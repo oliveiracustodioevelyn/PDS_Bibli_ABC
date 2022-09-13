@@ -7,6 +7,48 @@
         mc:Ignorable="d"
         Title="Menu_Principal" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
+
+
+        <Grid Grid.Row="1" Background="#ffffd7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="305*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Margin="1" Background="#e6e8bf">
+
+                <Image Height="100" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
+
+                <Button x:Name="btMenuInicial" Content="Menu Inicial" Margin="5 14 5 0" Height="29"/>
+                <Button x:Name="btCadastrarLivro" Content="Cadastrar Livro" Margin="5 4 5 0"  Height="29" Click="btCadastrarLivro_Click"/>
+                <Button x:Name="btCadastrarFornecedor" Content="Cadastrar Fornecedor" Margin="5 4 5 0"  Height="29" Click="btCadastrarFornecedor_Click"/>
+                <Button x:Name="btCadastrarLeitor" Content="Cadastrar Leitor" Margin="5 4 5 0" Height="29" Click="btCadastrarLeitor_Click" />
+                <Button x:Name="btDevolucao" Content="Devolução" Margin="5 4 5 0" Height="29" Click="btDevolucao_Click"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="2" Margin="5,5,7,5">
+                <Button x:Name="btPendente" Content="Pendentes" HorizontalAlignment="Left" Width="146" Margin="70,29,16,199" Click="btPendente_Click"/>
+                <Button x:Name="btAlugar" Content="Alugar" HorizontalAlignment="Left" Width="146" Margin="16,31,16,199" Click="btAlugar_Click"/>
+                <Button x:Name="btDevolução" Content="Devolução" HorizontalAlignment="Left"  Width="146" Margin="16,31,16,199" Click="btDevolução_Click"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <Button x:Name="btFavoritos" Content="Favoritos" HorizontalAlignment="Left" Margin="40,206,0,44" Width="579" Click="btFavoritos_Click"/>
+            </StackPanel>
+
+
+
+
+        </Grid>
     </Grid>
 </Window>

@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC.Views"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Window1" Height="615" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Cadastro de Fornrcedor" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Algerian"/>
+        <Grid Grid.Row="1" Background="AliceBlue">
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Margin="15">
+                <Label Content="Nome Fantasia" FontSize="20"/>
+                <TextBox x:Name="txtNomeFantasia" Padding="8"/>
+
+                <Label Content="Razão Social" FontSize="20"/>
+                <TextBox x:Name="txtRazaoSocial" Padding="8" Cursor="IBeam"/>
+
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Margin="15">
+
+                <UniformGrid Columns="2" Margin="0 5">
+
+                </UniformGrid>
+                
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

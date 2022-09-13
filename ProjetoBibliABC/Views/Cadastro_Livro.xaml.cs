@@ -23,5 +23,35 @@ namespace ProjetoBibliABC.Views
         {
             InitializeComponent();
         }
+
+        private void btHome_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btMenuInicial_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btCadastrarLivro_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btCadastrarFornecedor_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btCadastrarLeitor_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btDevolucao_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

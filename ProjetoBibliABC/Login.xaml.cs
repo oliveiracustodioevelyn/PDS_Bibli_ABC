@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProjetoBibliABC.Views;
 
 namespace ProjetoBibliABC
 {
@@ -23,6 +24,13 @@ namespace ProjetoBibliABC
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Menu_Principal menu = new Menu_Principal();
+            menu.Show();
+            this.Close();
         }
     }
 }

@@ -7,6 +7,61 @@
         mc:Ignorable="d"
         Title="Cadastro_Leitor" Height="450" Width="800">
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
+        <StackPanel Grid.Row="1" Grid.Column="0" Background="#e6e8bf">
+            <Button x:Name="btMenuInicial" Content="Menu Inicial" Height="29" Margin="5,90,5,5"/>
+            <Button x:Name="btCadastrarLivro" Content="Cadastrar Livro" Height="29" Margin="5"/>
+            <Button x:Name="btCadastrarFornecedor" Content="Cadastrar Fornecedor" Height="29" Margin="5"/>
+            <Button x:Name="btCadastrarLeitor" Content="Cadastrar Leitor" Height="29" Margin="5"/>
+            <Button x:Name="btDevolucao" Content="Devolução" Height="29" Margin="5"/>
+        </StackPanel>
+
+        <!--TEXTOS DA ESQUERDA-->
+        <StackPanel Grid.Row="1" Grid.Column="1" Background="#e6e8bf">
+            <Label Content="Nome Completo" FontSize="12"/>
+            <TextBox x:Name="txtNomeCompleto" HorizontalAlignment="Left" Padding="4" Width="200"/>
+
+            <Label Content="CPF" FontSize="12"/>
+            <TextBox x:Name="txtCPF" HorizontalAlignment="Left" Padding="4" Width="120"/>
+
+            <Label Content="RG" FontSize="12"/>
+            <TextBox x:Name="txtRG" HorizontalAlignment="Left" Padding="4" Width="146"/>
+
+            <Label Content="E-mail" FontSize="12"/>
+            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Padding="4" Width="146"/>
+
+            <Label Content="Código de Acesso" FontSize="12"/>
+            <TextBox x:Name="txtCodAce" HorizontalAlignment="Left" Padding="4" Width="146"/>
+
+            <Label Content="Telefone" FontSize="12"/>
+            <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Padding="4" Width="146"/>
+
+            <Label Content="Data de Nascimento" FontSize="12"/>
+            <DatePicker x:Name="dtDataNasc" HorizontalAlignment="Left" Padding="4" Width="146"/>
+        </StackPanel>
         
+        <!--TEXTOS DA DIREITA-->
+        <StackPanel  Grid.Row="2" Grid.Column="2" Background="#e6e8bf">
+            <Label Content="Sexo" FontSize="12"/>
+            <ComboBox x:Name="cbSexo" HorizontalAlignment="Left" Padding="4" Width="146"/>
+
+            <Label Content="Rua" FontSize="12"/>
+            <TextBox x:Name="txtRua" HorizontalAlignment="Left" Padding="4" Width="146"/>
+        </StackPanel>
+
+        <Button x:Name="btSalvar" Content="Salvar" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="120" Margin="10" Grid.Row="1" Grid.Column="2"/>
+        <Button x:Name="btCancelar" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="120" Margin="10" Grid.Row="1" Grid.Column="2"/>
+
     </Grid>
 </Window>

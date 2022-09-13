@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace ProjetoBibliABC.Views
 {
     /// <summary>
-    /// Lógica interna para Cadastro_Fonecedor.xaml
+    /// Lógica interna para Cadastro_Fornecedor.xaml
     /// </summary>
-    public partial class Cadastro_Fonecedor : Window
+    public partial class Cadastro_Fornecedor : Window
     {
-        public Cadastro_Fonecedor()
+        public Cadastro_Fornecedor()
         {
             InitializeComponent();
         }
