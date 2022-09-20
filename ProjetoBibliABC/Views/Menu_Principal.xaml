@@ -5,49 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC.Views"
         mc:Ignorable="d"
-        Title="Menu_Principal" Height="450" Width="800">
+        Title="Menu_Principal" Height="450" Width="800" WindowState="Maximized">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
+
+        <WrapPanel  Grid.Row="0" Background="White">
+            <Label Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
+
+            <Button x:Name="btMenuInicial" Content="Menu Inicial" Height="29" Background="White" Width="200"/>
+            <Button x:Name="btCadastrarLivro" Content="Cadastrar Livro" Height="29" Click="btCadastrarLivro_Click" Background="White" Width="200" Cursor="Hand"/>
+            <Button x:Name="btCadastrarFornecedor" Content="Cadastrar Fornecedor"  Height="29" Click="btCadastrarFornecedor_Click" Background="White" Width="200"/>
+            <Button x:Name="btCadastrarLeitor" Content="Cadastrar Leitor" Height="29" Click="btCadastrarLeitor_Click" Background="White" Width="200" Cursor="Hand" />
+            <Button x:Name="btDevolucao" Content="Devolução"  Height="29" Click="btDevolucao_Click" Background="White" Width="200"/>
+            <Button x:Name="btPendente" Content="Pendentes" Height="29" Click="btPendente_Click"  Background="White" Width="200" Cursor="Hand"/>
+            <Button x:Name="btAlugar" Content="Alugar" Height="29" Click="btAlugar_Click" Background="White" Width="200" Cursor="Hand"/>
+            <Button x:Name="btDevolução" Content="Devolução" Height="29"  Click="btDevolucao_Click" Background="White" Width="200" Cursor="Hand"/>
+        </WrapPanel>
 
 
-        <Grid Grid.Row="1" Background="#ffffd7">
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC9ADA7"/>
+                    <GradientStop Color="#FFF2E9E4" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="0*"/>
-                <ColumnDefinition Width="305*"/>
-
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Margin="1" Background="#e6e8bf">
-
-                <Image Height="100" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
-
-                <Button x:Name="btMenuInicial" Content="Menu Inicial" Margin="5 14 5 0" Height="29"/>
-                <Button x:Name="btCadastrarLivro" Content="Cadastrar Livro" Margin="5 4 5 0"  Height="29" Click="btCadastrarLivro_Click"/>
-                <Button x:Name="btCadastrarFornecedor" Content="Cadastrar Fornecedor" Margin="5 4 5 0"  Height="29" Click="btCadastrarFornecedor_Click"/>
-                <Button x:Name="btCadastrarLeitor" Content="Cadastrar Leitor" Margin="5 4 5 0" Height="29" Click="btCadastrarLeitor_Click" />
-                <Button x:Name="btDevolucao" Content="Devolução" Margin="5 4 5 0" Height="29" Click="btDevolucao_Click"/>
-
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal" Grid.Column="2" Margin="5,5,7,5">
-                <Button x:Name="btPendente" Content="Pendentes" HorizontalAlignment="Left" Width="146" Margin="70,29,16,199" Click="btPendente_Click"/>
-                <Button x:Name="btAlugar" Content="Alugar" HorizontalAlignment="Left" Width="146" Margin="16,31,16,199" Click="btAlugar_Click"/>
-                <Button x:Name="btDevolução" Content="Devolução" HorizontalAlignment="Left"  Width="146" Margin="16,31,16,199" Click="btDevolução_Click"/>
-
-            </StackPanel>
-
             <StackPanel Orientation="Horizontal" Grid.Column="2">
-                <Button x:Name="btFavoritos" Content="Favoritos" HorizontalAlignment="Left" Margin="40,206,0,44" Width="579" Click="btFavoritos_Click"/>
+                <Button x:Name="btFavoritos" Content="Favoritos" HorizontalAlignment="Left" Margin="40,206,0,44" Width="579" Click="btFavoritos_Click" Background="White"/>
             </StackPanel>
-
-
-
 
         </Grid>
     </Grid>

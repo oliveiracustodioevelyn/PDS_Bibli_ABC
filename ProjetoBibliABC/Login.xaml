@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="800" WindowState="Maximized">
+    <Grid Margin="0,0,0,-203">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#050554"/>
-                <GradientStop Color="#FF037786" Offset="1"/>
+                <GradientStop Color="#FFC9ADA7" Offset="0.33"/>
+                <GradientStop Color="#FFF2E9E4" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
 
@@ -22,30 +22,35 @@
 
         <StackPanel Grid.Column="1" Background="White">
 
-            <StackPanel Margin="20 100 20 0">
-            
-                <Label Content="Login" HorizontalAlignment="Center" FontSize="16" />
 
-                <Label Content="E-mail" HorizontalAlignment="Left" FontSize="16"/>
-                <TextBox x:Name="txtEmail" Padding="4" />
+            <StackPanel Margin="20 300 20 0">
 
-                <Label Content="Senha" HorizontalAlignment="Left" FontSize="16"/>
+                <Label Content="Login" HorizontalAlignment="Center" FontSize="40" FontFamily="Source Serif Pro Black" Height="62" />
 
-                <PasswordBox x:Name="txtSenha" Padding="4" />
+                <Label Content="E-mail" HorizontalAlignment="Left" FontSize="25" FontFamily="Source serif Pro Semibold" Margin="50 10 0 0"/>
+                <TextBox x:Name="txtEmail" Padding="4" FontSize="14" Width="500" Cursor="IBeam" Margin="0 0 0 10"/>
 
-                <Button x:Name="btLogin" Content="Login" HorizontalAlignment="Center"  Margin="19" Cursor="Hand" Background="#FFA3F3F1" Foreground="#FF1F1E1E" BorderBrush="#FF929292" Click="btLogin_Click"/>
-                <Label Content="Esqueceu a Senha?" HorizontalAlignment="Center" FontSize="9"  Background="{x:Null}" Foreground="#DD04A8ED" RenderTransformOrigin="1.151,-0.94">
-                    <Label.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="1080.093"/>
-                            <TranslateTransform X="2.238" Y="4.691"/>
-                        </TransformGroup>
-                    </Label.RenderTransform>
-                </Label>
+                <Label Content="Senha" HorizontalAlignment="Left" FontSize="25" FontFamily="Source Serif Pro Semibold" Margin="50 0 0 0"/>
+
+                <PasswordBox x:Name="txtSenha" Padding="4" FontSize="14" Width="500" Cursor="IBeam" />
+
+                <Button x:Name="btLogin" Content="Logar" HorizontalAlignment="Center"  Margin="19 50 19 0" Cursor="Hand" Background="#FFF1E4E2" Foreground="Black" BorderBrush="#FF929292" Click="btLogin_Click" FontFamily="Source Serif Pro Semibold" Height="38" Width="143" FontSize="20"/>
+                <Label Content="Esqueceu a Senha? " HorizontalAlignment="Center"  Background="{x:Null}" Foreground="#DD04A8ED" RenderTransformOrigin="1.151,-0.94" FontFamily="Source Sans Pro Semibold" FontSize="14"/>
+                <Label Content="Novo? Cadastre-se aqui!" HorizontalAlignment="Center"  Background="{x:Null}" Foreground="#DD04A8ED" RenderTransformOrigin="1.151,-0.94" FontFamily="Source Sans Pro Semibold" FontSize="14"/>
+
             </StackPanel>
         </StackPanel>
+        <Image HorizontalAlignment="Left" Height="460" Margin="-114,166,0,0" VerticalAlignment="Top" Width="742" Source="/B-removebg-preview.png" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="277" Margin="-5,393,0,0" VerticalAlignment="Top" Width="348" Source="/Design_sem_nome__1_-removebg-preview.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-35.588"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
 
     </Grid>

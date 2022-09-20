@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC.Views"
         mc:Ignorable="d"
-        Title="Devolucao" Height="450" Width="800">
+        Title="Devolucao" Height="450" Width="800" WindowState="Maximized">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>

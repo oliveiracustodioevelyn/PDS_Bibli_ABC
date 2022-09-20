@@ -13,7 +13,7 @@
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Cadastro_Fornecedor" Height="450" Width="800">
+        Title="Cadastro_Fornecedor" Height="450" Width="800" WindowState="Maximized">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
@@ -24,7 +24,13 @@
 
         <Label Grid.Row="0" Content="Cadastro de Escola" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black"/>
 
-        <Grid Grid.Row="1" Background="#FFA4EEF7">
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF600028"/>
+                    <GradientStop Color="#FF2D0065" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -191,6 +197,6 @@
         </Grid>
 
         <Button Grid.Row="2" Content="Salvar"  Margin="10,9" Cursor="Hand" Background="#FFFFC850" />
-        
+
     </Grid>
 </Window>
