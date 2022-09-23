@@ -22,6 +22,8 @@ namespace ProjetoBibliABC.Views
         public Cadastro_Livro()
         {
             InitializeComponent();
+            CbEditora.Items.Add("1");
+            CbEditora.Items.Add("2");
         }
 
         private void btHome_Click(object sender, RoutedEventArgs e)

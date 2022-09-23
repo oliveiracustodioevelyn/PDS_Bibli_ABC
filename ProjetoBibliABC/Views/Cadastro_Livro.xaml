@@ -5,62 +5,232 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC.Views"
         mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         Title="Cadastro_Livro" Height="450" Width="800" WindowState="Maximized">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
 
+        <Label Grid.Row="0" Content="Cadastro de Livro" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black"/>
 
-        <Grid Grid.Row="1"  Background="#ffffd7">
+        <Grid Grid.Row="1" Background="#FFF9F5F5">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="0*"/>
-                <ColumnDefinition Width="386*"/>
-
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Margin="1" Background="#e6e8bf">
+            <StackPanel Grid.Column="0" Margin="15">
+                <Label Content="Informações de Contato" FontSize="20"/>
 
-                <Image Height="100" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
+                <UniformGrid Columns="1" Margin="0 5">
+                    <StackPanel Orientation="Horizontal">
 
-                <Button x:Name="btMenuInicial" Content="Menu Inicial" Margin="5 14 5 0" Height="29" Click="btMenuInicial_Click"/>
-                <Button x:Name="btCadastrarLivro" Content="Cadastrar Livro" Margin="5 4 5 0"  Height="29" Click="btCadastrarLivro_Click"/>
-                <Button x:Name="btCadastrarFornecedor" Content="Cadastrar Fornecedor" Margin="5 4 5 0"  Height="29" Click="btCadastrarFornecedor_Click"/>
-                <Button x:Name="btCadastrarLeitor" Content="Cadastrar Leitor" Margin="5 4 5 0" Height="29" Click="btCadastrarLeitor_Click"/>
-                <Button x:Name="btDevolucao" Content="Devolução" Margin="5 4 5 0" Height="29" Click="btDevolucao_Click"/>
+
+                        <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Cod. Livro"
+                        x:Name="txtCodigo" Padding="8" Margin="0 0 5 0"/>
+                        <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Título"
+                        x:Name="txtTitulo" Padding="8" Margin="0 0 0 5" Width="850" Cursor="IBeam"/>
+                    </StackPanel>
+                   
+
+                </UniformGrid>
+                <StackPanel Orientation="Horizontal">
+                    <DatePicker 
+                    x:Name="dtPublicacao"
+                    Style="{StaticResource MaterialDesignFilledDatePicker}"
+                    materialDesign:HintAssist.Hint="Data de Publicacao" Padding="8" Width="150" HorizontalAlignment="Left"/>
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Ano"
+                        x:Name="txtAno" Padding="8" Width="100" Margin="10 0 0 0" />
+
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="N° Exemplar"
+                        x:Name="txtExemplar" Padding="8" Width="100" Margin="10 0 0 0" />
+
+                    <ComboBox
+                        materialDesign:HintAssist.Hint="N° Exemplar"
+                        x:Name="CbEditora" Padding="8" Width="100" Margin="10 0 0 0" />
+
+
+                </StackPanel>
+
+                <UniformGrid Columns="1" Margin="0 5">
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="N° Exemplar"
+                        x:Name="txtNum" Padding="8" Margin="0 0 5 0" Cursor="IBeam"/>
+                    
+
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="N° Páginas"
+                        x:Name="txtPag" Padding="8"/>
+
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Edicao"
+                        x:Name="txtEdicao" Padding="2"/>
+
+
+                </UniformGrid>
+
+                
+                <UniformGrid Columns="2" Margin="0 5">
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Tipo"
+                        x:Name="txtTipo" Padding="8" Margin="0 0 5 0"/>
+
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="ISBN"
+                        x:Name="txtIsbn" Padding="8"/>
+
+
+
+                </UniformGrid>
+
+
+
 
             </StackPanel>
+            <StackPanel Grid.Column="1" Margin="15">
+                <Label Content="Informações de Contato" FontSize="20"/>
 
-            <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="5,5,7,5">
+                <UniformGrid Columns="2" Margin="0 5">
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Telefone"
+                        x:Name="txtTelefone" Padding="8" Margin="0 0 5 0"/>
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="E-mail"
+                        x:Name="txtEmail" Padding="8"/>
+                </UniformGrid>
 
-                <Label Content="Titulo do Livro" HorizontalAlignment="Left" FontSize="12" Margin="0,0,0,323"/>
-                <Label Content="Código do Livro" HorizontalAlignment="Left" Margin="420,0,0,323" Width="96"/>
-                <Label Content="Ano de Publicação" HorizontalAlignment="Left" Margin="-604,47,12,275"/>
-                <Label Content="Autor" HorizontalAlignment="Left" Margin="-444,47,-452,275" Width="46"/>
-                <Label Content="Editora" HorizontalAlignment="Left" Margin="-607,94,-600,228"/>
-                <Label Content="Prateleira" HorizontalAlignment="Left" Margin="-274,94,-269,228"/>
-                <Label Content="Classificação" HorizontalAlignment="Left" Margin="-605,140,0,179"/>
-                <Label Content="Genero" HorizontalAlignment="Left" Margin="-405,140,0,179"/>
-                <Label Content="Data de Cadastro" HorizontalAlignment="Left" Margin="-175,140,0,179"/>
+                <Label Content="Informações de Localização" FontSize="20"/>
+
+                <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Rua"
+                        x:Name="txtRua" Padding="8" />
+
+                <UniformGrid Columns="2" Margin="0 5">
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Número"
+                        x:Name="txtNumero" Padding="8" Margin="0 0 5 0"/>
+
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Bairro"
+                        x:Name="txtBairro" Padding="8"/>
+
+                </UniformGrid>
+
+                <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Complemento"
+                        x:Name="txtComplemento" Padding="8"/>
+
+                <UniformGrid Columns="2" Margin="0 5">
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Cidade"
+                        x:Name="txtCidade" Padding="8" Margin="0 0 5 0"/>
+
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Estado"
+                        x:Name="txtEstado" Padding="8"/>
+
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="CEP"
+                        x:Name="txtCep" Padding="8"/>
+
+                </UniformGrid>
+
+                <DatePicker 
+                    x:Name="dtCriacao"
+                    Style="{StaticResource MaterialDesignFilledDatePicker}"
+                    materialDesign:HintAssist.Hint="Data de Criação"/>
+
             </StackPanel>
-            
-            <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="0,31,0,20">
-                <TextBox x:Name="txtTituloLivro" HorizontalAlignment="Left" Margin="5,0,0,298" Padding="4" Width="497" />
-                <TextBox x:Name="txtCodigoLivro" Margin="15,0,0,298" Padding="4" Width="119"/>
-                <TextBox x:Name="txtAnoPublicacao" Margin="-1100,47,15,251" Padding="4" Width="146"/>
-                <TextBox x:Name="txtAutor" Margin="-470,47,0,251" Padding="4" Width="466"/>
-                <TextBox x:Name="txtEditora" Margin="-630,93,440,205" Width="312"/>
-                <TextBox x:Name="txtPrateleira" Margin="-420,93,122,205"/>
-                <TextBox x:Name="txtClassificacao" Margin="-555,140,344,158"/>
-                <TextBox x:Name="txtGenero" Margin="-755,140,568,158"/>
-                <TextBox x:Name="txtData" Margin="-319,140,121,158"/>
-            </StackPanel>
-
-
         </Grid>
+
+        <Button Grid.Row="2" Content="Salvar"  Margin="10,9" Cursor="Hand" Background="#FFF5F4F3" />
+
     </Grid>
 </Window>
