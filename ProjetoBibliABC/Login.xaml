@@ -41,16 +41,6 @@
             </StackPanel>
         </StackPanel>
         <Image HorizontalAlignment="Left" Height="460" Margin="-114,166,0,0" VerticalAlignment="Top" Width="742" Source="/B-removebg-preview.png" Grid.ColumnSpan="2"/>
-        <Image HorizontalAlignment="Left" Height="277" Margin="-5,393,0,0" VerticalAlignment="Top" Width="348" Source="/Design_sem_nome__1_-removebg-preview.png" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-35.588"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
 
 
     </Grid>

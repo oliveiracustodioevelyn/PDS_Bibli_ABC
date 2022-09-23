@@ -5,6 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC.Views"
         mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+         TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         Title="Window1" Height="615" Width="800" WindowState="Maximized">
     <Grid>
         <Grid.RowDefinitions>
@@ -13,19 +21,54 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Content="Cadastro de Fornrcedor" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Algerian"/>
-        <Grid Grid.Row="1" Background="AliceBlue">
-        <Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Content="Cadastro de Fornecedor" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Algerian"/>
+        <Grid Grid.Row="1" Background="#FFF9F5F5">
+            <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0" Margin="15">
-                <Label Content="Nome Fantasia" FontSize="20"/>
-                <TextBox x:Name="txtNomeFantasia" Padding="8"/>
+                <Label Content="Informações Pessoais" FontSize="20"/>
 
-                <Label Content="Razão Social" FontSize="20"/>
-                <TextBox x:Name="txtRazaoSocial" Padding="8" Cursor="IBeam"/>
+
+                <TextBox
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    VerticalAlignment="Top"
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="Nome Fornecedor "
+                    x:Name="txtNomeFornecedor" Padding="8"/>
+
+                <TextBox
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    VerticalAlignment="Top"
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="Razão Social"
+                    x:Name="txtRazaoSocial" Padding="8"/>
+
+                <TextBox
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    VerticalAlignment="Top"
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="CNPJ"
+                    x:Name="txtCNPJ" Padding="8"/>
+
+                <TextBox
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    VerticalAlignment="Top"
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="Incrição Estadual"
+                    x:Name="txtInscEstadual" Padding="8"/>
+
+
 
 
             </StackPanel>

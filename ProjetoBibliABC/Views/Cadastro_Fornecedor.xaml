@@ -22,32 +22,26 @@
         </Grid.RowDefinitions>
 
 
-        <Label Grid.Row="0" Content="Cadastro de Escola" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black"/>
+        <Label Grid.Row="0" Content="Cadastro de Fornecedor" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black"/>
 
-        <Grid Grid.Row="1">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF600028"/>
-                    <GradientStop Color="#FF2D0065" Offset="1"/>
-                </LinearGradientBrush>
-            </Grid.Background>
+        <Grid Grid.Row="1" Background="#FFF9F5F5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0" Margin="15">
-                <Label Content="Informações Registro" FontSize="20"/>
+                <Label Content="Informações Pessoais" FontSize="20"/>
 
-                <!--<Label Content="Nome Fantasia" FontSize="16"/>-->
+
                 <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     VerticalAlignment="Top"
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Nome Fantasia"
-                    x:Name="txtNomeFantasia" Padding="8"/>
+                    materialDesign:HintAssist.Hint="Nome "
+                    x:Name="txtNome" Padding="8"/>
 
                 <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -196,7 +190,7 @@
             </StackPanel>
         </Grid>
 
-        <Button Grid.Row="2" Content="Salvar"  Margin="10,9" Cursor="Hand" Background="#FFFFC850" />
+        <Button Grid.Row="2" Content="Salvar"  Margin="10,9" Cursor="Hand" Background="#FFF5F4F3" />
 
     </Grid>
 </Window>
