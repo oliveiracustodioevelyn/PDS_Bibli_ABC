@@ -16,27 +16,8 @@
             <Label Grid.Row="0" Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
 
 
-            <Grid Grid.Row="1"  Background="#ffffd7">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="0*"/>
-                    <ColumnDefinition Width="386*"/>
-
-                </Grid.ColumnDefinitions>
-
-                <StackPanel Margin="1" Background="#e6e8bf">
-
-                    <Image Height="100" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
-
-                    <Button x:Name="btMenuInicial" Content="Menu Inicial" Margin="5 14 5 0" Height="29"/>
-                    <Button x:Name="btCadastrarLivro" Content="Cadastrar Livro" Margin="5 4 5 0"  Height="29" />
-                    <Button x:Name="btCadastrarFornecedor" Content="Cadastrar Fornecedor" Margin="5 4 5 0"  Height="29" Cursor="Hand" />
-                    <Button x:Name="btCadastrarLeitor" Content="Cadastrar Leitor" Margin="5 4 5 0" Height="29" />
-                    <Button x:Name="btDevolucao" Content="Devolução" Margin="5 4 5 0" Height="29"/>
-
-                </StackPanel>
-                
-            </Grid>
+            
+          
         </Grid>
     </Grid>
 </Window>

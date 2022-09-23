@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC.Views"
         mc:Ignorable="d"
-        Title="Menu_Principal" Height="450" Width="800" WindowState="Maximized">
+        Title="Menu_Principal" Height="450" Width="1121" WindowState="Maximized">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
 
-        <WrapPanel  Grid.Row="0" Background="White">
+        <WrapPanel  Grid.Row="0" Background="White" HorizontalAlignment="Left" Width="1257" Margin="0,0,0,357" Grid.RowSpan="2">
             <Label Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
 
             <Button x:Name="btMenuInicial" Content="Menu Inicial" Height="29" Background="White" Width="200"/>
@@ -21,10 +21,14 @@
             <Button x:Name="btCadastrarFornecedor" Content="Cadastrar Fornecedor"  Height="29" Click="btCadastrarFornecedor_Click" Background="White" Width="200"/>
             <Button x:Name="btCadastrarLeitor" Content="Cadastrar Leitor" Height="29" Click="btCadastrarLeitor_Click" Background="White" Width="200" Cursor="Hand" />
             <Button x:Name="btDevolucao" Content="Devolução"  Height="29" Click="btDevolucao_Click" Background="White" Width="200"/>
+            <Button x:Name="btFuncionario" Content="Funcionário"  Height="29" Click="btFuncionario_Click" Background="White" Width="200"/>
+
             <Button x:Name="btPendente" Content="Pendentes" Height="29" Click="btPendente_Click"  Background="White" Width="200" Cursor="Hand"/>
             <Button x:Name="btAlugar" Content="Alugar" Height="29" Click="btAlugar_Click" Background="White" Width="200" Cursor="Hand"/>
             <Button x:Name="btDevolução" Content="Devolução" Height="29"  Click="btDevolucao_Click" Background="White" Width="200" Cursor="Hand"/>
         </WrapPanel>
+        
+        
 
 
         <Grid Grid.Row="1">

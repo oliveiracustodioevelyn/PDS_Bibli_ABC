@@ -40,8 +40,8 @@
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Nome "
-                    x:Name="txtNome" Padding="8"/>
+                    materialDesign:HintAssist.Hint="Nome Fornecedor"
+                    x:Name="txtNomeForn" Padding="8"/>
 
                 <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"

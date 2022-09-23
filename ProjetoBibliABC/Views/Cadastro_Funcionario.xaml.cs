@@ -17,9 +17,9 @@ namespace ProjetoBibliABC.Views
     /// <summary>
     /// Lógica interna para Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Cadastro_Funcionario : Window
     {
-        public Window1()
+        public Cadastro_Funcionario()
         {
             InitializeComponent();
         }

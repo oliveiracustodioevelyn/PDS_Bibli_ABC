@@ -69,5 +69,11 @@ namespace ProjetoBibliABC.Views
         {
 
         }
+
+        private void btFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            Cadastro_Funcionario cad = new Cadastro_Funcionario();
+            cad.ShowDialog();
+        }
     }
 }
