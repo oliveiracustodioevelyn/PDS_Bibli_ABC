@@ -1,0 +1,66 @@
+﻿<Window x:Class="ProjetoBibliABC.Views.Cadastro_Livro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetoBibliABC.Views"
+        mc:Ignorable="d"
+        Title="Cadastro_Livro" Height="450" Width="800" WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
+
+
+        <Grid Grid.Row="1"  Background="#ffffd7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="386*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Margin="1" Background="#e6e8bf">
+
+                <Image Height="100" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
+
+                <Button x:Name="btMenuInicial" Content="Menu Inicial" Margin="5 14 5 0" Height="29" Click="btMenuInicial_Click"/>
+                <Button x:Name="btCadastrarLivro" Content="Cadastrar Livro" Margin="5 4 5 0"  Height="29" Click="btCadastrarLivro_Click"/>
+                <Button x:Name="btCadastrarFornecedor" Content="Cadastrar Fornecedor" Margin="5 4 5 0"  Height="29" Click="btCadastrarFornecedor_Click"/>
+                <Button x:Name="btCadastrarLeitor" Content="Cadastrar Leitor" Margin="5 4 5 0" Height="29" Click="btCadastrarLeitor_Click"/>
+                <Button x:Name="btDevolucao" Content="Devolução" Margin="5 4 5 0" Height="29" Click="btDevolucao_Click"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="5,5,7,5">
+
+                <Label Content="Titulo do Livro" HorizontalAlignment="Left" FontSize="12" Margin="0,0,0,323"/>
+                <Label Content="Código do Livro" HorizontalAlignment="Left" Margin="420,0,0,323" Width="96"/>
+                <Label Content="Ano de Publicação" HorizontalAlignment="Left" Margin="-604,47,12,275"/>
+                <Label Content="Autor" HorizontalAlignment="Left" Margin="-444,47,-452,275" Width="46"/>
+                <Label Content="Editora" HorizontalAlignment="Left" Margin="-607,94,-600,228"/>
+                <Label Content="Prateleira" HorizontalAlignment="Left" Margin="-274,94,-269,228"/>
+                <Label Content="Classificação" HorizontalAlignment="Left" Margin="-605,140,0,179"/>
+                <Label Content="Genero" HorizontalAlignment="Left" Margin="-405,140,0,179"/>
+                <Label Content="Data de Cadastro" HorizontalAlignment="Left" Margin="-175,140,0,179"/>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="0,31,0,20">
+                <TextBox x:Name="txtTituloLivro" HorizontalAlignment="Left" Margin="5,0,0,298" Padding="4" Width="497" />
+                <TextBox x:Name="txtCodigoLivro" Margin="15,0,0,298" Padding="4" Width="119"/>
+                <TextBox x:Name="txtAnoPublicacao" Margin="-1100,47,15,251" Padding="4" Width="146"/>
+                <TextBox x:Name="txtAutor" Margin="-470,47,0,251" Padding="4" Width="466"/>
+                <TextBox x:Name="txtEditora" Margin="-630,93,440,205" Width="312"/>
+                <TextBox x:Name="txtPrateleira" Margin="-420,93,122,205"/>
+                <TextBox x:Name="txtClassificacao" Margin="-555,140,344,158"/>
+                <TextBox x:Name="txtGenero" Margin="-755,140,568,158"/>
+                <TextBox x:Name="txtData" Margin="-319,140,121,158"/>
+            </StackPanel>
+
+
+        </Grid>
+    </Grid>
+</Window>
