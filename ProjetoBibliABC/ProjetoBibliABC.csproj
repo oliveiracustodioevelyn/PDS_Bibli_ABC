@@ -215,6 +215,15 @@
   <ItemGroup>
     <Resource Include="Design_sem_nome__1_-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\B-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\logoo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

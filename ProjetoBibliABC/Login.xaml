@@ -9,9 +9,10 @@
     <Grid Margin="0,0,0,-203">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFC9ADA7" Offset="0.33"/>
-                <GradientStop Color="#FFF2E9E4" Offset="1"/>
+                <GradientStop Color="#FF0A114A" Offset="0.33"/>
+                <GradientStop Color="#FF0A114A" Offset="1"/>
             </LinearGradientBrush>
+       
         </Grid.Background>
 
 
@@ -25,7 +26,7 @@
 
             <StackPanel Margin="20 300 20 0">
 
-                <Label Content="Login" HorizontalAlignment="Center" FontSize="40" FontFamily="Source Serif Pro Black" Height="62" />
+                <Label Content="Login" HorizontalAlignment="Center" FontSize="48" FontFamily="Source Serif Pro Black" Height="62" Background="Transparent" FontWeight="Normal" />
 
                 <Label Content="E-mail" HorizontalAlignment="Left" FontSize="25" FontFamily="Source serif Pro Semibold" Margin="50 10 0 0"/>
                 <TextBox x:Name="txtEmail" Padding="4" FontSize="14" Width="500" Cursor="IBeam" Margin="0 0 0 10"/>
@@ -34,13 +35,12 @@
 
                 <PasswordBox x:Name="txtSenha" Padding="4" FontSize="14" Width="500" Cursor="IBeam" />
 
-                <Button x:Name="btLogin" Content="Logar" HorizontalAlignment="Center"  Margin="19 50 19 0" Cursor="Hand" Background="#FFF1E4E2" Foreground="Black" BorderBrush="#FF929292" Click="btLogin_Click" FontFamily="Source Serif Pro Semibold" Height="38" Width="143" FontSize="20"/>
+                <Button x:Name="btLogin" Content="Logar" HorizontalAlignment="Center"  Margin="19 50 19 0" Cursor="Hand" Background="#FF0A114A" Foreground="#FFFFFBFB" BorderBrush="#FF929292" Click="btLogin_Click" FontFamily="Source Serif Pro Semibold" Height="38" Width="143" FontSize="20"/>
                 <Label Content="Esqueceu a Senha? " HorizontalAlignment="Center"  Background="{x:Null}" Foreground="#DD04A8ED" RenderTransformOrigin="1.151,-0.94" FontFamily="Source Sans Pro Semibold" FontSize="14"/>
                 <Label Content="Novo? Cadastre-se aqui!" HorizontalAlignment="Center"  Background="{x:Null}" Foreground="#DD04A8ED" RenderTransformOrigin="1.151,-0.94" FontFamily="Source Sans Pro Semibold" FontSize="14"/>
 
             </StackPanel>
         </StackPanel>
-        <Image HorizontalAlignment="Left" Height="460" Margin="-114,166,0,0" VerticalAlignment="Top" Width="742" Source="/B-removebg-preview.png" Grid.ColumnSpan="2"/>
 
 
     </Grid>
