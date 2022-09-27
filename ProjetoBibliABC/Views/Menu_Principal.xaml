@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC.Views"
         mc:Ignorable="d"
-        Title="Menu_Principal" Height="450" Width="1121" WindowState="Maximized">
+        Title="Menu_Principal" Height="700" Width="1200" WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="340"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Background="#FF0A114A">
+        <StackPanel Background="#FF0A114A" Margin="0 0 0 0">
             <Grid Height="200" Width="234" Margin="0 10">
                 <Grid.Background >
                     <ImageBrush ImageSource="/Views/logoo.png" />
