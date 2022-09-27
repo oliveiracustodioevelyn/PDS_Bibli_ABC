@@ -5,63 +5,102 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC.Views"
         mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         Title="Cadastro_Leitor" Height="450" Width="800" WindowState="Maximized">
     <Grid>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="0" Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
-        <StackPanel Grid.Row="1" Grid.Column="0" Background="#e6e8bf">
-            <Button x:Name="btMenuInicial" Content="Menu Inicial" Height="29" Margin="5,90,5,5"/>
-            <Button x:Name="btCadastrarLivro" Content="Cadastrar Livro" Height="29" Margin="5"/>
-            <Button x:Name="btCadastrarFornecedor" Content="Cadastrar Fornecedor" Height="29" Margin="5"/>
-            <Button x:Name="btCadastrarLeitor" Content="Cadastrar Leitor" Height="29" Margin="5"/>
-            <Button x:Name="btDevolucao" Content="Devolução" Height="29" Margin="5"/>
-        </StackPanel>
+
 
         <!--TEXTOS DA ESQUERDA-->
-        <StackPanel Grid.Row="1" Grid.Column="1" Background="#e6e8bf">
-            <Label Content="Nome Completo" FontSize="12"/>
-            <TextBox x:Name="txtNomeCompleto" HorizontalAlignment="Left" Padding="4" Width="200"/>
+        <StackPanel Grid.Column="0" Background="White" Margin="15">
 
-            <Label Content="CPF" FontSize="12"/>
-            <TextBox x:Name="txtCPF" HorizontalAlignment="Left" Padding="4" Width="120"/>
+            <TextBox 
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Código de Acesso"
+                        x:Name="txtCodAce" Padding="8" Cursor="IBeam" FontSize="18"/>
 
-            <Label Content="RG" FontSize="12"/>
-            <TextBox x:Name="txtRG" HorizontalAlignment="Left" Padding="4" Width="146"/>
+            <TextBox 
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Nome Completo"
+                        x:Name="txtNomeCompleto" Padding="8" Cursor="IBeam" FontSize="18"/>
+            <TextBox 
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="CPF"
+                        x:Name="txtCPF" Padding="8" Cursor="IBeam" FontSize="18"/>
 
-            <Label Content="E-mail" FontSize="12"/>
-            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Padding="4" Width="146"/>
+            <TextBox 
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="RG"
+                        x:Name="txtRG" Padding="8" Cursor="IBeam" FontSize="18"/>
 
-            <Label Content="Código de Acesso" FontSize="12"/>
-            <TextBox x:Name="txtCodAce" HorizontalAlignment="Left" Padding="4" Width="146"/>
+            <TextBox 
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="E-mail"
+                        x:Name="txtEmail" Padding="8" Cursor="IBeam" FontSize="18"/>
+            <TextBox 
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Telefone"
+                        x:Name="txtTelefone" Padding="8" Cursor="IBeam" FontSize="18"/>
 
-            <Label Content="Telefone" FontSize="12"/>
-            <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Padding="4" Width="146"/>
+            <DatePicker 
+                x:Name="dtDataNasc"
+                    Style="{StaticResource MaterialDesignFilledDatePicker}"
+                    materialDesign:HintAssist.Hint="Data de Nascimento" FontSize="18"/>
+            
+            <ComboBox 
+                Style="{StaticResource MaterialDesignFilledComboBox}"
+                        materialDesign:HintAssist.Hint="Sexo" FontSize="18"/>
+            
+            <TextBox 
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Rua"
+                        x:Name="txtRua" Padding="8" Cursor="IBeam" FontSize="18"/>
 
-            <Label Content="Data de Nascimento" FontSize="12"/>
-            <DatePicker x:Name="dtDataNasc" HorizontalAlignment="Left" Padding="4" Width="146"/>
         </StackPanel>
+
         
-        <!--TEXTOS DA DIREITA-->
-        <StackPanel  Grid.Row="2" Grid.Column="2" Background="#e6e8bf">
-            <Label Content="Sexo" FontSize="12"/>
-            <ComboBox x:Name="cbSexo" HorizontalAlignment="Left" Padding="4" Width="146"/>
 
-            <Label Content="Rua" FontSize="12"/>
-            <TextBox x:Name="txtRua" HorizontalAlignment="Left" Padding="4" Width="146"/>
-        </StackPanel>
+        <WrapPanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Right">
 
-        <Button x:Name="btSalvar" Content="Salvar" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="120" Margin="10" Grid.Row="1" Grid.Column="2"/>
-        <Button x:Name="btCancelar" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="120" Margin="10" Grid.Row="1" Grid.Column="2"/>
-
+            <Button Margin="5 10" x:Name="btSalvar" Content="Salvar" Cursor="Hand" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="120" Height="32" />
+            <Button Margin="5 10" x:Name="btCancelar" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="120" Height="32" Cursor="Hand"/>
+        </WrapPanel>
     </Grid>
 </Window>
