@@ -7,12 +7,16 @@
         mc:Ignorable="d"
         Title="Menu_Principal" Height="700" Width="1200" WindowState="Maximized">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="103*"/>
+            <RowDefinition Height="581*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="340"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Background="#FF0A114A" Margin="0 0 0 0">
+        <StackPanel Background="#FF0A114A" Grid.RowSpan="2">
             <Grid Height="200" Width="234" Margin="0 10">
                 <Grid.Background >
                     <ImageBrush ImageSource="/Views/logoo.png" />
