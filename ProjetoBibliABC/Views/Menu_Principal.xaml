@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Background="#FF0A114A" Grid.RowSpan="2">
-            <Grid Height="200" Width="234" Margin="0 10">
+            <Grid Height="197" Width="202" Margin="0 10">
                 <Grid.Background >
                     <ImageBrush ImageSource="/Views/logoo.png" />
                 </Grid.Background>
@@ -25,11 +25,14 @@
             <Button x:Name="btCadastrarLivro" Content="Cadastrar Livro" HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Click="btCadastrarLivro_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
             <Button x:Name="btCadastrarFornecedor" Content="Cadastrar Fornecedor"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Click="btCadastrarFornecedor_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
             <Button x:Name="btCadastrarLeitor" Content="Cadastrar Leitor" HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Click="btCadastrarLeitor_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
-            <Button x:Name="btDevolucao" Content="Devolução"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Click="btDevolucao_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
-            <Button x:Name="btFuncionario" Content="Funcionário"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Click="btFuncionario_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
-            <Button x:Name="btPendente" Content="Pendentes" HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Click="btPendente_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
-            <Button x:Name="btAlugar" Content="Alugar" HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Click="btAlugar_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
-            <Button x:Name="btDevolução" Content="Devolução" HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top"  Click="btDevolucao_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
+            <Button x:Name="btAlugar" Content="Alugar Livro" HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Click="btAlugar_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
+            <Button x:Name="btDevolucao" Content="Devolução de Livro"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Click="btDevolucao_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
+            <Button x:Name="btPendente" Content="Livros Pendentes" HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Click="btPendente_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
+            <Button x:Name="btFuncionario" Content="Listagem de Funcionário"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Click="btFuncionario_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
+            <Button x:Name="btListaLivro" Content="Listagem de Livros"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
+            <Button x:Name="btListaLeitor" Content="Listagem de Leitores"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
+            <Button x:Name="btListaFornecedor" Content="Listagem de Editora"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
+
         </StackPanel>
     </Grid>
 </Window>
