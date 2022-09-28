@@ -72,7 +72,7 @@
 
 
                 </UniformGrid>
-               
+
                 <UniformGrid Columns="1" Margin="0 5">
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -129,8 +129,44 @@
             </StackPanel>
 
         </Grid>
+        <Grid Grid.Row="3" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <UniformGrid Grid.Row="2" Columns="3">
 
-        <Button Grid.Row="2" Content="Salvar"  Margin="10,9,10,9" Cursor="Hand" Background="#FFF5F4F3" />
+                    <Button x:Name="btCancelar" HorizontalAlignment="Center"  Margin="0 0 40 0" Cursor="Hand" Foreground="Black" FontFamily="Candara" Height="38" Width="143" FontSize="20" FontWeight="Normal">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="15" Background="#FFFFC850">
+                                    <TextBlock Text="Cancelar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Candara"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button x:Name="btLimpar" HorizontalAlignment="Center"  Margin="0 0 40 0" Cursor="Hand" Foreground="Black" FontFamily="Candara" Height="38" Width="143" FontSize="20" FontWeight="Normal">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="15" Background="#FFFFC850">
+                                    <TextBlock Text="Limpar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Candara"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button x:Name="btSalvar" HorizontalAlignment="Center"  Margin="0 0 40 0" Cursor="Hand" Foreground="Black"  FontFamily="Candara" Height="38" Width="143" FontSize="20" FontWeight="Normal">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="15" Background="#FFFFC850">
+                                    <TextBlock Text="Salvar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Candara"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </UniformGrid>
+            </StackPanel>
+
+
+
+        </Grid>
 
     </Grid>
 </Window>
