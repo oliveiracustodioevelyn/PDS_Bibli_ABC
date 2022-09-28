@@ -84,6 +84,9 @@
     <Compile Include="Views\Listagem_Acervo.xaml.cs">
       <DependentUpon>Listagem_Acervo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Listagem_Fornecedor.xaml.cs">
+      <DependentUpon>Listagem_Fornecedor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Listagem_Funcionario.xaml.cs">
       <DependentUpon>Listagem_Funcionario.xaml</DependentUpon>
     </Compile>
@@ -133,6 +136,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Listagem_Acervo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Listagem_Fornecedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

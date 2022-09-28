@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProjetoBibliABC.Views"
         mc:Ignorable="d"
         Title="Menu_Principal" Height="700" Width="1200" WindowState="Maximized">
-    <Grid>
+    <Grid Margin="0,0,0,-151">
         <Grid.RowDefinitions>
             <RowDefinition Height="103*"/>
             <RowDefinition Height="581*"/>
@@ -29,9 +29,9 @@
             <Button x:Name="btDevolucao" Content="Devolução de Livro"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Click="btDevolucao_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
             <Button x:Name="btPendente" Content="Livros Pendentes" HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Click="btPendente_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
             <Button x:Name="btFuncionario" Content="Listagem de Funcionário"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Click="btFuncionario_Click" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
-            <Button x:Name="btListaLivro" Content="Listagem de Livros"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
-            <Button x:Name="btListaLeitor" Content="Listagem de Leitores"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
-            <Button x:Name="btListaFornecedor" Content="Listagem de Editora"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold"/>
+            <Button x:Name="btListaLivro" Content="Listagem de Livros"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold" Click="btListaLivro_Click"/>
+            <Button x:Name="btListaLeitor" Content="Listagem de Leitores"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold" Click="btListaLeitor_Click"/>
+            <Button x:Name="btListaFornecedor" Content="Listagem de Editora"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold" Click="btListaFornecedor_Click"/>
 
         </StackPanel>
     </Grid>
