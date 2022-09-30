@@ -13,7 +13,7 @@
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Cadastro_Funcionario" Height="615" Width="800" WindowState="Maximized">
+        Title="Cadastro_Funcionario" Height="1080" Width="1920" WindowState="Maximized">
     <Grid Background="#FF0A114A">
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
@@ -24,7 +24,7 @@
 
         <Label Content="Cadastro de Funcionário" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" BorderBrush="White" Foreground="#DDFFFFFF" Height="50" Width="490"/>
 
-        <Grid Grid.Row="1" Background="#FFF9F5F5">
+        <Grid Grid.Row="1" Background="White">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -34,23 +34,23 @@
                 <Label Content="Informações Pessoais" FontSize="24"/>
 
 
-                <TextBox
+                <UniformGrid Columns="2" Margin="0 5">
+                    <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
-                    VerticalAlignment="Top"
+                    VerticalAlignment="Center"
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
-                    MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Código Livro" 
-                    x:Name="txtCodigo" Padding="2" Height="40" Width="80" HorizontalAlignment="Left" Margin="0 5 0 10" Cursor="IBeam" FontSize="18"/>
+                    materialDesign:HintAssist.Hint="Código" 
+                    x:Name="txtCodigo" Padding="8" Cursor="IBeam" Margin="0 0 5 0" FontSize="18"/>
 
-                <TextBox
+                    <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
-                    VerticalAlignment="Top"
+                    VerticalAlignment="Center"
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
-                    MaxWidth="400"
                     materialDesign:HintAssist.Hint="Titulo"
-                    x:Name="txtTitulo" Padding="2" Height="40" Width="270" Margin="90 -50 0 0" FontSize="18"/>
+                    x:Name="txtTitulo" Padding="8" FontSize="18"/>
+                </UniformGrid>
 
                 <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -70,13 +70,7 @@
                     materialDesign:HintAssist.Hint="Incrição Estadual"
                     x:Name="txtInscEstadual" Padding="8" FontSize="18"/>
 
-
-                <Label Content="Tipo" FontSize="24" Margin="7"/>
-
-                <StackPanel Orientation="Horizontal">
-                    <RadioButton x:Name="rdTipoPublica" GroupName="rdTipo" FontSize="18" Margin="10 0 50 0">Pública</RadioButton>
-                    <RadioButton x:Name="rdTipoPrivada" GroupName="rdTipo" FontSize="18">Privada</RadioButton>
-                </StackPanel>
+                <StackPanel Orientation="Horizontal"/>
 
                 <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
