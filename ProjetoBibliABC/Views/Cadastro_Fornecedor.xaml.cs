@@ -23,5 +23,10 @@ namespace ProjetoBibliABC.Views
         {
             InitializeComponent();
         }
+
+        private void btCancelar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
