@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowState="Maximized">
+        Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized">
     <Grid Margin="0,0,0,-203">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-               
+
 
             </LinearGradientBrush>
 
@@ -44,9 +44,24 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Label Content="Esqueceu a Senha? " HorizontalAlignment="Center"  Background="{x:Null}" Foreground="#DD04A8ED" RenderTransformOrigin="1.151,-0.94" FontFamily="Source Sans Pro Semibold" FontSize="15" Margin="0 9 0 0"/>
-                <Label Content="Novo? Cadastre-se aqui!" HorizontalAlignment="Center"  Background="{x:Null}" Foreground="#DD04A8ED" RenderTransformOrigin="1.151,-0.94" FontFamily="Source Sans Pro Semibold" FontSize="15"/>
 
+                <Button x:Name="btEsqueceuSenha" Content="Esqueceu a Senha?" HorizontalAlignment="Center" Foreground="#DD04A8ED" Margin="0,130,0,0"  Width="253" Cursor="Hand">
+                    <Button.BorderBrush>
+                        <ImageBrush/>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <ImageBrush/>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="btCadastrarFunc" Content="Novo? Cadastre-se aqui" HorizontalAlignment="Center" Foreground="#DD04A8ED"  Width="253" Cursor="Hand" Click="btCadastrarFunc_Click">
+                    <Button.BorderBrush>
+                        <ImageBrush/>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <ImageBrush/>
+                    </Button.Background>
+                </Button>
             </StackPanel>
 
         </StackPanel>
