@@ -14,15 +14,16 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="Cadastro_Funcionario" Height="1080" Width="1920" WindowState="Maximized">
-    <Grid Background="#FF0A114A">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition/>
             <RowDefinition Height="80" Cursor="IBeam"/>
         </Grid.RowDefinitions>
 
-
-        <Label Content="Cadastro de Funcionário" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" BorderBrush="White" Foreground="#DDFFFFFF" Height="50" Width="490"/>
+        <StackPanel  Background ="#FF0A114A" Grid.Row="0">
+            <Label Grid.Row="0"  Content="Cadastro de Funcionário" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="43"/>
+        </StackPanel>
 
         <Grid Grid.Row="1" Background="White">
             <Grid.ColumnDefinitions>
@@ -30,11 +31,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="0" Margin="15">
+            <StackPanel Grid.Column="0">
                 <Label Content="Informações Pessoais" FontSize="24"/>
 
-
-                <UniformGrid Columns="2" Margin="0 5">
+                <UniformGrid Columns="2" Margin="0 5 0 5">
                     <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     VerticalAlignment="Center"
@@ -48,50 +48,68 @@
                     VerticalAlignment="Center"
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="Titulo"
-                    x:Name="txtTitulo" Padding="8" FontSize="18"/>
+                    materialDesign:HintAssist.Hint="Nome Completo"
+                    x:Name="txtNome" Padding="8" FontSize="18" />
                 </UniformGrid>
 
-                <TextBox
+                <UniformGrid Columns="2" Margin="0 5 0 5">
+                    <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
-                    VerticalAlignment="Top"
+                    VerticalAlignment="Center"
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="CNPJ"
-                    x:Name="txtCNPJ" Padding="8" FontSize="18"/>
-
-                <TextBox
+                    materialDesign:HintAssist.Hint="CPF"
+                    x:Name="txtCPF" Padding="8" FontSize="18" Cursor="IBeam" HorizontalAlignment="Left" Width="400"/>
+                    <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
-                    VerticalAlignment="Top"
+                    VerticalAlignment="Center"
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Incrição Estadual"
-                    x:Name="txtInscEstadual" Padding="8" FontSize="18"/>
+                    materialDesign:HintAssist.Hint="RG"
+                    x:Name="txtRG" Padding="8" FontSize="18" Width="419" HorizontalAlignment="Left"/>
+                </UniformGrid>
 
-                <StackPanel Orientation="Horizontal"/>
-
-                <TextBox
+                <UniformGrid Columns="2" Margin="0 5 0 5">
+                    <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
-                    VerticalAlignment="Top"
+                    VerticalAlignment="Center"
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Respsável"
-                    x:Name="txtResponsavel" Padding="8" Margin="0" FontSize="18"/>
+                    materialDesign:HintAssist.Hint="Sexo"
+                    x:Name="txtSexo" Padding="8" FontSize="18" Cursor="IBeam" HorizontalAlignment="Left" Width="390"/>
 
-                <TextBox
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    VerticalAlignment="Top"
-                    AcceptsReturn="True"
-                    TextWrapping="Wrap"
-                    MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Telefone do Respsável"
-                    x:Name="txtResponsavelTelefone" Padding="8" Margin="5" FontSize="18"/>
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Telefone 1"
+                        x:Name="txtTelefone1" Padding="8" Margin="0 0 5 0" FontSize="18"/>
+                </UniformGrid>
 
+                <UniformGrid Columns="2" Margin="0 5 0 5">
+                    <DatePicker 
+                    x:Name="dtNasc"
+                    Style="{StaticResource MaterialDesignFilledDatePicker}"
+                    materialDesign:HintAssist.Hint="Data de Nascimento" Padding="10" Width="390" FontSize="18" HorizontalAlignment="Left"/>
+
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Telefone 2"
+                        x:Name="txtTelefone2" Padding="8" Margin="0 0 5 0" FontSize="18"/>
+                </UniformGrid>
 
             </StackPanel>
+
+
+
+
             <StackPanel Grid.Column="1" Margin="15">
                 <Label Content="Informações de Contato" FontSize="24"/>
 
@@ -101,15 +119,16 @@
                         VerticalAlignment="Top"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
-                        materialDesign:HintAssist.Hint="Telefone"
-                        x:Name="txtTelefone" Padding="8" Margin="0 0 5 0" FontSize="18"/>
+                        materialDesign:HintAssist.Hint="E-mail"
+                        x:Name="txtEmail" Padding="8" FontSize="18"/>
+
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
                         VerticalAlignment="Top"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
-                        materialDesign:HintAssist.Hint="E-mail"
-                        x:Name="txtEmail" Padding="8" FontSize="18"/>
+                        materialDesign:HintAssist.Hint="Senha"
+                        x:Name="txtSenha" Padding="8" Margin="0 0 5 0" FontSize="18"/>
                 </UniformGrid>
 
                 <Label Content="Informações de Localização" FontSize="24"/>
@@ -166,21 +185,7 @@
                         materialDesign:HintAssist.Hint="Estado"
                         x:Name="txtEstado" Padding="8" FontSize="18"/>
 
-                    <TextBox 
-                        Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
-                        AcceptsReturn="True"
-                        TextWrapping="Wrap"
-                        materialDesign:HintAssist.Hint="CEP"
-                        x:Name="txtCep" Padding="8" FontSize="18" Cursor="IBeam"/>
-
                 </UniformGrid>
-
-                <DatePicker 
-                    x:Name="dtCriacao"
-                    Style="{StaticResource MaterialDesignFilledDatePicker}"
-                    materialDesign:HintAssist.Hint="Data de Criação"/>
-
             </StackPanel>
         </Grid>
 
