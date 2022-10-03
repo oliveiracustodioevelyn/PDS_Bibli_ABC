@@ -19,7 +19,7 @@ namespace ProjetoBibliABC.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "INSERT INTO Curso VALUES (null, @titulo_obra,  @autor_obra, @dataPublicacao_obra, @localizacao_obra, @edicao_obra, @sinopse_obra);";
+                comando.CommandText = "INSERT INTO  Obras VALUES (null, @titulo_obra,  @autor_obra, @dataPublicacao_obra, @localizacao_obra, @edicao_obra, @sinopse_obra);";
 
                 comando.Parameters.AddWithValue("@titulo_obra", livro.TituloObra);
                 comando.Parameters.AddWithValue("@autor_obra", livro.AutorObra);
@@ -108,7 +108,7 @@ namespace ProjetoBibliABC.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "Update Curso set " +
+                comando.CommandText = "Update  Obras set " +
                "titulo_obra = @titulo, autor_obra = @autor, dataPublicacao_obra = @data, localizacao_obra = @localizacao, edicao_obra = @edicao, sinopse_obra = @sinopse" + " where id_cur = @id";
 
 

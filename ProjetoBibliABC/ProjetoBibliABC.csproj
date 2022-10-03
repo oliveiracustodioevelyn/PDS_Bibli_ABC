@@ -66,10 +66,15 @@
     </ApplicationDefinition>
     <Compile Include="DataBase\Conexao.cs" />
     <Compile Include="Helper\DAOHelper.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\FuncionarioDAO.cs" />
     <Compile Include="Models\Leitor.cs" />
     <Compile Include="Models\LeitorDAO.cs" />
+=======
+    <Compile Include="Models\Fornecedor.cs" />
+    <Compile Include="Models\FornecedorDAO.cs" />
+>>>>>>> 3a6d8787c4630353deddda3ab8a89c222797da5a
     <Compile Include="Models\Livro.cs" />
     <Compile Include="Models\LivroDAO.cs" />
     <Compile Include="Views\Alugar.xaml.cs">
