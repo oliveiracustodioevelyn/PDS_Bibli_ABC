@@ -17,12 +17,35 @@
                 <Label Grid.Row="0"  Content="Listagem de Livros" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="43"/>
             </StackPanel>
 
-            
-            
-     
-           
 
-            
+            <DataGrid Grid.Row="1" x:Name="dataGridAcervo" Margin="5" AutoGenerateColumns="False" CanUserAddRows="False"
+                  CanUserDeleteRows="False" IsReadOnly="True" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Título Livro" Binding="{Binding TituloObra}"/>
+                    <DataGridTextColumn Header="Gênero" Binding="{Binding GeneroL}" />
+                    <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" />
+
+                    <DataGridTemplateColumn Header="Ações">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+
+                                    <Button Content="Atualizar registro" Margin="5 0" />
+                                    <Button Content="Excluir registro" />
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                </DataGrid.Columns>
+
+            </DataGrid>
+
+
+
         </Grid>
         </Grid>
 </Window>
