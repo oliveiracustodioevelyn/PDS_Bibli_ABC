@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC.Views"
         mc:Ignorable="d"
-        Title="Listagem_Avervo" Height="450" Width="800" WindowState="Maximized">
+        Title="Listagem_Avervo"  Height="1080" Width="1920" WindowState="Maximized">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -13,18 +13,16 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Label Grid.Row="0" Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
+            <StackPanel  Background ="#FF0A114A" Grid.Row="0">
+                <Label Grid.Row="0"  Content="Listagem de Livros" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="43"/>
+            </StackPanel>
 
+            
+            
+     
+           
 
-            <Grid Grid.Row="1"  Background="#ffffd7">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="0*"/>
-                    <ColumnDefinition Width="386*"/>
-
-                </Grid.ColumnDefinitions>
-
-            </Grid>
+            
         </Grid>
         </Grid>
 </Window>
