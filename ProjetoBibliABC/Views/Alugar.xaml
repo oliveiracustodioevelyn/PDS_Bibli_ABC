@@ -4,32 +4,41 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        Title="Alugar" Height="450" Width="800" WindowState="Maximized">
+        Title="Alugar" Height="1080" Width="1920" WindowState="Maximized">
     <Grid>
         <Grid>
-
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition/>
+                <RowDefinition Height="80" Cursor="IBeam"/>
             </Grid.RowDefinitions>
 
-            <Label Grid.Row="0" Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
+            <StackPanel  Background ="#FF0A114A" Grid.Row="0">
+                <Label Grid.Row="0"  Content="Alugar" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="61"/>
+            </StackPanel>
 
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="15">
 
-            <Grid Grid.Row="1">
-                <Grid.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    </LinearGradientBrush>
-                </Grid.Background>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="0*"/>
-                    <ColumnDefinition Width="305*"/>
+                <StackPanel Orientation="Horizontal">
+                  
+                    <DatePicker 
+                    x:Name="dtAtual"
+                    Style="{StaticResource MaterialDesignFilledDatePicker}"
+                    materialDesign:HintAssist.Hint="Data de Atual" Padding="10" Width="260" FontSize="18"/>
 
-                </Grid.ColumnDefinitions>
-            </Grid>
-
+                </StackPanel>
+               
+            </StackPanel>
+            
         </Grid>
     </Grid>
 </Window>

@@ -66,6 +66,8 @@
     </ApplicationDefinition>
     <Compile Include="DataBase\Conexao.cs" />
     <Compile Include="Helper\DAOHelper.cs" />
+    <Compile Include="Models\Fornecedor.cs" />
+    <Compile Include="Models\FornecedorDAO.cs" />
     <Compile Include="Models\Livro.cs" />
     <Compile Include="Models\LivroDAO.cs" />
     <Compile Include="Views\Alugar.xaml.cs">

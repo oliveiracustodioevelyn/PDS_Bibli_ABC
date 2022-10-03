@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="Listagem_Fornecedor" Height="1080" Width="1920">
     <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel  Background ="#FF0A114A" Grid.Row="0">
+                <Label Grid.Row="0"  Content="Listagem Fornecedor" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="43"/>
+            </StackPanel>
+
+        </Grid>
         
     </Grid>
 </Window>
