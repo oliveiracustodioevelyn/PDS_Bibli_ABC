@@ -34,14 +34,14 @@
             <StackPanel Grid.Column="0">
                 <Label Content="Informações Pessoais" FontSize="24"/>
 
-                <UniformGrid Columns="2" Margin="0 5 0 5">
+                <UniformGrid Columns="2" Margin="25 5" Width="910">
                     <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     VerticalAlignment="Center"
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     materialDesign:HintAssist.Hint="Código" 
-                    x:Name="txtCodigo" Padding="8" Cursor="IBeam" Margin="0 0 5 0" FontSize="18"/>
+                    x:Name="txtCodigo" Padding="8" FontSize="18" Cursor="IBeam" HorizontalAlignment="Left" Width="200"/>
 
                     <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -49,10 +49,10 @@
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     materialDesign:HintAssist.Hint="Nome Completo"
-                    x:Name="txtNome" Padding="8" FontSize="18" />
+                    x:Name="txtNome" Padding="8" FontSize="18" Margin="-247,0,55,0" />
                 </UniformGrid>
 
-                <UniformGrid Columns="2" Margin="0 5 0 5">
+                <UniformGrid Columns="2" Margin="25 5">
                     <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     VerticalAlignment="Center"
@@ -68,10 +68,10 @@
                     TextWrapping="Wrap"
                     MaxWidth="400"
                     materialDesign:HintAssist.Hint="RG"
-                    x:Name="txtRG" Padding="8" FontSize="18" Width="419" HorizontalAlignment="Left"/>
+                    x:Name="txtRG" Padding="8" FontSize="18" Cursor="IBeam" HorizontalAlignment="Left" Width="400"/>
                 </UniformGrid>
 
-                <UniformGrid Columns="2" Margin="0 5 0 5">
+                <UniformGrid Columns="2" Margin="25 5">
                     <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     VerticalAlignment="Center"
@@ -79,7 +79,7 @@
                     TextWrapping="Wrap"
                     MaxWidth="400"
                     materialDesign:HintAssist.Hint="Sexo"
-                    x:Name="txtSexo" Padding="8" FontSize="18" Cursor="IBeam" HorizontalAlignment="Left" Width="390"/>
+                    x:Name="txtSexo" Padding="8" FontSize="18" Cursor="IBeam" HorizontalAlignment="Left" Width="400"/>
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -87,14 +87,14 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Telefone 1"
-                        x:Name="txtTelefone1" Padding="8" Margin="0 0 5 0" FontSize="18"/>
+                        x:Name="txtTelefone1" Padding="8" FontSize="18" Cursor="IBeam" HorizontalAlignment="Left" Width="400"/>
                 </UniformGrid>
 
-                <UniformGrid Columns="2" Margin="0 5 0 5">
+                <UniformGrid Columns="2" Margin="25 5">
                     <DatePicker 
                     x:Name="dtNasc"
                     Style="{StaticResource MaterialDesignFilledDatePicker}"
-                    materialDesign:HintAssist.Hint="Data de Nascimento" Padding="10" Width="390" FontSize="18" HorizontalAlignment="Left"/>
+                    materialDesign:HintAssist.Hint="Data de Nascimento" Padding="10" Width="400" FontSize="18" HorizontalAlignment="Left"/>
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -102,7 +102,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Telefone 2"
-                        x:Name="txtTelefone2" Padding="8" Margin="0 0 5 0" FontSize="18"/>
+                        x:Name="txtTelefone2" Padding="8" FontSize="18" Cursor="IBeam" HorizontalAlignment="Left" Width="400"/>
                 </UniformGrid>
 
             </StackPanel>
@@ -116,11 +116,11 @@
                 <UniformGrid Columns="2" Margin="0 5">
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="E-mail"
-                        x:Name="txtEmail" Padding="8" FontSize="18"/>
+                        x:Name="txtEmail" Padding="8" FontSize="18" Width="456"/>
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
