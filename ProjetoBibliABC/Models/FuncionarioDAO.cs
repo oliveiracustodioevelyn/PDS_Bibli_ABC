@@ -24,7 +24,7 @@ namespace ProjetoBibliABC.Models
                 comando.Parameters.AddWithValue("@titulo_obra", livro.TituloObra);
                 comando.Parameters.AddWithValue("@autor_obra", livro.AutorObra);
                 comando.Parameters.AddWithValue("@dataPublicacao_obra", livro.DataPublicacao);
-                comando.Parameters.AddWithValue("@localizacao_obra", livro.LocalizacaoObra);
+           
                 comando.Parameters.AddWithValue("@edicao_obra", livro.EdicaoObra);
                 comando.Parameters.AddWithValue("@sinopse_obra", livro.SinopseObra);
 
@@ -60,7 +60,7 @@ namespace ProjetoBibliABC.Models
                     livro.TituloObra = DAOHelper.GetString(reader, "titulo_obra");
                     livro.AutorObra = DAOHelper.GetString(reader, "autor_obra");
                     livro.DataPublicacao = DAOHelper.GetDateTime(reader, "dataPublicacao_obra");
-                    livro.LocalizacaoObra = DAOHelper.GetString(reader, "localizacao_obra");
+                   
                     livro.EdicaoObra = DAOHelper.GetString(reader, "edicao_obra");
                     livro.SinopseObra = DAOHelper.GetString(reader, "sinopse_obra");
 
