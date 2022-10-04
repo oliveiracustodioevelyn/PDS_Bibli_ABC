@@ -120,7 +120,7 @@
                         </Button.Template>
                     </Button>
 
-                    <Button x:Name="btLimpar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="61" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A">
+                    <Button x:Name="btLimpar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="61" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A" Click="btLimpar_Click">
                         <Button.Template>
                             <ControlTemplate>
                                 <Border CornerRadius="15" Background="#FFFFC850">
@@ -129,7 +129,7 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-                    <Button x:Name="btSalvar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black"  FontFamily="Arial Black" Height="59" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A">
+                    <Button x:Name="btSalvar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black"  FontFamily="Arial Black" Height="59" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A" Click="btSalvar_Click">
                         <Button.Template>
                             <ControlTemplate>
                                 <Border CornerRadius="15" Background="#FFFFC850">
