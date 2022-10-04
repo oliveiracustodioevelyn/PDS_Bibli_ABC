@@ -27,6 +27,7 @@ namespace ProjetoBibliABC.Views
             InitializeComponent();
             CbEditora.Items.Add("1");
             CbEditora.Items.Add("2");
+            CbTipo.Items.Add("");
         }
 
         private void Cadastro_Livro_Loaded(object sender, RoutedEventArgs e)
@@ -35,6 +36,9 @@ namespace ProjetoBibliABC.Views
             txtEdicao.Text = _livro.EdicaoObra;
             txtSinopse.Text = _livro.SinopseObra;
             txtTitulo.Text = _livro.TituloObra;
+            txtEdicao.Text = _livro.EdicaoObra;
+           // txtExemplar.Text = _livro.NumExemplar;
+           //txtPrateleira.Text = _livro
            
         }
 
@@ -74,7 +78,13 @@ namespace ProjetoBibliABC.Views
             _livro.AutorObra = txtAutor.Text;
             _livro.EdicaoObra = txtEdicao.Text;
             _livro.TituloObra = txtTitulo.Text;
-
+            _livro.NumExemplar = Convert.ToInt32(txtExemplar.Text);
+            _livro.NumPagina = Convert.ToInt32(txtNumPag.Text);
+            _livro.EditoraObra = Convert.ToString(CbEditora);
+           _livro.Genero = txtGenero.Text;
+            _livro.Tipo = Convert.ToString(CbTipo);
+            _livro.DataPublicacao = dtPublicacao.SelectedDate;
+           
 
             try
             {
@@ -83,13 +93,13 @@ namespace ProjetoBibliABC.Views
                 if (_livro.Id > 0)
                 {
                     dao.Update(_livro);
-                    MessageBox.Show("Registro de curso atualizado com sucesso");
+                    MessageBox.Show("Registro do livro atualizado com sucesso");
                 }
                 else
                 {
                     dao.Insert(_livro);
 
-                    MessageBox.Show("Registro de escola cadastrado com sucesso.");
+                    MessageBox.Show("Registro do livro cadastrado com sucesso.");
                 }
 
             }
