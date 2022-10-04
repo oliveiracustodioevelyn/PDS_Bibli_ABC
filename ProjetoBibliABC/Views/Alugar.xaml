@@ -26,50 +26,57 @@
                 <Label Grid.Row="0"  Content="Alugar" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="61"/>
             </StackPanel>
 
-            <StackPanel Grid.Row="1" Grid.Column="0" Margin="15">
-
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,0,30,30">
                 <StackPanel Orientation="Horizontal">
 
-                    <DatePicker 
-                    x:Name="dtAtual"
-                    Style="{StaticResource MaterialDesignFilledDatePicker}"
-                        Margin="18 0 0 0"
-                    materialDesign:HintAssist.Hint="Data de Vigência" Padding="10" Width="260" FontSize="18"/>
-                    <DatePicker 
-                    x:Name="dtDevolucao"
-                    Style="{StaticResource MaterialDesignFilledDatePicker}"
-                        Margin="35"
-                    materialDesign:HintAssist.Hint="Data de Devolução" Padding="10" Width="260" FontSize="18"/>
-
-
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
 
                     <TextBox 
-                        Grid.Column="1"
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    materialDesign:HintAssist.Hint="Cod. Livro"
+                        Margin="20 30 0 0"
+                    x:Name="txtCodigo" Padding="10" Cursor="IBeam" FontSize="18" Width="114"/>
+
+
+                    <TextBox
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Livro"
-                        Margin="17 0 0 0"
-                        x:Name="txtPesqLivro" Padding="10" FontSize="18" Width="670" />
+                        Margin="30 30 0 0"
+                        x:Name="txtPesqLeitor_Copy" Padding="10" FontSize="18" Width="524" Cursor="IBeam" Height="69" />
+                    <Button x:Name="btBuscarL" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="62" Width="151" FontSize="20" FontWeight="Normal">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="15" Background="#FFFFC850">
+
+                                    <TextBlock Text="Buscar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" Foreground="#FF0A114A"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
                     <TextBox 
-                        Grid.Column="1"
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    materialDesign:HintAssist.Hint="Cod. Livro"
+                        Margin="20 20 0 0"
+                    x:Name="txtCodigoLivro" Padding="10" Cursor="IBeam" FontSize="18" Width="114" Height="68"/>
+
+                    <TextBox
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Leitor"
-                        Margin="77 0 0 0"
-                        x:Name="txtPesqLeitor" Padding="10" FontSize="18" Width="670" />
+                        Margin="30 20 0 0"
+                        x:Name="txtPesqLivro" Padding="10" FontSize="18" Width="524" Height="69" Cursor="IBeam" />
 
-                </StackPanel>
-
-                <StackPanel Orientation="Horizontal">
-                    <Button x:Name="btBuscarLivro" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="48" Width="151" FontSize="20" FontWeight="Normal"
-                            
-                            Margin="20 30 20 0">
+                    <Button x:Name="btBuscarLeitor" Cursor="Hand" Foreground="Black" Margin="10" FontFamily="Arial Black" Height="48" Width="151" FontSize="20" FontWeight="Normal">
                         <Button.Template>
                             <ControlTemplate>
                                 <Border CornerRadius="15" Background="#FFFFC850">
@@ -79,18 +86,23 @@
                         </Button.Template>
                     </Button>
 
-                    <Button x:Name="btBuscarLeitor" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="48" Width="151" FontSize="20" FontWeight="Normal"
-                            
-                            Margin="580 30 20 0">
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Border CornerRadius="15" Background="#FFFFC850">
-                                    <TextBlock Text="Buscar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" Foreground="#FF0A114A"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
                 </StackPanel>
+                <ComboBox 
+                    Style="{StaticResource MaterialDesignFilledComboBox}"
+                    materialDesign:HintAssist.Hint="Quant dias aluguel" FontSize="18" Width="276" Height="58"/>
+
+                <StackPanel Orientation="Horizontal"/>
+                
+                <DatePicker 
+                    x:Name="dtAtual"
+                    Style="{StaticResource MaterialDesignFilledDatePicker}"
+                    materialDesign:HintAssist.Hint="Data de Vigência" Padding="10" Width="260" FontSize="18"/>
+               
+                <DatePicker 
+                    x:Name="dtDevolucao"
+                    Style="{StaticResource MaterialDesignFilledDatePicker}"
+                    materialDesign:HintAssist.Hint="Data de Devolução" Padding="10" Width="260" FontSize="18"/>
+
 
 
             </StackPanel>
