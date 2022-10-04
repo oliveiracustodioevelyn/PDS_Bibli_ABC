@@ -84,7 +84,6 @@ CREATE TABLE Obras(
 cod_obra int primary key auto_increment,
 titulo_obra varchar(100),
 dataPublicacao_obra date,
-ano_obra date,
 num_exemplar_obra int,
 editora_obra varchar(100),
 num_paginas_obra int,
