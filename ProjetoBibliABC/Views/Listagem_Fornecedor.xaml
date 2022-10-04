@@ -14,8 +14,33 @@
             </Grid.RowDefinitions>
 
             <StackPanel  Background ="#FF0A114A" Grid.Row="0">
-                <Label Grid.Row="0"  Content="Listagem Fornecedor" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="43"/>
+                <Label Grid.Row="0"  Content="Listagem Fornecedor" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="56"/>
             </StackPanel>
+
+            <DataGrid Grid.Row="1" x:Name="dataGridAcervo" Margin="5" AutoGenerateColumns="False" CanUserAddRows="False"
+                  CanUserDeleteRows="False" IsReadOnly="True" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Fornecedor" Binding="{Binding Fornecedor}"/>
+                   
+
+                    <DataGridTemplateColumn Header="Ações">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+
+                                    <Button Content="Atualizar registro" Margin="5 0" />
+                                    <Button Content="Excluir registro" />
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                </DataGrid.Columns>
+
+            </DataGrid>
 
         </Grid>
         

@@ -29,16 +29,110 @@
             <StackPanel Grid.Row="1" Grid.Column="0" Margin="15">
 
                 <StackPanel Orientation="Horizontal">
-                  
+
                     <DatePicker 
                     x:Name="dtAtual"
                     Style="{StaticResource MaterialDesignFilledDatePicker}"
-                    materialDesign:HintAssist.Hint="Data de Atual" Padding="10" Width="260" FontSize="18"/>
+                        Margin="18 0 0 0"
+                    materialDesign:HintAssist.Hint="Data de Vigência" Padding="10" Width="260" FontSize="18"/>
+                    <DatePicker 
+                    x:Name="dtDevolucao"
+                    Style="{StaticResource MaterialDesignFilledDatePicker}"
+                        Margin="35"
+                    materialDesign:HintAssist.Hint="Data de Devolução" Padding="10" Width="260" FontSize="18"/>
+
 
                 </StackPanel>
-               
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBox 
+                        Grid.Column="1"
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Livro"
+                        Margin="17 0 0 0"
+                        x:Name="txtPesqLivro" Padding="10" FontSize="18" Width="670" />
+                    <TextBox 
+                        Grid.Column="1"
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Leitor"
+                        Margin="77 0 0 0"
+                        x:Name="txtPesqLeitor" Padding="10" FontSize="18" Width="670" />
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btBuscarLivro" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="48" Width="151" FontSize="20" FontWeight="Normal"
+                            
+                            Margin="20 30 20 0">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="15" Background="#FFFFC850">
+                                    <TextBlock Text="Buscar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" Foreground="#FF0A114A"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button x:Name="btBuscarLeitor" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="48" Width="151" FontSize="20" FontWeight="Normal"
+                            
+                            Margin="580 30 20 0">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="15" Background="#FFFFC850">
+                                    <TextBlock Text="Buscar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" Foreground="#FF0A114A"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+
+
             </StackPanel>
-            
+
+            <Grid Grid.Row="2" HorizontalAlignment="Center" Width="750">
+                <StackPanel Orientation="Horizontal" Background="White">
+                    <UniformGrid Grid.Row="2" Columns="3">
+
+                        <Button x:Name="btCancelar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="60" Width="211" FontSize="20" FontWeight="Normal"
+                            
+                            Margin="20 0 20 0">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Border CornerRadius="15" Background="#FFFFC850">
+                                        <TextBlock Text="Cancelar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" Foreground="#FF0A114A"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <Button x:Name="btLimpar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="61" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Border CornerRadius="15" Background="#FFFFC850">
+                                        <TextBlock Text="Limpar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" Foreground="#FF0A114A"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <Button x:Name="btSalvar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black"  FontFamily="Arial Black" Height="59" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A" >
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Border CornerRadius="15" Background="#FFFFC850">
+                                        <TextBlock Text="Salvar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" Foreground="#FF0A114A"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </UniformGrid>
+                </StackPanel>
+            </Grid>
         </Grid>
+
     </Grid>
 </Window>
