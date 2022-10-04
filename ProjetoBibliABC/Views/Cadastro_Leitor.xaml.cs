@@ -44,7 +44,7 @@ namespace ProjetoBibliABC.Views
             txtEmail.Text = _leitor.Email;
             txtTelefone.Text = _leitor.Telefone;
             dtDataNasc.SelectedDate = _leitor.DataNascimento;
-            txtRua.Text = _leitor.Endereco;
+            //txtRua.Text = _leitor.Endereco;
         }
 
         /*public Cadastro_Leitor()
@@ -66,7 +66,7 @@ namespace ProjetoBibliABC.Views
             _leitor.Email = txtEmail.Text;
             _leitor.Telefone = txtTelefone.Text;
             _leitor.DataNascimento = dtDataNasc.SelectedDate;
-            _leitor.Endereco = txtRua.Text;
+            //_leitor.Endereco = txtRua.Text;
 
             try
             {
