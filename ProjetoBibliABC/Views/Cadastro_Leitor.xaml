@@ -21,21 +21,25 @@
             <RowDefinition/>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-
-        </Grid.ColumnDefinitions>
-
+      
 
         <StackPanel  Background ="#FF0A114A" Grid.Row="0">
             <Label Grid.Row="0"  Content="Cadastro de Leitor" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="43"/>
         </StackPanel>
 
+       
 
         <!--TEXTOS DA ESQUERDA-->
-        <StackPanel Grid.Row="1" Background="White" Margin="15,15,15,15">
+        <Grid Grid.Row="1" Background="#FFFFFF">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-            <UniformGrid Columns="1" Margin="0 5">
+            <StackPanel Grid.Column="0" Margin="15">
+                <Label Content="Informações do Leitor" HorizontalAlignment="Center" FontSize="24"/>
+
+                <UniformGrid Columns="1" >
 
                 <StackPanel Orientation="Horizontal">
                     <TextBox
@@ -43,68 +47,80 @@
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     materialDesign:HintAssist.Hint="Código de Acesso"
-                    x:Name="txtCodAce" Padding="8" Margin="0 0 20 0" Cursor="IBeam" FontSize="18" Width="170"/>
-                </StackPanel>
+                    x:Name="txtCodAce" Padding="10" Margin="0 0 10 10" FontSize="18" Width="170"/>
 
-
-                <TextBox 
+                        <TextBox 
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     VerticalAlignment="Center"
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     materialDesign:HintAssist.Hint="Nome Completo"
-                    x:Name="txtNomeCompleto" Padding="8" Cursor="IBeam" FontSize="18"/>
-                <TextBox 
+                    x:Name="txtNomeCompleto" Padding="10" Margin="0 0 10 10" FontSize="18" Width="750"/>
+                    
+                    </StackPanel>
+
+                    <UniformGrid Columns="2">
+
+                        <TextBox 
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     VerticalAlignment="Top"
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     materialDesign:HintAssist.Hint="CPF"
-                    x:Name="txtCPF" Padding="8" Cursor="IBeam" FontSize="18"/>
+                    x:Name="txtCPF" Padding="10"  FontSize="18" Margin="0 0 0 0"/>
 
-                <TextBox 
+                        <TextBox 
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     VerticalAlignment="Top"
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     materialDesign:HintAssist.Hint="RG"
-                    x:Name="txtRG" Padding="8" Cursor="IBeam" FontSize="18"/>
+                    x:Name="txtRG" Padding="10"  FontSize="18" Margin="10 0 0 0"/>
 
-                <TextBox 
+
+                    </UniformGrid>
+
+                    <TextBox 
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     VerticalAlignment="Top"
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     materialDesign:HintAssist.Hint="E-mail"
-                    x:Name="txtEmail" Padding="8" Cursor="IBeam" FontSize="18"/>
-                <TextBox 
+                    x:Name="txtEmail" Padding="10" Cursor="IBeam" FontSize="18"/>
+
+                    <UniformGrid Columns="2">
+                        <TextBox 
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     VerticalAlignment="Top"
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     materialDesign:HintAssist.Hint="Telefone"
-                    x:Name="txtTelefone" Padding="8" Cursor="IBeam" FontSize="18"/>
+                    x:Name="txtTelefone" Padding="10" Cursor="IBeam" FontSize="18"/>
+
+                        <ComboBox 
+                    Style="{StaticResource MaterialDesignFilledComboBox}"
+                    materialDesign:HintAssist.Hint="Sexo" FontSize="18" Margin="10 0 0 0" Padding="8"/>
+                        
+                    </UniformGrid>
+                    
+               
 
                 <DatePicker 
                     x:Name="dtDataNasc"
                     Style="{StaticResource MaterialDesignFilledDatePicker}"
-                    materialDesign:HintAssist.Hint="Data de Nascimento" FontSize="18"/>
+                    materialDesign:HintAssist.Hint="Data de Nascimento" Padding="10" FontSize="18"/>
 
-                <ComboBox 
-                    Style="{StaticResource MaterialDesignFilledComboBox}"
-                    materialDesign:HintAssist.Hint="Sexo" FontSize="18"/>
-
-                <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    VerticalAlignment="Top"
-                    AcceptsReturn="True"
-                    TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="Rua"
-                    x:Name="txtRua" Padding="8" Cursor="IBeam" FontSize="18"/>
+              
+              
             </UniformGrid>
 
 
-        </StackPanel>
+                <ComboBox 
+                    Style="{StaticResource MaterialDesignFilledComboBox}"
+                    materialDesign:HintAssist.Hint="Função" FontSize="18" Margin="0 10 0 0" x:Name ="cbFuncao" Padding="8"/>
+
+            </StackPanel>
+        </Grid>
 
         <Grid Grid.Row="2" HorizontalAlignment="Center" Width="750">
             <StackPanel Orientation="Horizontal" Background="White">

@@ -25,9 +25,6 @@
             <Label Grid.Row="0"  Content="Cadastro de Editora" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="43"/>
         </StackPanel>
 
-
-
-
         <Grid Grid.Row="1" Background="#FFFFFF">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -39,28 +36,28 @@
 
                 <Grid Margin="0 5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="3.*"/>
+                        <ColumnDefinition Width="233*"/>
+                        <ColumnDefinition Width="180*"/>
+                        <ColumnDefinition Width="517*"/>
 
                     </Grid.ColumnDefinitions>
 
                     <TextBox 
                         Grid.Column="0"
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Código"
-                        x:Name="txtCodigo" Padding="10" Margin="0 0 5 0" FontSize="18" />
+                        x:Name="txtCodigo" Padding="10" Margin="0,0,4,0" FontSize="18" />
 
-                    <TextBox 
-                        Grid.Column="1"
+                    <TextBox
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Razao Social"
-                        x:Name="txtRazaoSoc" Padding="10" FontSize="18" />
+                        x:Name="txtRazaoSoc" Padding="10" FontSize="18" Grid.ColumnSpan="3" Margin="232,0,0,0" />
                 </Grid>
 
 
