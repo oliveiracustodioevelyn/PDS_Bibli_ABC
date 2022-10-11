@@ -109,6 +109,9 @@ namespace ProjetoBibliABC.Views
             }
         }
 
+        private void txtCodigo_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
+        }
     }
 }
