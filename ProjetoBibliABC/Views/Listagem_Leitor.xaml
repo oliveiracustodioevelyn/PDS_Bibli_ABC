@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC.Views"
         mc:Ignorable="d"
-        Title="Listagem_Leitor" Height="450" Width="800" WindowState="Maximized">
+        Title="Listagem_Leitor" Height="1020" Width="1920" WindowState="Maximized">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -13,29 +13,36 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Label Grid.Row="0" Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
+            <StackPanel  Background ="#FF0A114A" Grid.Row="0">
+                <Label Grid.Row="0"  Content="Listagem Leitor" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="57"/>
+            </StackPanel>
+
+            <DataGrid Grid.Row="1" x:Name="dataGridAcervo" Margin="5" AutoGenerateColumns="False" CanUserAddRows="False"
+                  CanUserDeleteRows="False" IsReadOnly="True" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Leitor" Binding="{Binding Leitor}"/>
 
 
-            <Grid Grid.Row="1"  Background="#ffffd7">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="0*"/>
-                    <ColumnDefinition Width="386*"/>
+                    <DataGridTemplateColumn Header="Ações">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
 
-                </Grid.ColumnDefinitions>
+                                    <Button Content="Atualizar registro" Margin="5 0" />
+                                    <Button Content="Excluir registro" />
 
-                <StackPanel Margin="1" Background="#e6e8bf">
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
 
-                    <Image Height="100" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
+                </DataGrid.Columns>
 
-                    <Button x:Name="btMenuInicial" Content="Menu Inicial" Margin="5 14 5 0" Height="29" />
-                    <Button x:Name="btCadastrarLivro" Content="Cadastrar Livro" Margin="5 4 5 0"  Height="29" />
-                    <Button x:Name="btCadastrarFornecedor" Content="Cadastrar Fornecedor" Margin="5 4 5 0"  Height="29" />
-                    <Button x:Name="btCadastrarLeitor" Content="Cadastrar Leitor" Margin="5 4 5 0" Height="29" />
-                    <Button x:Name="btDevolucao" Content="Devolução" Margin="5 4 5 0" Height="29" />
+            </DataGrid>
 
-                </StackPanel>
-            </Grid>
         </Grid>
+
     </Grid>
 </Window>

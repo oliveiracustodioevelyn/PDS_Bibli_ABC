@@ -32,5 +32,11 @@ namespace ProjetoBibliABC
             menu.Show();
             this.Close();
         }
+
+        private void btCadastrarFunc_Click(object sender, RoutedEventArgs e)
+        {
+            Cadastro_Funcionario func = new Cadastro_Funcionario();
+            func.Show();
+        }
     }
 }
