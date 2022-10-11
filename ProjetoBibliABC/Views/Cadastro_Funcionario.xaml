@@ -84,8 +84,8 @@
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Respsável"
-                    x:Name="txtResponsavel" Padding="8" Margin="0"/>
+                    materialDesign:HintAssist.Hint="Responsável"
+                    x:Name="txtResponsavel" Padding="8" Margin="0" Cursor="IBeam"/>
 
                 <TextBox
                     Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -93,8 +93,8 @@
                     AcceptsReturn="True"
                     TextWrapping="Wrap"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Telefone do Respsável"
-                    x:Name="txtResponsavelTelefone" Padding="8" Margin="5"/>
+                    materialDesign:HintAssist.Hint="Telefone do Responsável"
+                    x:Name="txtResponsavelTelefone" Padding="8" Margin="5" Cursor="IBeam"/>
 
 
             </StackPanel>
