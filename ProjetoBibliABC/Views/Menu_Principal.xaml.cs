@@ -90,5 +90,11 @@ namespace ProjetoBibliABC.Views
             Listagem_Fornecedor forn = new Listagem_Fornecedor();
             forn.ShowDialog();
         }
+
+        private void btPerfil_Funcionario_Click(object sender, RoutedEventArgs e)
+        {
+            Listagem_Funcionario lis = new Listagem_Funcionario();
+            lis.ShowDialog();
+        }
     }
 }
