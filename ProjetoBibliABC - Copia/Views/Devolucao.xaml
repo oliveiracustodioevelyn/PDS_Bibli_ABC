@@ -1,0 +1,23 @@
+﻿<Window x:Class="ProjetoBibliABC.Views.Devolucao"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetoBibliABC.Views"
+        mc:Ignorable="d"
+        Title="Devolucao" Height="450" Width="800" WindowState="Maximized">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
+
+
+            
+          
+        </Grid>
+    </Grid>
+</Window>
