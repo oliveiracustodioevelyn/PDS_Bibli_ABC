@@ -1,0 +1,48 @@
+﻿<Window x:Class="ProjetoBibliABC.Views.Listagem_Fornecedor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetoBibliABC.Views"
+        mc:Ignorable="d"
+        Title="Listagem_Fornecedor" Height="1080" Width="1920">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel  Background ="#FF0A114A" Grid.Row="0">
+                <Label Grid.Row="0"  Content="Listagem Fornecedor" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="56"/>
+            </StackPanel>
+
+            <DataGrid Grid.Row="1" x:Name="dataGridAcervo" Margin="5" AutoGenerateColumns="False" CanUserAddRows="False"
+                  CanUserDeleteRows="False" IsReadOnly="True" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Fornecedor" Binding="{Binding Fornecedor}"/>
+                   
+
+                    <DataGridTemplateColumn Header="Ações">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+
+                                    <Button Content="Atualizar registro" Margin="5 0" />
+                                    <Button Content="Excluir registro" />
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                </DataGrid.Columns>
+
+            </DataGrid>
+
+        </Grid>
+        
+    </Grid>
+</Window>
