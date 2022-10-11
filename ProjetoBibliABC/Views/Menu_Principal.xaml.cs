@@ -62,33 +62,18 @@ namespace ProjetoBibliABC.Views
 
         private void btDevolução_Click(object sender, RoutedEventArgs e)
         {
-            Devolucao dev = new Devolucao();
-            dev.ShowDialog();
+          
+        }
+
+        private void btFavoritos_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void btFuncionario_Click(object sender, RoutedEventArgs e)
         {
-            Listagem_Funcionario cad = new Listagem_Funcionario();
+            Cadastro_Funcionario cad = new Cadastro_Funcionario();
             cad.ShowDialog();
-        }
-
-        private void btListaLivro_Click(object sender, RoutedEventArgs e)
-        {
-            Listagem_Avervo ca = new Listagem_Avervo();
-                ca.ShowDialog();
-
-        }
-
-        private void btListaLeitor_Click(object sender, RoutedEventArgs e)
-        {
-            Listagem_Leitor lei = new Listagem_Leitor();
-            lei.ShowDialog();
-        }
-
-        private void btListaFornecedor_Click(object sender, RoutedEventArgs e)
-        {
-            Listagem_Fornecedor forn = new Listagem_Fornecedor();
-            forn.ShowDialog();
         }
     }
 }

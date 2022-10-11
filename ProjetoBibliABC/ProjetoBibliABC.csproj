@@ -43,7 +43,6 @@
     <Reference Include="MaterialDesignThemes.Wpf, Version=4.1.0.2556, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>packages\MaterialDesignThemes.4.1.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -64,16 +63,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DataBase\Conexao.cs" />
-    <Compile Include="Helper\DAOHelper.cs" />
-    <Compile Include="Models\Funcionario.cs" />
-    <Compile Include="Models\FuncionarioDAO.cs" />
-    <Compile Include="Models\Leitor.cs" />
-    <Compile Include="Models\LeitorDAO.cs" />
-    <Compile Include="Models\Fornecedor.cs" />
-    <Compile Include="Models\FornecedorDAO.cs" />
-    <Compile Include="Models\Livro.cs" />
-    <Compile Include="Models\LivroDAO.cs" />
     <Compile Include="Views\Alugar.xaml.cs">
       <DependentUpon>Alugar.xaml</DependentUpon>
     </Compile>
@@ -94,9 +83,6 @@
     </Compile>
     <Compile Include="Views\Listagem_Acervo.xaml.cs">
       <DependentUpon>Listagem_Acervo.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Listagem_Fornecedor.xaml.cs">
-      <DependentUpon>Listagem_Fornecedor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Listagem_Funcionario.xaml.cs">
       <DependentUpon>Listagem_Funcionario.xaml</DependentUpon>
@@ -150,10 +136,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Listagem_Fornecedor.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\Listagem_Funcionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -198,7 +180,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DataBase\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagens\logo.png" />
   </ItemGroup>
@@ -237,36 +223,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\logoo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagens\modeloLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="modeloLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagens\forma1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="forma1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="inimaginavel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="melhor.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagens\consegui.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="consegui.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagens\ultima.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="ultima.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets')" />

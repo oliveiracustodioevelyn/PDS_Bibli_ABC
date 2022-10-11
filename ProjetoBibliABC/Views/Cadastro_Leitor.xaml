@@ -5,157 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC.Views"
         mc:Ignorable="d"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        TextElement.FontWeight="Regular"
-        TextElement.FontSize="13"
-        TextOptions.TextFormattingMode="Ideal" 
-        TextOptions.TextRenderingMode="Auto"        
-        Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Cadastro_Leitor" Height="1080" Width="1920" WindowState="Maximized">
+        Title="Cadastro_Leitor" Height="450" Width="800" WindowState="Maximized">
     <Grid>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
-            <RowDefinition/>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-      
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-        <StackPanel  Background ="#FF0A114A" Grid.Row="0">
-            <Label Grid.Row="0"  Content="Cadastro de Leitor" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="43"/>
+        <Label Grid.Row="0" Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
+        <StackPanel Grid.Row="1" Grid.Column="0" Background="#e6e8bf">
+            <Button x:Name="btMenuInicial" Content="Menu Inicial" Height="29" Margin="5,90,5,5"/>
+            <Button x:Name="btCadastrarLivro" Content="Cadastrar Livro" Height="29" Margin="5"/>
+            <Button x:Name="btCadastrarFornecedor" Content="Cadastrar Fornecedor" Height="29" Margin="5"/>
+            <Button x:Name="btCadastrarLeitor" Content="Cadastrar Leitor" Height="29" Margin="5"/>
+            <Button x:Name="btDevolucao" Content="Devolução" Height="29" Margin="5"/>
         </StackPanel>
 
-       
-
         <!--TEXTOS DA ESQUERDA-->
-        <Grid Grid.Row="1" Background="#FFFFFF">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1" Background="#e6e8bf">
+            <Label Content="Nome Completo" FontSize="12"/>
+            <TextBox x:Name="txtNomeCompleto" HorizontalAlignment="Left" Padding="4" Width="200"/>
 
-            <StackPanel Grid.Column="0" Margin="15">
-                <Label Content="Informações do Leitor" HorizontalAlignment="Center" FontSize="24"/>
+            <Label Content="CPF" FontSize="12"/>
+            <TextBox x:Name="txtCPF" HorizontalAlignment="Left" Padding="4" Width="120"/>
 
-                <UniformGrid Columns="1" >
+            <Label Content="RG" FontSize="12"/>
+            <TextBox x:Name="txtRG" HorizontalAlignment="Left" Padding="4" Width="146"/>
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBox
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="Código de Acesso"
-                    x:Name="txtCodAce" Padding="10" Margin="0 0 10 10" FontSize="18" Width="170"/>
+            <Label Content="E-mail" FontSize="12"/>
+            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Padding="4" Width="146"/>
 
-                        <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    VerticalAlignment="Center"
-                    AcceptsReturn="True"
-                    TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="Nome Completo"
-                    x:Name="txtNomeCompleto" Padding="10" Margin="0 0 10 10" FontSize="18" Width="750"/>
-                    
-                    </StackPanel>
+            <Label Content="Código de Acesso" FontSize="12"/>
+            <TextBox x:Name="txtCodAce" HorizontalAlignment="Left" Padding="4" Width="146"/>
 
-                    <UniformGrid Columns="2">
+            <Label Content="Telefone" FontSize="12"/>
+            <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Padding="4" Width="146"/>
 
-                        <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    VerticalAlignment="Top"
-                    AcceptsReturn="True"
-                    TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="CPF"
-                    x:Name="txtCPF" Padding="10"  FontSize="18" Margin="0 0 0 0"/>
+            <Label Content="Data de Nascimento" FontSize="12"/>
+            <DatePicker x:Name="dtDataNasc" HorizontalAlignment="Left" Padding="4" Width="146"/>
+        </StackPanel>
+        
+        <!--TEXTOS DA DIREITA-->
+        <StackPanel  Grid.Row="2" Grid.Column="2" Background="#e6e8bf">
+            <Label Content="Sexo" FontSize="12"/>
+            <ComboBox x:Name="cbSexo" HorizontalAlignment="Left" Padding="4" Width="146"/>
 
-                        <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    VerticalAlignment="Top"
-                    AcceptsReturn="True"
-                    TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="RG"
-                    x:Name="txtRG" Padding="10"  FontSize="18" Margin="10 0 0 0"/>
+            <Label Content="Rua" FontSize="12"/>
+            <TextBox x:Name="txtRua" HorizontalAlignment="Left" Padding="4" Width="146"/>
+        </StackPanel>
 
+        <Button x:Name="btSalvar" Content="Salvar" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="120" Margin="10" Grid.Row="1" Grid.Column="2"/>
+        <Button x:Name="btCancelar" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="120" Margin="10" Grid.Row="1" Grid.Column="2"/>
 
-                    </UniformGrid>
-
-                    <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    VerticalAlignment="Top"
-                    AcceptsReturn="True"
-                    TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="E-mail"
-                    x:Name="txtEmail" Padding="10" Cursor="IBeam" FontSize="18"/>
-
-                    <UniformGrid Columns="2">
-                        <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    VerticalAlignment="Top"
-                    AcceptsReturn="True"
-                    TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="Telefone"
-                    x:Name="txtTelefone" Padding="10" Cursor="IBeam" FontSize="18"/>
-
-                        <ComboBox 
-                    Style="{StaticResource MaterialDesignFilledComboBox}"
-                    materialDesign:HintAssist.Hint="Sexo" FontSize="18" Margin="10 0 0 0" Padding="8"/>
-                        
-                    </UniformGrid>
-                    
-               
-
-                <DatePicker 
-                    x:Name="dtDataNasc"
-                    Style="{StaticResource MaterialDesignFilledDatePicker}"
-                    materialDesign:HintAssist.Hint="Data de Nascimento" Padding="10" FontSize="18"/>
-
-              
-              
-            </UniformGrid>
-
-
-                <ComboBox 
-                    Style="{StaticResource MaterialDesignFilledComboBox}"
-                    materialDesign:HintAssist.Hint="Função" FontSize="18" Margin="0 10 0 0" x:Name ="cbFuncao" Padding="8"/>
-
-            </StackPanel>
-        </Grid>
-
-        <Grid Grid.Row="2" HorizontalAlignment="Center" Width="750">
-            <StackPanel Orientation="Horizontal" Background="White">
-                <UniformGrid Grid.Row="2" Columns="3">
-
-                    <Button x:Name="btCancelar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="60" Width="211" FontSize="20" FontWeight="Normal" Click="btCancelar_Click" Margin="20 0 20 0">
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Border CornerRadius="15" Background="#FFFFC850">
-                                    <TextBlock Text="Cancelar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" Foreground="#FF0A114A"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-
-                    <Button x:Name="btLimpar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="61" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A" Click="btLimpar_Click">
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Border CornerRadius="15" Background="#FFFFC850">
-                                    <TextBlock Text="Limpar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" Foreground="#FF0A114A"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                    <Button x:Name="btSalvar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black"  FontFamily="Arial Black" Height="59" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A" Click="btSalvar_Click">
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Border CornerRadius="15" Background="#FFFFC850">
-                                    <TextBlock Text="Salvar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" Foreground="#FF0A114A"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                </UniformGrid>
-            </StackPanel>
-        </Grid>
     </Grid>
 </Window>
