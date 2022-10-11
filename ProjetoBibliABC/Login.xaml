@@ -26,7 +26,11 @@
 
             <StackPanel Margin="10 188 20 0">
 
+<<<<<<< Updated upstream
                 <Label Content="Loginn" Margin="0 0 0 0" HorizontalAlignment="Center" FontSize="48" FontFamily="arial" Height="72" Background="Transparent" FontWeight="Normal" />
+=======
+                <Label Content="Login" HorizontalAlignment="Center" FontSize="48" FontFamily="Source Serif Pro Black" Height="71" Background="Transparent" FontWeight="Normal" />
+>>>>>>> Stashed changes
 
                 <Label Content="E-mail" HorizontalAlignment="Left" FontSize="25" FontFamily="Source serif Pro Semibold" Margin="50 10 0 0"/>
                 <TextBox x:Name="txtEmail" Padding="4" FontSize="14" Width="500" Cursor="IBeam" Margin="0 0 0 10"/>

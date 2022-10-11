@@ -52,14 +52,14 @@
                         materialDesign:HintAssist.Hint="Título"
                         x:Name="txtTitulo" Padding="8" Margin="0 0 0 5" Width="850" Cursor="IBeam"/>
                     </StackPanel>
-                   
+
 
                 </UniformGrid>
                 <StackPanel Orientation="Horizontal">
                     <DatePicker 
                     x:Name="dtPublicacao"
                     Style="{StaticResource MaterialDesignFilledDatePicker}"
-                    materialDesign:HintAssist.Hint="Data de Publicacao" Padding="8" Width="150" HorizontalAlignment="Left"/>
+                    materialDesign:HintAssist.Hint="Data de Publicação" Padding="8" Width="150" HorizontalAlignment="Left"/>
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
                         VerticalAlignment="Top"
@@ -91,7 +91,7 @@
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="N° Exemplar"
                         x:Name="txtNum" Padding="8" Margin="0 0 5 0" Cursor="IBeam"/>
-                    
+
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -106,13 +106,13 @@
                         VerticalAlignment="Top"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
-                        materialDesign:HintAssist.Hint="Edicao"
-                        x:Name="txtEdicao" Padding="2"/>
+                        materialDesign:HintAssist.Hint="Edição"
+                        x:Name="txtEdicao" Padding="2" Cursor="IBeam"/>
 
 
                 </UniformGrid>
 
-                
+
                 <UniformGrid Columns="2" Margin="0 5">
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -120,7 +120,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Tipo"
-                        x:Name="txtTipo" Padding="8" Margin="0 0 5 0"/>
+                        x:Name="txtTipo" Padding="8" Margin="0 0 5 0" Cursor="IBeam"/>
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -230,7 +230,7 @@
             </StackPanel>
         </Grid>
 
-        <Button Grid.Row="2" Content="Salvar"  Margin="10,9" Cursor="Hand" Background="#FFF5F4F3" />
+        <Button Grid.Row="2" Content="Salvar"  Margin="10,0,10,9" Cursor="Hand" Background="#FFF5F4F3" Height="32" VerticalAlignment="Bottom" />
 
     </Grid>
 </Window>
