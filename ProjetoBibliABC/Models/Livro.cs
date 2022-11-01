@@ -18,6 +18,7 @@ namespace ProjetoBibliABC.Models
         public string Genero { get; set; }
         public string Tipo { get; set; }
         public string EdicaoObra { get; set; }
+        public string Ano { get; set; }
        
         public string SinopseObra { get; set; }
        

@@ -37,8 +37,9 @@ namespace ProjetoBibliABC.Views
             txtSinopse.Text = _livro.SinopseObra;
             txtTitulo.Text = _livro.TituloObra;
             txtEdicao.Text = _livro.EdicaoObra;
-           // txtExemplar.Text = _livro.NumExemplar;
-           //txtPrateleira.Text = _livro
+            // txtExemplar.Text = _livro.NumExemplar;
+            //txtPrateleira.Text = _livro
+        
            
         }
 
@@ -84,7 +85,9 @@ namespace ProjetoBibliABC.Views
            _livro.Genero = txtGenero.Text;
             _livro.Tipo = Convert.ToString(CbTipo);
             _livro.DataPublicacao = dtPublicacao.SelectedDate;
-           
+           _livro.Id = Convert.ToInt32(txtCodigo.Text);
+            _livro.Ano = txtAno.Text;
+
 
             try
             {
