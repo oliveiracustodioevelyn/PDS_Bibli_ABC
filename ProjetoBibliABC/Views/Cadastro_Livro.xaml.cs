@@ -85,7 +85,7 @@ namespace ProjetoBibliABC.Views
            _livro.Genero = txtGenero.Text;
             _livro.Tipo = Convert.ToString(CbTipo);
             _livro.DataPublicacao = dtPublicacao.SelectedDate;
-           _livro.Id = Convert.ToInt32(txtCodigo.Text);
+     
             _livro.Ano = txtAno.Text;
 
 

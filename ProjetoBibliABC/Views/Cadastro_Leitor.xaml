@@ -42,12 +42,7 @@
                 <UniformGrid Columns="1">
 
                     <StackPanel Orientation="Horizontal">
-                        <TextBox
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="Código de Acesso"
-                    x:Name="txtCodAce" Padding="10" Margin="0 0 10 10" FontSize="18" Width="170"/>
+                    
 
                         <TextBox 
                     Style="{StaticResource MaterialDesignFilledTextBox}"

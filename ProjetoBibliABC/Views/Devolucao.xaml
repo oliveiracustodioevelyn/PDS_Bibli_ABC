@@ -4,20 +4,97 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoBibliABC.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        Title="Devolucao" Height="1080" Width="1920" WindowState="Maximized">
+        Title="Alugar" Height="1080" Width="1920" WindowState="Maximized">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="10*"/>
+             
+                
             </Grid.RowDefinitions>
+           
 
-            <Label Grid.Row="0" Content="BIBLI ABC" FontSize="20" HorizontalAlignment="Left" Margin="10" />
+            <StackPanel  Background ="#FF0A114A" Grid.Row="0">
+                <Label Grid.Row="0"  Content="Devolver Livros" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="45"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <Label FontSize="30" Content="Pesquisar Livros Emprestados" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" Margin="0 10 0 10"/>
+                
+                <Label FontSize="20" Content="Selecione para pesquisar" HorizontalAlignment="Left" Foreground="Black" FontFamily="Arial" Margin="0 10 0 10"/>
+                <StackPanel Orientation="Horizontal" Margin="10,0">
+
+                 
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton x:Name="rdLeitor" GroupName="rdDev" FontSize="20" Margin="10 0 50 0">Leitor</RadioButton>
+                        <RadioButton x:Name="rdLivro" GroupName="rdDev" FontSize="20">Livro</RadioButton>
+                    </StackPanel>
+                    
+                    <TextBox
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    materialDesign:HintAssist.Hint="Codigo"
+                    x:Name="txtCodigo" Padding="10" Margin="50 0 10 10" FontSize="18" Width="300"/>
+
+                    <TextBox
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    materialDesign:HintAssist.Hint="Nome ou título"
+                    x:Name="txtTitLivro" Padding="10" Margin="0 0 10 10" FontSize="18" Width="700"/>
+
+                    <Button x:Name="btPesquisar" HorizontalAlignment="center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="60" Width="210" FontSize="20" FontWeight="Normal" Margin="20 0 20 10">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="15" Background="#FFFFC850">
+                                    <TextBlock Text="Pesquisar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FF0A114A"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
 
 
+                </StackPanel>
             
-          
+            
+            <StackPanel Grid.Row="2">
+            <DataGrid x:Name="dataGridLivros" Margin="5" IsReadOnly="True" AutoGenerateColumns="False" Height="420">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Codigo do Livro" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Titulo" Binding="{Binding Titulo}"/>
+                    <DataGridTextColumn Header="Autor" Binding="{Binding Autor}"/>
+                    <DataGridTextColumn Header="Ano" Binding="{Binding Ano}"/>
+                
+
+                    <DataGridTemplateColumn Header="Funcoes">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Content="Renovar" Margin="5 0" />
+                                    <Button Content="Devolver" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            </StackPanel>
+
+
+
+            </StackPanel>
+
         </Grid>
     </Grid>
 </Window>

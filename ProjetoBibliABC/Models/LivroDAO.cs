@@ -20,7 +20,7 @@ namespace ProjetoBibliABC.Models
                 var comando = _conn.Query();
 
                 comando.CommandText = "INSERT INTO  Obras VALUES (null, @titulo_obra,  @dataPublicacao_obra, @num_exemplar_obra, @editora_obra, @num_paginas_obra, @autor_obra," +
-                    "@genero_obra,@tipo_obra,@edicao_obra, @sinopse_obra);";
+                    "@genero_obra,@tipo_obra,@edicao_obra, @sinopse_obra, 0, 0, 0, 0);";
 
                 comando.Parameters.AddWithValue("@titulo_obra", livro.TituloObra);
                 comando.Parameters.AddWithValue("@dataPublicacao_obra", livro.DataPublicacao);
@@ -61,7 +61,7 @@ namespace ProjetoBibliABC.Models
                 {
                     var livro = new Livro();
 
-                    livro.Id = reader.GetInt32("cod_obra");
+                   
                     livro.TituloObra = DAOHelper.GetString(reader, "titulo_obra");
                     livro.DataPublicacao = DAOHelper.GetDateTime(reader, "dataPublicacao_obra");
                     livro.NumExemplar = reader.GetInt32("num_exemplar_obra");

@@ -37,7 +37,7 @@ namespace ProjetoBibliABC.Views
 
         private void Cadastro_Leitor_Loaded(object sender, RoutedEventArgs e)
         {
-            txtCodAce.Text = Convert.ToString(_leitor.Id);
+      
             txtNomeCompleto.Text = _leitor.Nome;
             txtCPF.Text = _leitor.CPF;
             txtRG.Text = _leitor.RG;
@@ -59,7 +59,7 @@ namespace ProjetoBibliABC.Views
 
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
-            _leitor.Id = Convert.ToInt32(txtCodAce.Text);
+        
             _leitor.Nome = txtNomeCompleto.Text;
             _leitor.CPF = txtCPF.Text;
             _leitor.RG = txtRG.Text;

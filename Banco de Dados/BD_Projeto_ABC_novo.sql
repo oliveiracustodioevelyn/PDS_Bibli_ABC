@@ -65,20 +65,6 @@ foreign key (cod_lei_fk) references Leitor (cod_lei),
 foreign key (id_dev_fk) references Devolucao (id_dev)
 );
 
-CREATE TABLE Prateleira(
-id_pra int primary key auto_increment,
-numero_pra int
-);
-
-CREATE TABLE Tipo(
-id_tip int primary key auto_increment,
-tipoAcervo_tip varchar(100)
-);
-
-CREATE TABLE Genero(
-id_gen int primary key auto_increment,
-genero_gen varchar(100)
-);
 
 CREATE TABLE Obras(
 cod_obra int primary key auto_increment,
@@ -91,16 +77,10 @@ autor_obra varchar(100),
 genero_obra varchar(100),
 tipo_obra varchar(100),
 edicao_obra varchar (100),
-sinopse_obra varchar(100),
-cog_edi_fk int,
-foreign key (cog_edi_fk) references Editora (cog_edi),
-id_pra_fk int, 
-foreign key (id_pra_fk) references Prateleira (id_pra),
-id_tip_fk int,
-foreign key (id_tip_fk) references Tipo (id_tip),
-id_gen_fk int,
-foreign key (id_gen_fk) references Genero (id_gen)
+sinopse_obra varchar(100)
 );
+#comando.CommandText = "INSERT INTO  Obras VALUES (null, @titulo_obra,  @dataPublicacao_obra, @num_exemplar_obra, @editora_obra, @num_paginas_obra, @autor_obra," +"@genero_obra,@tipo_obra,@edicao_obra, @sinopse_obra);";
+
 
 CREATE TABLE AluObra(
 id_AluObra int primary key auto_increment,
