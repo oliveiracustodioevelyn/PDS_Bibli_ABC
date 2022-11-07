@@ -168,7 +168,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Estado"
-                        x:Name="txtEstado" Padding="10" FontSize="18"/>
+                        x:Name="txtEstado" Padding="10" FontSize="18" Cursor="IBeam"/>
 
                 </UniformGrid>
 

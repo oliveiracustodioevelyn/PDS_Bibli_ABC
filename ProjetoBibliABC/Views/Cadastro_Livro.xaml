@@ -152,28 +152,9 @@
                    
                 
 
-                <UniformGrid Columns="2" Margin="0 5">
+                <UniformGrid Columns="2" Margin="0 5"/>
 
-
-                    <TextBox 
-                        Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
-                        AcceptsReturn="True"
-                        TextWrapping="Wrap"
-                        materialDesign:HintAssist.Hint="Fileira"
-                        x:Name="txtFileira" Padding="10" Margin="0 0 5 0" FontSize="18" Cursor="IBeam"/>
-
-                    <TextBox 
-                        Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
-                        AcceptsReturn="True"
-                        TextWrapping="Wrap"
-                        materialDesign:HintAssist.Hint="Prateleira"
-                        x:Name="txtPrateleira" Padding="10" Margin="0 0 5 0" FontSize="18" Cursor="IBeam"/>
-
-                </UniformGrid>
-
-                </StackPanel>
+            </StackPanel>
             
         </Grid>
 

@@ -32,6 +32,7 @@
             <Button x:Name="btListaLivro" Content="Listagem de Livros"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold" Click="btListaLivro_Click"/>
             <Button x:Name="btListaLeitor" Content="Listagem de Leitores"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold" Click="btListaLeitor_Click"/>
             <Button x:Name="btListaFornecedor" Content="Listagem de Editora"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold" Click="btListaFornecedor_Click"/>
+            <Button x:Name="btsair" Content="Sair"  HorizontalAlignment="Center" Margin="0 5" VerticalAlignment="Top" Background="#FFFFC850" Width="300" Height="45" Foreground="#FF021A65" FontSize="20" Cursor="Hand" FontWeight="Bold" Click="btSair_Click"/>
 
         </StackPanel>
     </Grid>

@@ -96,5 +96,11 @@ namespace ProjetoBibliABC.Views
             Listagem_Funcionario lis = new Listagem_Funcionario();
             lis.ShowDialog();
         }
+
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow login = new MainWindow();
+            login.ShowDialog();
+        }
     }
 }
