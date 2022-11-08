@@ -25,9 +25,7 @@ namespace ProjetoBibliABC.Views
         public Cadastro_Livro()
         {
             InitializeComponent();
-            CbEditora.Items.Add("1");
-            CbEditora.Items.Add("2");
-            CbTipo.Items.Add("");
+           
         }
 
         private void Cadastro_Livro_Loaded(object sender, RoutedEventArgs e)
@@ -83,7 +81,7 @@ namespace ProjetoBibliABC.Views
             _livro.NumPagina = Convert.ToInt32(txtNumPag.Text);
             _livro.EditoraObra = Convert.ToString(CbEditora);
            _livro.Genero = txtGenero.Text;
-            _livro.Tipo = Convert.ToString(CbTipo);
+            _livro.Tipo = txtTipo.Text;
             _livro.DataPublicacao = dtPublicacao.SelectedDate;
      
             _livro.Ano = txtAno.Text;

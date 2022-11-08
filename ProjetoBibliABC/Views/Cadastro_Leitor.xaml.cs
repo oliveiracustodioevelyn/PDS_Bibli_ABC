@@ -24,7 +24,8 @@ namespace ProjetoBibliABC.Views
     {
         private Leitor _leitor = new Leitor();
         public Cadastro_Leitor()
-        {
+        {   
+
             InitializeComponent();
             Loaded += Cadastro_Leitor_Loaded;
         }
