@@ -11,7 +11,13 @@ telefone1_fun varchar(100),
 telefone2_fun varchar(100),
 dataNascimento_fun date,
 email_fun varchar(100), 
-senha_fun varchar(100)
+senha_fun varchar(100),
+rua_fun varchar(100),
+bairro_fun varchar(100),
+numero_fun varchar(100),
+complemento_fun varchar(100),
+cidade_fun varchar(100),
+estado_fun varchar(100)
 );
 
 CREATE TABLE Endereco(
@@ -79,7 +85,6 @@ foreign key (cod_lei_fk) references Leitor (cod_lei),
 foreign key (id_dev_fk) references Devolucao (id_dev)
 );
 
-
 CREATE TABLE Obras(
 cod_obra int primary key auto_increment,
 titulo_obra varchar(100),
@@ -93,6 +98,7 @@ tipo_obra varchar(100),
 edicao_obra varchar (100),
 sinopse_obra varchar(100)
 );
+
 #comando.CommandText = "INSERT INTO  Obras VALUES (null, @titulo_obra,  @dataPublicacao_obra, @num_exemplar_obra, @editora_obra, @num_paginas_obra, @autor_obra," +"@genero_obra,@tipo_obra,@edicao_obra, @sinopse_obra);";
 
 
