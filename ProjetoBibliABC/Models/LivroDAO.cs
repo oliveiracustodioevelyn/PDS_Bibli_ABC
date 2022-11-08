@@ -33,6 +33,28 @@ namespace ProjetoBibliABC.Models
                 comando.Parameters.AddWithValue("@edicao_obra", livro.EdicaoObra);
                 comando.Parameters.AddWithValue("@sinopse_obra", livro.SinopseObra);
 
+
+
+                /*CREATE TABLE Obras(
+cod_obra int primary key auto_increment,
+titulo_obra varchar(100),
+dataPublicacao_obra date,
+num_exemplar_obra int,
+editora_obra varchar(100),
+num_paginas_obra int,
+autor_obra varchar(100),
+genero_obra varchar(100),
+tipo_obra varchar(100),
+edicao_obra varchar (100),
+sinopse_obra varchar(100)
+);*/
+
+
+
+
+
+
+
                 var resultado = comando.ExecuteNonQuery();
 
                 if (resultado == 0)

@@ -19,16 +19,16 @@ namespace ProjetoBibliABC.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "INSERT INTO Leitor VALUES (null, @nome_lei,  @cpf_lei, @email_lei, @rg_lei, @endereco_lei, @telefone_lei, @dataNascimento_lei, @sexo_lei);";
+                comando.CommandText = "INSERT INTO Leitor VALUES (null, @nome,  @cpf, @email, @rg, @endereco, @telefone, @dataNascimento, @sexo_);";
 
-                comando.Parameters.AddWithValue("@nome_lei", leitor.Nome);
-                comando.Parameters.AddWithValue("@cpf_lei", leitor.CPF);
-                comando.Parameters.AddWithValue("@email_lei", leitor.Email);
-                comando.Parameters.AddWithValue("@rg_lei", leitor.RG);
-                comando.Parameters.AddWithValue("@endereco_lei", leitor.Endereco);
-                comando.Parameters.AddWithValue("@telefone_lei", leitor.Telefone);
-                comando.Parameters.AddWithValue("@dataNascimento_lei", leitor.DataNascimento?.ToString("yyyy-MM-dd"));
-                comando.Parameters.AddWithValue("@sexo_lei", leitor.Sexo);
+                comando.Parameters.AddWithValue("@nome", leitor.Nome);
+                comando.Parameters.AddWithValue("@cpf", leitor.CPF);
+                comando.Parameters.AddWithValue("@email", leitor.Email);
+                comando.Parameters.AddWithValue("@rg", leitor.RG);
+                comando.Parameters.AddWithValue("@endereco", leitor.Endereco);
+                comando.Parameters.AddWithValue("@telefone", leitor.Telefone);
+                comando.Parameters.AddWithValue("@dataNascimento", leitor.DataNascimento?.ToString("yyyy-MM-dd"));
+                comando.Parameters.AddWithValue("@sexo", leitor.Sexo);
 
                 var resultado = comando.ExecuteNonQuery();
 

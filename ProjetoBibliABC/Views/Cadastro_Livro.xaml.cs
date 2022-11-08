@@ -30,15 +30,40 @@ namespace ProjetoBibliABC.Views
 
         private void Cadastro_Livro_Loaded(object sender, RoutedEventArgs e)
         {
+            txtCodigo.Text = Convert.ToString(_livro.Id); 
+            txtTitulo.Text = _livro.TituloObra;
+            dtPublicacao.Text = Convert.ToString(_livro.DataPublicacao);
+            txtExemplar.Text = Convert.ToString(_livro.NumExemplar);
+            CbEditora.Text = Convert.ToString(_livro.EditoraObra);
+            txtNumPag.Text = Convert.ToString(_livro.NumPagina);
             txtAutor.Text = _livro.AutorObra;
+            txtGenero.Text = Convert.ToString(_livro.Genero);
+            txtTipo.Text = Convert.ToString(_livro.Tipo);
             txtEdicao.Text = _livro.EdicaoObra;
             txtSinopse.Text = _livro.SinopseObra;
-            txtTitulo.Text = _livro.TituloObra;
-            txtEdicao.Text = _livro.EdicaoObra;
+
+
+
+
+            
             // txtExemplar.Text = _livro.NumExemplar;
             //txtPrateleira.Text = _livro
-        
-           
+
+            /*CREATE TABLE Obras(
+            cod_obra int primary key auto_increment,
+            titulo_obra varchar(100),
+            dataPublicacao_obra date,
+            num_exemplar_obra int,
+            editora_obra varchar(100),
+            num_paginas_obra int,
+            autor_obra varchar(100),
+            genero_obra varchar(100),
+            tipo_obra varchar(100),
+            edicao_obra varchar (100),
+            sinopse_obra varchar(100)
+            );*/
+
+
         }
 
         private void btHome_Click(object sender, RoutedEventArgs e)
@@ -80,11 +105,23 @@ namespace ProjetoBibliABC.Views
             _livro.NumExemplar = Convert.ToInt32(txtExemplar.Text);
             _livro.NumPagina = Convert.ToInt32(txtNumPag.Text);
             _livro.EditoraObra = Convert.ToString(CbEditora);
-           _livro.Genero = txtGenero.Text;
+            _livro.Genero = txtGenero.Text;
             _livro.Tipo = txtTipo.Text;
             _livro.DataPublicacao = dtPublicacao.SelectedDate;
-     
-            _livro.Ano = txtAno.Text;
+
+            /*CREATE TABLE Obras(
+            cod_obra int primary key auto_increment,
+            titulo_obra varchar(100),
+            dataPublicacao_obra date,
+            num_exemplar_obra int,
+            editora_obra varchar(100),
+            num_paginas_obra int,
+            autor_obra varchar(100),
+            genero_obra varchar(100),
+            tipo_obra varchar(100),
+            edicao_obra varchar (100),
+            sinopse_obra varchar(100)
+            );*/
 
 
             try

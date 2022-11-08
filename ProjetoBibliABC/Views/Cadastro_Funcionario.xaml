@@ -32,7 +32,7 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0">
-                <Label Content="Informações Pessoais" FontSize="24"/>
+                <Label Content="Informações Pessoais" HorizontalAlignment="Center" FontSize="24"/>
 
                 <UniformGrid Columns="2" Margin="25 5" Width="910">
                     <TextBox
@@ -111,7 +111,7 @@
 
 
             <StackPanel Grid.Column="1" Margin="15">
-                <Label Content="Informações de Contato" FontSize="24"/>
+                <Label Content="Informações de Contato" HorizontalAlignment="Center" FontSize="24"/>
 
                 <UniformGrid Columns="2" Margin="0 5">
                     <TextBox 
@@ -120,7 +120,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="E-mail"
-                        x:Name="txtEmail" Padding="8" FontSize="18" Width="456"/>
+                        x:Name="txtEmail" Padding="8" FontSize="18" Width="456" Cursor="IBeam"/>
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -128,10 +128,10 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Senha"
-                        x:Name="txtSenha" Padding="8" Margin="0 0 5 0" FontSize="18"/>
+                        x:Name="txtSenha" Padding="8" Margin="0 0 5 0" FontSize="18" Cursor="IBeam"/>
                 </UniformGrid>
 
-                <Label Content="Informações de Localização" FontSize="24"/>
+                <Label Content="Informações de Endereço" HorizontalAlignment="Center" FontSize="24"/>
 
                 <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -139,7 +139,14 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Rua"
-                        x:Name="txtRua" Padding="8" FontSize="18"/>
+                        x:Name="txtRua" Padding="10" Margin="0 0 10 5" FontSize="18" Cursor="IBeam"/>
+                <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Bairro"
+                        x:Name="txtBairro" Padding="10" Margin="0 0 10 5" FontSize="18"/>
 
                 <UniformGrid Columns="2" Margin="0 5">
                     <TextBox 
@@ -148,15 +155,15 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Número"
-                        x:Name="txtNumero" Padding="8" Margin="0 0 5 0" FontSize="18"/>
+                        x:Name="txtNumero" Padding="10" Margin="0 0 10 5" FontSize="18"/>
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
                         VerticalAlignment="Top"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
-                        materialDesign:HintAssist.Hint="Bairro"
-                        x:Name="txtBairro" Padding="8" FontSize="18"/>
+                        materialDesign:HintAssist.Hint="CEP"
+                        x:Name="txtCep" Padding="10" FontSize="18" Cursor="IBeam"/>
 
                 </UniformGrid>
 
@@ -166,7 +173,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Complemento"
-                        x:Name="txtComplemento" Padding="8" FontSize="18" Cursor="IBeam"/>
+                        x:Name="txtComplemento" Padding="10" FontSize="18" Margin="0 0 0 5"/>
 
                 <UniformGrid Columns="2" Margin="0 5">
                     <TextBox 
@@ -175,7 +182,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Cidade"
-                        x:Name="txtCidade" Padding="8" Margin="0 0 5 0" FontSize="18"/>
+                        x:Name="txtCidade" Padding="10" Margin="0 5 10 0" FontSize="18"/>
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -183,7 +190,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Estado"
-                        x:Name="txtEstado" Padding="8" FontSize="18"/>
+                        x:Name="txtEstado" Padding="10" FontSize="18" Margin="0 5 10 0"/>
 
                 </UniformGrid>
             </StackPanel>
@@ -203,7 +210,7 @@
                         </Button.Template>
                     </Button>
 
-                    <Button x:Name="btLimpar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="61" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A">
+                    <Button x:Name="btLimpar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="61" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A" Click="btLimpar_Click">
                         <Button.Template>
                             <ControlTemplate>
                                 <Border CornerRadius="15" Background="#FFFFC850">
@@ -212,7 +219,7 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-                    <Button x:Name="btSalvar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black"  FontFamily="Arial Black" Height="59" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A">
+                    <Button x:Name="btSalvar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black"  FontFamily="Arial Black" Height="59" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A" Click="btSalvar_Click">
                         <Button.Template>
                             <ControlTemplate>
                                 <Border CornerRadius="15" Background="#FFFFC850">

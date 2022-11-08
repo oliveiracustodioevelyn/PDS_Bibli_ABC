@@ -32,7 +32,14 @@ rg_lei varchar(100),
 email_lei varchar(100),
 telefone_lei varchar(100),
 dataNascimento_lei date,
-sexo_lei varchar(100)
+sexo_lei varchar(100),
+rua_lei varchar(100),
+bairro_lei varchar(100),
+numero_lei varchar(100),
+cep_lei varchar(100),
+complemento_lei varchar(100),
+cidade_lei varchar(100),
+estado_lei varchar(100)
 );
 
 CREATE TABLE Editora(
@@ -43,7 +50,14 @@ cnpj_edi varchar(100),
 telefone1_edi varchar(100),
 telefone2_edi varchar(100),
 representante_edi varchar(100), 
-email_edi varchar(100)
+email_edi varchar(100),
+rua_edi varchar(100),
+bairro_edi varchar(100),
+numero_edi varchar(100),
+cep_edi varchar(100),
+complemento_edi varchar(100),
+cidade_edi varchar(100),
+estado_edi varchar(100)
 ); 
 
 CREATE TABLE Devolucao(

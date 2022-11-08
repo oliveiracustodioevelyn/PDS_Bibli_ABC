@@ -20,48 +20,28 @@ namespace ProjetoBibliABC.Models
                 var comando = _conn.Query();
 
 
-                comando.CommandText = "INSERT INTO Curso VALUES (null, @nome_fun,  @cpf_fun, @rg_fun, @endereco_fun, @telefone_fun, @dataNascimento_fun, @sexo_fun, @turno_fun, @email_fun, @senha_fun);";
+                comando.CommandText = "INSERT INTO Funcionario VALUES (null, @nome,  @cpf, @rg, @sexo, @telefone1, @telefone2, @dataNascimento, @email, @senha, @rua, @bairo, @numero, @complemento, @cidade, @estado);";
 
-                comando.Parameters.AddWithValue("@nome_fun", funcionario.Nome);
-                comando.Parameters.AddWithValue("@cpf_fun", funcionario.CPF);
-                comando.Parameters.AddWithValue("@rg_fun", funcionario.RG);
-                comando.Parameters.AddWithValue("@endereco_fun", funcionario.Endereco);
-                comando.Parameters.AddWithValue("@telefone_fun", funcionario.Telefone);
-                comando.Parameters.AddWithValue("@dataNascimento_fun", funcionario.DataNascimento);
-                comando.Parameters.AddWithValue("@sexo_fun", funcionario.Sexo);
-                comando.Parameters.AddWithValue("@turno_fun", funcionario.Turno);
-                comando.Parameters.AddWithValue("@email_fun", funcionario.Email);
-                comando.Parameters.AddWithValue("@senha_fun", funcionario.Senha);
+                //comando.Parameters.AddWithValue("@id", funcionario.Id);
+                comando.Parameters.AddWithValue("@nome", funcionario.Nome);
+                comando.Parameters.AddWithValue("@cpf", funcionario.CPF);
+                comando.Parameters.AddWithValue("@rg", funcionario.RG);
+                comando.Parameters.AddWithValue("@sexo", funcionario.Sexo);
+                comando.Parameters.AddWithValue("@telefone1", funcionario.Telefone1);
+                comando.Parameters.AddWithValue("@telefone2", funcionario.Telefone2);
+                comando.Parameters.AddWithValue("@dataNascimento", funcionario.DataNascimento?.ToString("yyyy-MM-dd"));
+                
+                //comando.Parameters.AddWithValue("@turno_fun", funcionario.Turno);
+                comando.Parameters.AddWithValue("@email", funcionario.Email);
+                comando.Parameters.AddWithValue("@senha", funcionario.Senha);
+                comando.Parameters.AddWithValue("@rua", funcionario.Rua);
+                comando.Parameters.AddWithValue("@bairro", funcionario.Bairro);
+                comando.Parameters.AddWithValue("@numero", funcionario.Numero);
+                comando.Parameters.AddWithValue("@complemento", funcionario.Complemento);
+                comando.Parameters.AddWithValue("@cidade", funcionario.Cidade);
+                comando.Parameters.AddWithValue("@estado", funcionario.Estado);
 
 
-                /*
-                 public int Id { get; set; }
-                 public string Nome { get; set; }
-                 public string CPF { get; set; }
-                 public string RG { get; set; }
-                 public string Endereco { get; set; }
-                 public string Telefone { get; set; }
-                 public DateTime? DataNascimento { get; set; }
-                 public string Sexo { get; set; }
-                 public string Turno { get; set; }
-                 public string Email { get; set; }
-                 public string Senha { get; set; }
-                 */
-
-                /*
-                CREATE TABLE Funcionario(
-                id_fun int primary key auto_increment,
-                nome_fun varchar(100),
-                cpf_fun varchar(100),
-                rg_fun varchar(100),
-                endereco_fun varchar(100),
-                telefone_fun varchar(100),
-                dataNascimento_fun date,
-                sexo_fun varchar(100),
-                turno_fun varchar(100),
-                email_fun varchar(100), 
-                senha_fun varchar(100)
-                */
 
 
                 var resultado = comando.ExecuteNonQuery();
@@ -84,7 +64,7 @@ namespace ProjetoBibliABC.Models
                 var lista = new List<Funcionario>();
                 var comando = _conn.Query();
 
-                comando.CommandText = "SELECT * FROM Obras";
+                comando.CommandText = "SELECT * FROM Funcionario";
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -130,7 +110,7 @@ namespace ProjetoBibliABC.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM Obras  WHERE id_obra = @id";
+                comando.CommandText = "DELETE FROM Funcionario  WHERE id_fun = @id";
 
                 comando.Parameters.AddWithValue("@id", funcionario.Id);
 
@@ -154,9 +134,27 @@ namespace ProjetoBibliABC.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "Update Curso set " +
-               "titulo_obra = @titulo, autor_obra = @autor, dataPublicacao_obra = @data, localizacao_obra = @localizacao, edicao_obra = @edicao, sinopse_obra = @sinopse" + " where id_cur = @id";
+                comando.CommandText = "Update Funcionario set " +
+               "nome_fun = @nome,  cpf_fun = @cpf, rg_fun = @rg, sexo_fun = @sexo, telefone1_fun = @telefone1, telefone2_fun = @telefone2, dataNascimento_fun = @dataNascimento, email_fun = @email, senha_fun = @senha, rua_fun = @rua, bairo_fun = @bairo, numero_fun = @numero, complemento_fun = @complemento, cidade_fun = @cidade, estado_fun = @estado" + "where id_fun = @id";
 
+                comando.Parameters.AddWithValue("@id", funcionario.Id);
+                comando.Parameters.AddWithValue("@nome", funcionario.Nome);
+                comando.Parameters.AddWithValue("@cpf", funcionario.CPF);
+                comando.Parameters.AddWithValue("@rg", funcionario.RG);
+                comando.Parameters.AddWithValue("@sexo", funcionario.Sexo);
+                comando.Parameters.AddWithValue("@telefone1", funcionario.Telefone1);
+                comando.Parameters.AddWithValue("@telefone2", funcionario.Telefone2);
+                comando.Parameters.AddWithValue("@dataNascimento", funcionario.DataNascimento?.ToString("yyyy-MM-dd"));
+
+                //comando.Parameters.AddWithValue("@turno_fun", funcionario.Turno);
+                comando.Parameters.AddWithValue("@email", funcionario.Email);
+                comando.Parameters.AddWithValue("@senha", funcionario.Senha);
+                comando.Parameters.AddWithValue("@rua", funcionario.Rua);
+                comando.Parameters.AddWithValue("@bairro", funcionario.Bairro);
+                comando.Parameters.AddWithValue("@numero", funcionario.Numero);
+                comando.Parameters.AddWithValue("@complemento", funcionario.Complemento);
+                comando.Parameters.AddWithValue("@cidade", funcionario.Cidade);
+                comando.Parameters.AddWithValue("@estado", funcionario.Estado);
 
                 var resultado = comando.ExecuteNonQuery();
 
