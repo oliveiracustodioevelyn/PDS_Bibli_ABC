@@ -33,13 +33,6 @@ namespace ProjetoBibliABC.Models
                 comando.Parameters.AddWithValue("@edicao", livro.EdicaoObra);
                 comando.Parameters.AddWithValue("@sinopse", livro.SinopseObra);
 
-
-
-
-
-
-
-
                 var resultado = comando.ExecuteNonQuery();
 
                 if (resultado == 0)
@@ -80,7 +73,6 @@ namespace ProjetoBibliABC.Models
                     livro.EdicaoObra = DAOHelper.GetString(reader, "edicao_obra");
                     livro.SinopseObra = DAOHelper.GetString(reader, "sinopse_obra");
                    
-
                     lista.Add(livro);
                 }
                 reader.Close();
