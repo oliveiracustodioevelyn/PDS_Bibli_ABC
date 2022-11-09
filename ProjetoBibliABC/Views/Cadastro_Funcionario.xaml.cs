@@ -23,7 +23,6 @@ namespace ProjetoBibliABC.Views
         private Funcionario _funcionario = new Funcionario();
         public Cadastro_Funcionario()
         {
-
             InitializeComponent();
             Loaded += Cadastro_Funcionario_Loaded;
         }

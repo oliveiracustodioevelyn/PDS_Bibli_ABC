@@ -19,7 +19,8 @@ namespace ProjetoBibliABC.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "INSERT INTO  Obras VALUES (null, @titulo,  @dataPublicacao, @num_exemplar, @editora, @num_paginas, @autor," +
+                comando.CommandText = "INSERT INTO  Obras VALUES (null, @titulo,  @dataPublicacao, " +
+                    "@num_exemplar, @editora, @num_paginas, @autor," +
                     "@genero, @tipo, @edicao, @sinopse);";
 
                 comando.Parameters.AddWithValue("@titulo", livro.TituloObra);
@@ -118,7 +119,8 @@ namespace ProjetoBibliABC.Models
 
                 comando.CommandText = "Update  Obras set " +
                "titulo_obra = @titulo, dataPublicacao_obra = @data, num_exemplar_obra = @numExemplar, editora_obra = @editora," +
-               "num_paginas_obra = @numPagina, autor_obra = @autor, genero_obra = @genero, tipo_obra = @tipo, edicao_obra = @edicao, sinopse_obra = @sinopse" + " where cod_obra = @id";
+               "num_paginas_obra = @numPagina, autor_obra = @autor, genero_obra = @genero, tipo_obra = @tipo, " +
+               "edicao_obra = @edicao, sinopse_obra = @sinopse" + " where cod_obra = @id";
 
 
                 var resultado = comando.ExecuteNonQuery();
