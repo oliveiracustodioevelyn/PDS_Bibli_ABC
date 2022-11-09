@@ -44,26 +44,6 @@ namespace ProjetoBibliABC.Views
 
 
 
-
-            
-            // txtExemplar.Text = _livro.NumExemplar;
-            //txtPrateleira.Text = _livro
-
-            /*CREATE TABLE Obras(
-            cod_obra int primary key auto_increment,
-            titulo_obra varchar(100),
-            dataPublicacao_obra date,
-            num_exemplar_obra int,
-            editora_obra varchar(100),
-            num_paginas_obra int,
-            autor_obra varchar(100),
-            genero_obra varchar(100),
-            tipo_obra varchar(100),
-            edicao_obra varchar (100),
-            sinopse_obra varchar(100)
-            );*/
-
-
         }
 
         private void btHome_Click(object sender, RoutedEventArgs e)
@@ -137,7 +117,7 @@ namespace ProjetoBibliABC.Views
                 {
                     dao.Insert(_livro);
 
-                    MessageBox.Show("Registro do livro cadastrado com sucesso.");
+                    MessageBox.Show("errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrooooo");
                 }
 
             }
