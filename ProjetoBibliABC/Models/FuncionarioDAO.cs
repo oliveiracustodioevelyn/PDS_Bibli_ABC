@@ -20,7 +20,8 @@ namespace ProjetoBibliABC.Models
                 var comando = _conn.Query();
 
 
-                comando.CommandText = "INSERT INTO Funcionario VALUES (null, @nome,  @cpf, @rg, @sexo, @telefone1, @telefone2, @dataNascimento, @email, @senha, @rua, @bairo, @numero, @complemento, @cidade, @estado);";
+                comando.CommandText = "INSERT INTO Funcionario VALUES (null, @nome,  @cpf, @rg, @sexo, @telefone1, " +
+                    "@telefone2, @dataNascimento, @email, @senha, @rua, @bairo, @numero, @complemento, @cidade, @estado);";
 
                 //comando.Parameters.AddWithValue("@id", funcionario.Id);
                 comando.Parameters.AddWithValue("@nome", funcionario.Nome);

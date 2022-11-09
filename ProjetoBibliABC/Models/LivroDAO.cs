@@ -19,35 +19,20 @@ namespace ProjetoBibliABC.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "INSERT INTO  Obras VALUES (null, @titulo_obra,  @dataPublicacao_obra, @num_exemplar_obra, @editora_obra, @num_paginas_obra, @autor_obra," +
-                    "@genero_obra,@tipo_obra,@edicao_obra, @sinopse_obra, 0, 0, 0, 0);";
+                comando.CommandText = "INSERT INTO  Obras VALUES (null, @titulo,  @dataPublicacao, @num_exemplar, @editora, @num_paginas, @autor," +
+                    "@genero, @tipo, @edicao, @sinopse);";
 
-                comando.Parameters.AddWithValue("@titulo_obra", livro.TituloObra);
-                comando.Parameters.AddWithValue("@dataPublicacao_obra", livro.DataPublicacao);
-                comando.Parameters.AddWithValue("@num_exemplar_obra", livro.NumExemplar);
-                comando.Parameters.AddWithValue("@editora_obra", livro.EditoraObra);
-                comando.Parameters.AddWithValue("@num_paginas_obra", livro.NumPagina);
-                comando.Parameters.AddWithValue("@autor_obra", livro.AutorObra);
-                comando.Parameters.AddWithValue("@genero_obra", livro.Genero);
-                comando.Parameters.AddWithValue("@tipo_obra", livro.Tipo);
-                comando.Parameters.AddWithValue("@edicao_obra", livro.EdicaoObra);
-                comando.Parameters.AddWithValue("@sinopse_obra", livro.SinopseObra);
+                comando.Parameters.AddWithValue("@titulo", livro.TituloObra);
+                comando.Parameters.AddWithValue("@dataPublicacao", livro.DataPublicacao?.ToString("yyyy-MM-dd"));
+                comando.Parameters.AddWithValue("@num_exemplar", livro.NumExemplar);
+                comando.Parameters.AddWithValue("@editora", livro.EditoraObra);
+                comando.Parameters.AddWithValue("@num_paginas", livro.NumPagina);
+                comando.Parameters.AddWithValue("@autor", livro.AutorObra);
+                comando.Parameters.AddWithValue("@genero", livro.Genero);
+                comando.Parameters.AddWithValue("@tipo", livro.Tipo);
+                comando.Parameters.AddWithValue("@edicao", livro.EdicaoObra);
+                comando.Parameters.AddWithValue("@sinopse", livro.SinopseObra);
 
-
-
-                /*CREATE TABLE Obras(
-cod_obra int primary key auto_increment,
-titulo_obra varchar(100),
-dataPublicacao_obra date,
-num_exemplar_obra int,
-editora_obra varchar(100),
-num_paginas_obra int,
-autor_obra varchar(100),
-genero_obra varchar(100),
-tipo_obra varchar(100),
-edicao_obra varchar (100),
-sinopse_obra varchar(100)
-);*/
 
 
 

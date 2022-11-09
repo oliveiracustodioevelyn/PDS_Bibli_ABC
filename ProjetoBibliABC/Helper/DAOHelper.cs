@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace ProjetoBibliABC.Helper
 {
-    static class DAOHelper
+    internal class DAOHelper
     {
         public static string GetString(MySqlDataReader reader, string column_name)
         {
