@@ -99,7 +99,7 @@ namespace ProjetoBibliABC.Views
                 {
                     dao.Insert(_funcionario);
 
-                    MessageBox.Show("Registro de leitor cadastrado com sucesso.");
+                    MessageBox.Show("Cadastrado realizado com Sucesso!!");
                 }
 
             }

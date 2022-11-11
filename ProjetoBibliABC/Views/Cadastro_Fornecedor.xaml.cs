@@ -82,7 +82,7 @@ namespace ProjetoBibliABC.Views
                 {
                     dao.Insert(_fornecedor);
 
-                    MessageBox.Show("errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrooooo");
+                    MessageBox.Show("Cadastrado realizado com Sucesso!!");
                 }
 
             }

@@ -39,13 +39,19 @@ namespace ProjetoBibliABC.Views
         private void Cadastro_Leitor_Loaded(object sender, RoutedEventArgs e)
         {
       
-            txtNomeCompleto.Text = _leitor.Nome;
-            txtCPF.Text = _leitor.CPF;
-            txtRG.Text = _leitor.RG;
+            txtNome.Text = _leitor.Nome;
+            txtCpf.Text = _leitor.CPF;
+            txtRg.Text = _leitor.RG;
             txtEmail.Text = _leitor.Email;
             txtTelefone.Text = _leitor.Telefone;
-            dtDataNasc.SelectedDate = _leitor.DataNascimento;
-            //txtRua.Text = _leitor.Endereco;
+            dtNasc.SelectedDate = _leitor.DataNascimento;
+            txtSexo.Text = _leitor.Sexo;
+            txtRua.Text = _leitor.Rua;
+            txtBairro.Text = _leitor.Bairro;
+            txtNumero.Text = _leitor.Numero;
+            txtComplemento.Text = _leitor.Complemento;
+            txtCidade.Text = _leitor.Cidade;
+            txtEstado.Text = _leitor.Estado;
         }
 
         /*public Cadastro_Leitor()
@@ -61,13 +67,22 @@ namespace ProjetoBibliABC.Views
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
         
-            _leitor.Nome = txtNomeCompleto.Text;
-            _leitor.CPF = txtCPF.Text;
-            _leitor.RG = txtRG.Text;
+            _leitor.Nome = txtNome.Text;
+            _leitor.CPF = txtCpf.Text;
+            _leitor.RG = txtRg.Text;
             _leitor.Email = txtEmail.Text;
             _leitor.Telefone = txtTelefone.Text;
-            _leitor.DataNascimento = dtDataNasc.SelectedDate;
-            //_leitor.Endereco = txtRua.Text;
+            _leitor.DataNascimento = dtNasc.SelectedDate;
+            _leitor.Sexo = txtSexo.Text;
+
+            _leitor.Rua = txtRua.Text;
+            _leitor.Bairro = txtBairro.Text;
+            _leitor.Numero = txtNumero.Text;
+            _leitor.Cep = txtCep.Text;
+            _leitor.Complemento = txtComplemento.Text;
+            _leitor.Cidade = txtCidade.Text;
+            _leitor.Estado = txtEstado.Text;
+
 
             try
             {

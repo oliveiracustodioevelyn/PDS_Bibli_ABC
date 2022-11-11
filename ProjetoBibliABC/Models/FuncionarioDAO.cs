@@ -21,12 +21,12 @@ namespace ProjetoBibliABC.Models
 
 
                 comando.CommandText = "INSERT INTO Funcionario VALUES (null, @nome,  @cpf, @rg, @sexo, @telefone1, " +
-                    "@telefone2, @dataNascimento, @email, @senha, @rua, @bairo, @numero, @complemento, @cidade, @estado);";
+                    "@telefone2, @dataNascimento, @email, @senha, @rua, @bairro, @numero, @complemento, @cidade, @estado);";
 
-                //comando.Parameters.AddWithValue("@id", funcionario.Id);
+                
                 comando.Parameters.AddWithValue("@nome", funcionario.Nome);
                 comando.Parameters.AddWithValue("@cpf", funcionario.CPF);
-                /*comando.Parameters.AddWithValue("@rg", funcionario.RG);
+                comando.Parameters.AddWithValue("@rg", funcionario.RG);
                 comando.Parameters.AddWithValue("@sexo", funcionario.Sexo);
                 comando.Parameters.AddWithValue("@telefone1", funcionario.Telefone1);
                 comando.Parameters.AddWithValue("@telefone2", funcionario.Telefone2);
@@ -40,7 +40,7 @@ namespace ProjetoBibliABC.Models
                 comando.Parameters.AddWithValue("@numero", funcionario.Numero);
                 comando.Parameters.AddWithValue("@complemento", funcionario.Complemento);
                 comando.Parameters.AddWithValue("@cidade", funcionario.Cidade);
-                comando.Parameters.AddWithValue("@estado", funcionario.Estado);*/
+                comando.Parameters.AddWithValue("@estado", funcionario.Estado);
 
 
 

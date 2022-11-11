@@ -21,12 +21,12 @@ namespace ProjetoBibliABC.Models
 
                 comando.CommandText = "INSERT INTO Editora VALUES (null, @razao_social, " +
                     "@nome_fantasia, @cnpj, @telefone1, @telefone2, @representante," +
-                    "@email, @rua, @bairo, @numero, @cep, @complemento, @cidade, @estado);";
+                    "@email, @rua, @bairro, @numero, @cep, @complemento, @cidade, @estado);";
 
                 comando.Parameters.AddWithValue("@razao_social", fornecedor.Razao_social);
                 comando.Parameters.AddWithValue("@nome_fantasia", fornecedor.Nome_fantasia);
                 comando.Parameters.AddWithValue("@cnpj", fornecedor.Cnpj);
-                /*comando.Parameters.AddWithValue("@telefone1", fornecedor.Telefone1);
+                comando.Parameters.AddWithValue("@telefone1", fornecedor.Telefone1);
                 comando.Parameters.AddWithValue("@telefone2", fornecedor.Telefone2);
                 comando.Parameters.AddWithValue("@representante", fornecedor.Representante);
                 comando.Parameters.AddWithValue("@email", fornecedor.Email);
@@ -37,7 +37,7 @@ namespace ProjetoBibliABC.Models
                 comando.Parameters.AddWithValue("@cep", fornecedor.Cep);
                 comando.Parameters.AddWithValue("@complemento", fornecedor.Complemento);
                 comando.Parameters.AddWithValue("@cidade", fornecedor.Cidade);
-                comando.Parameters.AddWithValue("@estado", fornecedor.Estado);*/
+                comando.Parameters.AddWithValue("@estado", fornecedor.Estado);
 
 
 
