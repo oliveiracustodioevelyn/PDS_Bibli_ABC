@@ -110,4 +110,4 @@ foreign key (id_alu_fk) references Aluguel (id_alu),
 foreign key (cod_obra_fk) references Obras (cod_obra)
 );
 
-select	* from editora;
+select	* from obras;
