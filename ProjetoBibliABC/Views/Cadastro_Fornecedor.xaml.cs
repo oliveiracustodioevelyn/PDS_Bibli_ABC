@@ -64,6 +64,7 @@ namespace ProjetoBibliABC.Views
             _fornecedor.Rua = txtRua.Text;
             _fornecedor.Bairro = txtBairro.Text;
             _fornecedor.Numero = txtNumero.Text;
+            _fornecedor.Cep = txtCep.Text;
             _fornecedor.Complemento = txtComplemento.Text;
             _fornecedor.Cidade = txtCidade.Text;
             _fornecedor.Estado = txtEstado.Text;

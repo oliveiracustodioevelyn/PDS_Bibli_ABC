@@ -49,7 +49,7 @@ estado_lei varchar(100)
 );
 
 CREATE TABLE Editora(
-cog_edi int primary key auto_increment,
+cod_edi int primary key auto_increment,
 razaoSocial_edi varchar(100),
 nomeFantasia_edi varchar(100),
 cnpj_edi varchar(100),
@@ -109,3 +109,5 @@ cod_obra_fk int,
 foreign key (id_alu_fk) references Aluguel (id_alu),
 foreign key (cod_obra_fk) references Obras (cod_obra)
 );
+
+select	* from editora;

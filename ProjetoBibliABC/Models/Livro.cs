@@ -8,7 +8,7 @@ namespace ProjetoBibliABC.Models
 {
     public class Livro
     {
-        public int Id { get; }
+        public int Id { get; set; }
         public string  TituloObra { get; set; }
         public DateTime? DataPublicacao { get; set; }
         public int NumExemplar { get; set; }

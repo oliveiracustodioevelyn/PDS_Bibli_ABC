@@ -23,6 +23,7 @@ namespace ProjetoBibliABC.Views
         public Listagem_Avervo()
         {
             InitializeComponent();
+            Loaded += Listagem_Avervo_Loaded;
 
         }
 
@@ -43,14 +44,57 @@ namespace ProjetoBibliABC.Views
        
         }
 
-        //private void Button_Atualizar_Click(object sender, RoutedEventArgs e)
-        //{
-        //    var livroselecionado = dataGridAcervo.SelectedItem as Livro;
+        private void Button_Atualizar_Click(object sender, RoutedEventArgs e)
+        {
+            /*var livroSelecionado = dataGridAcervo.SelectedItem as Livro;
 
-        //    var form = new Cadastro_Livro(livroselecionado);
-        //    form.ShowDialog();
-        //    CarregarListagem();
-        //}
+            var form = new Cadastro_Livro(livroSelecionado);
+            form.ShowDialog();
+            CarregarListagem();*/
+        }
+
+        private void Button_Remover_Click(object sender, RoutedEventArgs e)
+        {
+            var escolaSelecionada = dataGridAcervo.SelectedItem as Livro;
+
+            var resultado = MessageBox.Show($"Deseja realmente remover o livro '{escolaSelecionada.TituloObra}' ?", "Confirmação de Exclusão",
+                MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (resultado == MessageBoxResult.Yes)
+                {
+
+                    var dao = new LivroDAO();
+                    dao.Delete(escolaSelecionada);
+
+                    MessageBox.Show("O registro foi Removido com sucesso!");
+                    CarregarListagem();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new LivroDAO();
+                List<Livro> listaEscolas = dao.List();
+
+                dataGridAcervo.ItemsSource = listaEscolas;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
 
     }

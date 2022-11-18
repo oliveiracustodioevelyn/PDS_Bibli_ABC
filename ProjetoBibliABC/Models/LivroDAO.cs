@@ -62,7 +62,7 @@ namespace ProjetoBibliABC.Models
                 {
                     var livro = new Livro();
 
-                   
+                    livro.Id = reader.GetInt32("cod_obra");
                     livro.TituloObra = DAOHelper.GetString(reader, "titulo_obra");
                     livro.DataPublicacao = DAOHelper.GetDateTime(reader, "dataPublicacao_obra");
                     livro.NumExemplar = reader.GetInt32("num_exemplar_obra");
@@ -122,6 +122,17 @@ namespace ProjetoBibliABC.Models
                "num_paginas_obra = @numPagina, autor_obra = @autor, genero_obra = @genero, tipo_obra = @tipo, " +
                "edicao_obra = @edicao, sinopse_obra = @sinopse" + " where cod_obra = @id";
 
+                comando.Parameters.AddWithValue("@id", livro.Id);
+                comando.Parameters.AddWithValue("@titulo", livro.TituloObra);
+                comando.Parameters.AddWithValue("@dataPublicacao", livro.DataPublicacao?.ToString("yyyy-MM-dd"));
+                comando.Parameters.AddWithValue("@num_exemplar", livro.NumExemplar);
+                comando.Parameters.AddWithValue("@editora", livro.EditoraObra);
+                comando.Parameters.AddWithValue("@num_paginas", livro.NumPagina);
+                comando.Parameters.AddWithValue("@autor", livro.AutorObra);
+                comando.Parameters.AddWithValue("@genero", livro.Genero);
+                comando.Parameters.AddWithValue("@tipo", livro.Tipo);
+                comando.Parameters.AddWithValue("@edicao", livro.EdicaoObra);
+                comando.Parameters.AddWithValue("@sinopse", livro.SinopseObra);
 
                 var resultado = comando.ExecuteNonQuery();
 

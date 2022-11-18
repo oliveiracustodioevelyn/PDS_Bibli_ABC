@@ -17,12 +17,25 @@
                 <Label Grid.Row="0"  Content="Listagem Fornecedor" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="56"/>
             </StackPanel>
 
-            <DataGrid Grid.Row="1" x:Name="dataGridAcervo" Margin="5" AutoGenerateColumns="False" CanUserAddRows="False"
+            <DataGrid Grid.Row="1" x:Name="dataGridFornecedor" Margin="5" AutoGenerateColumns="False" CanUserAddRows="False"
                   CanUserDeleteRows="False" IsReadOnly="True" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2">
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
-                    <DataGridTextColumn Header="Fornecedor" Binding="{Binding Fornecedor}"/>
+                    <DataGridTextColumn Header="Razão Social" Binding="{Binding RazaoSocial}"/>
+                    <DataGridTextColumn Header="Nome Fantasia" Binding="{Binding NomeFantasia}"/>
+                    <DataGridTextColumn Header="CNPJ" Binding="{Binding Cnpj}"/>
+                    <DataGridTextColumn Header="Telefone1" Binding="{Binding Telefone1}"/>
+                    <DataGridTextColumn Header="Telefone2" Binding="{Binding Telefone2}"/>
+                    <DataGridTextColumn Header="Representante" Binding="{Binding Representante}"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                    <DataGridTextColumn Header="Rua" Binding="{Binding Rua}"/>
+                    <DataGridTextColumn Header="Bairro" Binding="{Binding Bairro}"/>
+                    <DataGridTextColumn Header="Número" Binding="{Binding Numero}"/>
+                    <DataGridTextColumn Header="CEP" Binding="{Binding Cep}"/>
+                    <DataGridTextColumn Header="Complemento" Binding="{Binding Complemento}"/>
+                    <DataGridTextColumn Header="Cidade" Binding="{Binding Cidade}"/>
+                    <DataGridTextColumn Header="Estado" Binding="{Binding Estado}"/>
                    
 
                     <DataGridTemplateColumn Header="Ações">
@@ -30,8 +43,8 @@
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
 
-                                    <Button Content="Atualizar registro" Margin="5 0" />
-                                    <Button Content="Excluir registro" />
+                                    <Button Content="Atualizar registro" Margin="5 0" Click="Button_Atualizar_Click" />
+                                    <Button Content="Excluir registro" Click="Button_Remover_Click" />
 
                                 </StackPanel>
                             </DataTemplate>

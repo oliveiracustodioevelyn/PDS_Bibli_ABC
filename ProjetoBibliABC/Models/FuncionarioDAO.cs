@@ -58,7 +58,7 @@ namespace ProjetoBibliABC.Models
             }
         }
 
-        /*public List<Funcionario> List()
+        public List<Funcionario> List()
         {
             try
             {
@@ -74,22 +74,22 @@ namespace ProjetoBibliABC.Models
                     var funcionario = new Funcionario();
 
 
-                    livro.Id = reader.GetInt32("id_obra");
-                    livro.TituloObra = DAOHelper.GetString(reader, "titulo_obra");
-                    livro.AutorObra = DAOHelper.GetString(reader, "autor_obra");
-                    livro.DataPublicacao = DAOHelper.GetDateTime(reader, "dataPublicacao_obra");
-                   
-                    livro.EdicaoObra = DAOHelper.GetString(reader, "edicao_obra");
-                    livro.SinopseObra = DAOHelper.GetString(reader, "sinopse_obra");
-
-                    funcionario.Id = reader.GetInt32("id_obra");
-                    funcionario.TituloObra = DAOHelper.GetString(reader, "titulo_obra");
-                    funcionario.AutorObra = DAOHelper.GetString(reader, "autor_obra");
-                    funcionario.DataPublicacao = DAOHelper.GetDateTime(reader, "dataPublicacao_obra");
-                    funcionario.LocalizacaoObra = DAOHelper.GetString(reader, "localizacao_obra");
-                    funcionario.EdicaoObra = DAOHelper.GetString(reader, "edicao_obra");
-                    funcionario.SinopseObra = DAOHelper.GetString(reader, "sinopse_obra");
-
+                    funcionario.Id = reader.GetInt32("id_fun");
+                    funcionario.Nome = DAOHelper.GetString(reader, "nome_fun");
+                    funcionario.CPF = DAOHelper.GetString(reader, "cpf_fun");
+                    funcionario.RG = DAOHelper.GetString(reader, "rg_fun");
+                    funcionario.Sexo = DAOHelper.GetString(reader, "sexo_fun");
+                    funcionario.Telefone1 = DAOHelper.GetString(reader, "telefone1_fun");
+                    funcionario.Telefone2 = DAOHelper.GetString(reader, "telefone2_fun");
+                    funcionario.DataNascimento = DAOHelper.GetDateTime(reader, "dataNascimento_fun");
+                    funcionario.Email = DAOHelper.GetString(reader, "email_fun");
+                    funcionario.Senha = DAOHelper.GetString(reader, "senha_fun");
+                    funcionario.Rua = DAOHelper.GetString(reader, "rua_fun");
+                    funcionario.Bairro = DAOHelper.GetString(reader, "bairro_fun");
+                    funcionario.Numero = DAOHelper.GetString(reader, "numero_fun");
+                    funcionario.Complemento = DAOHelper.GetString(reader, "complemento_fun");
+                    funcionario.Cidade = DAOHelper.GetString(reader, "cidade_fun");
+                    funcionario.Estado = DAOHelper.GetString(reader, "estado_fun");
 
 
                     lista.Add(funcionario);
@@ -102,7 +102,7 @@ namespace ProjetoBibliABC.Models
             {
                 throw ex;
             }
-        }*/
+        }
 
         public void Delete(Funcionario funcionario)
         {
@@ -136,7 +136,9 @@ namespace ProjetoBibliABC.Models
                 var comando = _conn.Query();
 
                 comando.CommandText = "Update Funcionario set " +
-               "nome_fun = @nome,  cpf_fun = @cpf, rg_fun = @rg, sexo_fun = @sexo, telefone1_fun = @telefone1, telefone2_fun = @telefone2, dataNascimento_fun = @dataNascimento, email_fun = @email, senha_fun = @senha, rua_fun = @rua, bairo_fun = @bairo, numero_fun = @numero, complemento_fun = @complemento, cidade_fun = @cidade, estado_fun = @estado" + "where id_fun = @id";
+               "nome_fun = @nome,  cpf_fun = @cpf, rg_fun = @rg, sexo_fun = @sexo, telefone1_fun = @telefone1, telefone2_fun = @telefone2, " +
+               "dataNascimento_fun = @dataNascimento, email_fun = @email, senha_fun = @senha, rua_fun = @rua, bairo_fun = @bairo, numero_fun = @numero," +
+               " complemento_fun = @complemento, cidade_fun = @cidade, estado_fun = @estado" + "where id_fun = @id";
 
                 comando.Parameters.AddWithValue("@id", funcionario.Id);
                 comando.Parameters.AddWithValue("@nome", funcionario.Nome);

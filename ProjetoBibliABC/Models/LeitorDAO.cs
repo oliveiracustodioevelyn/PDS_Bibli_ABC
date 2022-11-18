@@ -51,7 +51,7 @@ namespace ProjetoBibliABC.Models
             }
         }
 
-        /*public List<Livro> List()
+        public List<Leitor> List()
         {
             try
             {
@@ -66,16 +66,22 @@ namespace ProjetoBibliABC.Models
                 {
                     var leitor = new Leitor();
 
-                    leitor.Id = reader.GetInt32("id_lei");
+                    leitor.Id = reader.GetInt32("cod_lei");
                     leitor.Nome = DAOHelper.GetString(reader, "nome_lei");
                     leitor.CPF = DAOHelper.GetString(reader, "cpf_lei");
-                    leitor.Email = DAOHelper.GetString(reader, "email_lei");
                     leitor.RG = DAOHelper.GetString(reader, "rg_lei");
-                    leitor.Endereco = DAOHelper.GetString(reader, "endereco_lei");
+                    leitor.Email = DAOHelper.GetString(reader, "email_lei");
+                    
                     leitor.Telefone = DAOHelper.GetString(reader, "telefone_lei");
                     leitor.DataNascimento = DAOHelper.GetDateTime(reader, "dataNascimento_lei");
                     leitor.Sexo = DAOHelper.GetString(reader, "sexo_lei");
-
+                    leitor.Rua = DAOHelper.GetString(reader, "rua_lei");
+                    leitor.Bairro = DAOHelper.GetString(reader, "bairro_lei");
+                    leitor.Numero = DAOHelper.GetString(reader, "numero_lei");
+                    leitor.Cep = DAOHelper.GetString(reader, "cep_lei");
+                    leitor.Complemento = DAOHelper.GetString(reader, "complemento_lei");
+                    leitor.Cidade = DAOHelper.GetString(reader, "cidade_lei");
+                    leitor.Estado = DAOHelper.GetString(reader, "estado_lei");
 
                     lista.Add(leitor);
                 }
@@ -87,7 +93,7 @@ namespace ProjetoBibliABC.Models
             {
                 throw ex;
             }
-        }*/
+        }
 
         public void Delete(Leitor leitor)
         {
@@ -96,7 +102,7 @@ namespace ProjetoBibliABC.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM Leitor  WHERE id_lei = @id";
+                comando.CommandText = "DELETE FROM Leitor WHERE cod_lei = @id";
 
                 comando.Parameters.AddWithValue("@id", leitor.Id);
 
@@ -121,8 +127,26 @@ namespace ProjetoBibliABC.Models
                 var comando = _conn.Query();
 
                 comando.CommandText = "Update Leitor set " +
-               "nome_lei = @nome_lei, cpf_lei = @cpf_lei, email_lei = @email_lei, rg_lei = @rg_lei, endereco_lei = @endereco_lei, telefone_lei = @telefone_lei, dataNascimento_lei = @dataNascimento_lei, sexo_lei = @sexo_lei" + " where id_lei = @id";
+               "nome_lei = @nome_lei, cpf_lei = @cpf_lei, rg_lei = @rg_lei, email_lei = @email_lei, " +
+               " telefone_lei = @telefone_lei, dataNascimento_lei = @dataNascimento_lei, sexo_lei = @sexo_lei, rua_fun = @rua, " +
+               "bairo_fun = @bairo, numero_fun = @numero, cep_fun = @cep, complemento_fun = @complemento, cidade_fun = @cidade, estado_fun = @estado" + " where cod_lei = @id";
 
+                comando.Parameters.AddWithValue("@id", leitor.Id);
+                comando.Parameters.AddWithValue("@nome", leitor.Nome);
+                comando.Parameters.AddWithValue("@cpf", leitor.CPF);
+                comando.Parameters.AddWithValue("@rg", leitor.RG);
+                comando.Parameters.AddWithValue("@email", leitor.Email);
+                comando.Parameters.AddWithValue("@telefone", leitor.Telefone);
+                comando.Parameters.AddWithValue("@dataNascimento", leitor.DataNascimento?.ToString("yyyy-MM-dd"));
+                comando.Parameters.AddWithValue("@sexo", leitor.Sexo);
+
+                comando.Parameters.AddWithValue("@rua", leitor.Rua);
+                comando.Parameters.AddWithValue("@bairro", leitor.Bairro);
+                comando.Parameters.AddWithValue("@numero", leitor.Numero);
+                comando.Parameters.AddWithValue("@cep", leitor.Cep);
+                comando.Parameters.AddWithValue("@complemento", leitor.Complemento);
+                comando.Parameters.AddWithValue("@cidade", leitor.Cidade);
+                comando.Parameters.AddWithValue("@estado", leitor.Estado);
 
                 var resultado = comando.ExecuteNonQuery();
 

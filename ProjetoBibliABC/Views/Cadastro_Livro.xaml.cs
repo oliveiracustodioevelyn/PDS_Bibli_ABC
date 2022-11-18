@@ -117,7 +117,7 @@ namespace ProjetoBibliABC.Views
                 {
                     dao.Insert(_livro);
 
-                    MessageBox.Show("errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrooooo");
+                    MessageBox.Show("Cadastrado realizado com Sucesso!!");
                 }
 
             }

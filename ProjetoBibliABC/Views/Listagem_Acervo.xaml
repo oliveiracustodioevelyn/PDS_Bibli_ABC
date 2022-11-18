@@ -22,18 +22,23 @@
                   CanUserDeleteRows="False" IsReadOnly="True" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2">
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
                     <DataGridTextColumn Header="Título Livro" Binding="{Binding TituloObra}"/>
-                    <DataGridTextColumn Header="Gênero" Binding="{Binding GeneroL}" />
+                    <DataGridTextColumn Header="Data Publicação" Binding="{Binding DataPublicacao}" />
+                    <DataGridTextColumn Header="Número do Exemplar" Binding="{Binding NumExemplar}" />
+                    <DataGridTextColumn Header="Editora" Binding="{Binding Edit}" />
+                    <DataGridTextColumn Header="Número de Páginas" Binding="{Binding NumPag}" />
                     <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" />
+                    <DataGridTextColumn Header="Edição" Binding="{Binding Edicao}" />
+                    <DataGridTextColumn Header="Sinopse" Binding="{Binding Sinopse}" />
 
                     <DataGridTemplateColumn Header="Ações">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
 
-                                    <Button Content="Atualizar registro" Margin="5 0" />
-                                    <Button Content="Excluir registro" />
+                                    <Button Content="Atualizar registro" Margin="5 0" Click="Button_Atualizar_Click" />
+                                    <Button Content="Excluir registro" Click="Button_Remover_Click" />
 
                                 </StackPanel>
                             </DataTemplate>
