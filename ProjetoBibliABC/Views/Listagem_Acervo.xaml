@@ -26,11 +26,11 @@
                     <DataGridTextColumn Header="Título Livro" Binding="{Binding TituloObra}"/>
                     <DataGridTextColumn Header="Data Publicação" Binding="{Binding DataPublicacao}" />
                     <DataGridTextColumn Header="Número do Exemplar" Binding="{Binding NumExemplar}" />
-                    <DataGridTextColumn Header="Editora" Binding="{Binding Edit}" />
-                    <DataGridTextColumn Header="Número de Páginas" Binding="{Binding NumPag}" />
+                    <DataGridTextColumn Header="Editora" Binding="{Binding EditoraObra}" />
+                    <DataGridTextColumn Header="Número de Páginas" Binding="{Binding NumPagina}" />
                     <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" />
-                    <DataGridTextColumn Header="Edição" Binding="{Binding Edicao}" />
-                    <DataGridTextColumn Header="Sinopse" Binding="{Binding Sinopse}" />
+                    <DataGridTextColumn Header="Edição" Binding="{Binding EdicaoObra}" />
+                    <DataGridTextColumn Header="Sinopse" Binding="{Binding SinopseObra}" />
 
                     <DataGridTemplateColumn Header="Ações">
                         <DataGridTemplateColumn.CellTemplate>

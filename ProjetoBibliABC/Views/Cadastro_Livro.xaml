@@ -61,14 +61,7 @@
                     x:Name="dtPublicacao"
                     Style="{StaticResource MaterialDesignFilledDatePicker}"
                     materialDesign:HintAssist.Hint="Data de Publicacao" Padding="10" Width="314" FontSize="18" Margin="5 0 0 0" />
-                    <TextBox 
-                        Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
-                        AcceptsReturn="True"
-                        TextWrapping="Wrap"
-                        materialDesign:HintAssist.Hint="Ano"
-                        x:Name="txtAno" Padding="10" Width="150" Margin="10 0 5 0" FontSize="18"/>
-
+                    
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
                         VerticalAlignment="Top"
@@ -77,9 +70,13 @@
                         materialDesign:HintAssist.Hint="N° Exemplar"
                         x:Name="txtExemplar" Padding="10" Width="150" Margin="10 0 0 0" FontSize="18" Cursor="IBeam" />
 
-                    <ComboBox
+                    <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Editora"
-                        x:Name="CbEditora" Padding="18" Width="254" Margin="10 0 0 00" FontSize="18" Background="#FFE0E0E0"/>
+                        x:Name="txtEditora" Padding="10" Width="150" Margin="10 0 0 0" FontSize="18" Cursor="IBeam" />
 
                 </StackPanel>
             </StackPanel>
@@ -112,12 +109,13 @@
                         materialDesign:HintAssist.Hint="Gênero"
                         x:Name="txtGenero" Padding="10" FontSize="18" Width="498" Margin="20 260 0 0" Cursor="IBeam" />
 
-                <TextBox
-                        
+                <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Tipo"
-                       
-                        x:Name="txtTipo" Padding="18" Width="394"  FontSize="18" Background="#FFE0E0E0"
-                        Margin="10 260 0 536" Cursor="IBeam"/>
+                        x:Name="txtTipo" Padding="10" FontSize="18" Width="498" Margin="20 260 0 0" Cursor="IBeam" />
 
 
             </StackPanel>

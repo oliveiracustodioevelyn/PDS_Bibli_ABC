@@ -34,11 +34,11 @@ namespace ProjetoBibliABC.Views
             txtTitulo.Text = _livro.TituloObra;
             dtPublicacao.Text = Convert.ToString(_livro.DataPublicacao);
             txtExemplar.Text = Convert.ToString(_livro.NumExemplar);
-            CbEditora.Text = Convert.ToString(_livro.EditoraObra);
+            txtEditora.Text = _livro.EditoraObra;
             txtNumPag.Text = Convert.ToString(_livro.NumPagina);
             txtAutor.Text = _livro.AutorObra;
-            txtGenero.Text = Convert.ToString(_livro.Genero);
-            txtTipo.Text = Convert.ToString(_livro.Tipo);
+            txtGenero.Text = _livro.Genero;
+            txtTipo.Text = _livro.Tipo;
             txtEdicao.Text = _livro.EdicaoObra;
             txtSinopse.Text = _livro.SinopseObra;
 
@@ -84,10 +84,11 @@ namespace ProjetoBibliABC.Views
             _livro.TituloObra = txtTitulo.Text;
             _livro.NumExemplar = Convert.ToInt32(txtExemplar.Text);
             _livro.NumPagina = Convert.ToInt32(txtNumPag.Text);
-            _livro.EditoraObra = Convert.ToString(CbEditora);
+            _livro.EditoraObra = txtEditora.Text;
             _livro.Genero = txtGenero.Text;
             _livro.Tipo = txtTipo.Text;
             _livro.DataPublicacao = dtPublicacao.SelectedDate;
+            
 
             /*CREATE TABLE Obras(
             cod_obra int primary key auto_increment,

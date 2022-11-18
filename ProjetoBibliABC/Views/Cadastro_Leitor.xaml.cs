@@ -111,5 +111,10 @@ namespace ProjetoBibliABC.Views
         {
 
         }
+
+        private void txtCidade_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

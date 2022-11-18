@@ -93,7 +93,7 @@ namespace ProjetoBibliABC.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM Obras  WHERE cod_obra = @id";
+                comando.CommandText = "DELETE FROM Obras WHERE cod_obra = @id";
 
                 comando.Parameters.AddWithValue("@id",livro.Id);
 

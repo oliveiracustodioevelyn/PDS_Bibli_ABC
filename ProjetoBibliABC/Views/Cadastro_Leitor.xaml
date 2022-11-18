@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel  Background ="#FF0A114A" Grid.Row="0">
-            <Label Grid.Row="0"  Content="Cadastro de Editora" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="43"/>
+            <Label Grid.Row="0"  Content="Cadastro de Leitor" FontSize="36" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" Height="43"/>
         </StackPanel>
 
         <Grid Grid.Row="1" Background="#FFFFFF">
@@ -47,11 +47,11 @@
                 <UniformGrid Columns="2" Margin="0 5">
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Nome"
-                        x:Name="txtNome" Padding="10"  Margin="0 0 0 0" FontSize="18" Cursor="IBeam" Width="433"/>
+                        x:Name="txtNome" Padding="10" FontSize="18" Cursor="IBeam" HorizontalAlignment="Center" Width="465" Margin="0 0 10 0"/>
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -59,7 +59,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="CPF"
-                        x:Name="txtCpf" Padding="10" Margin="0 5 0 0" FontSize="18"/>
+                        x:Name="txtCpf" Padding="10" FontSize="18" HorizontalAlignment="Center" Width="465"/>
                 </UniformGrid>
 
                 <UniformGrid Columns="2" Margin="0 5">
@@ -71,15 +71,15 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Email"
-                        x:Name="txtEmail" Padding="10" FontSize="18" Width="445" Cursor="IBeam"/>
+                        x:Name="txtEmail" Padding="10" FontSize="18" Cursor="IBeam" HorizontalAlignment="Left" Width="465" Margin="0 0 10 0"/>
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="RG"
-                        x:Name="txtRg" Padding="10" Margin="5 0 0 0" FontSize="18" Cursor="IBeam" />
+                        x:Name="txtRg" Padding="10" FontSize="18" Cursor="IBeam" HorizontalAlignment="Left" Width="465"/>
 
                 </UniformGrid>
 
@@ -87,25 +87,25 @@
                     <DatePicker 
                     x:Name="dtNasc"
                     Style="{StaticResource MaterialDesignFilledDatePicker}"
-                    materialDesign:HintAssist.Hint="Data de Nascimento" Padding="10" Width="438" FontSize="18" />
+                    materialDesign:HintAssist.Hint="Data de Nascimento" Padding="10" FontSize="18" HorizontalAlignment="Left" Width="465" Margin="0 0 10 0"/>
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Telefone"
-                        x:Name="txtTelefone" Padding="10" FontSize="18" Cursor="IBeam"/>
+                        x:Name="txtTelefone" Padding="10" FontSize="18" Cursor="IBeam" HorizontalAlignment="Left" Width="465"/>
                 </UniformGrid>
 
-                <UniformGrid>
+                <UniformGrid Margin="0 5">
                     <TextBox
                         Style="{StaticResource MaterialDesignFilledTextBox}"
                         VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Sexo"
-                        x:Name="txtSexo" Padding="10" FontSize="18" Grid.ColumnSpan="3" Width="436"/>
+                        x:Name="txtSexo" Padding="10" FontSize="18" Width="454" HorizontalAlignment="Left"/>
                 </UniformGrid>
 
             </StackPanel>
@@ -113,25 +113,28 @@
 
                 <Label Content="Informações de Localização" FontSize="24" Margin="0 2" HorizontalAlignment="Center"/>
 
-                <TextBox 
+                <UniformGrid Columns="2" Margin="0 5">
+                    <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Rua"
-                        x:Name="txtRua" Padding="10" Margin="0 0 0 5" FontSize="18"/>
-                <TextBox 
+                        x:Name="txtRua" Padding="10" Margin="0 0 5 0" FontSize="18"/>
+                    <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Bairro"
                         x:Name="txtBairro" Padding="10" FontSize="18"/>
 
+                </UniformGrid>
+                
                 <UniformGrid Columns="2" Margin="0 5">
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Número"
@@ -139,7 +142,7 @@
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="CEP"
@@ -149,7 +152,7 @@
 
                 <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Complemento"
@@ -158,15 +161,15 @@
                 <UniformGrid Columns="2" Margin="0 5">
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Cidade"
-                        x:Name="txtCidade" Padding="10" Margin="0 0 5 0" FontSize="18"/>
+                        x:Name="txtCidade" Padding="10" Margin="0 0 5 0" FontSize="18" TextChanged="txtCidade_TextChanged"/>
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Estado"
