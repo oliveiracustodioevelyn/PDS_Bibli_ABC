@@ -66,11 +66,10 @@ cidade_edi varchar(100),
 estado_edi varchar(100)
 ); 
 
-CREATE TABLE Devolucao(
+/*CREATE TABLE Devolucao(
 id_dev int primary key auto_increment,
-data_dev date,
-hora_dev time
-);
+data_dev date
+);*/
 
 CREATE TABLE Aluguel(
 id_alu int primary key auto_increment,
@@ -79,10 +78,8 @@ hora_alu time,
 dataDevolucao date,
 id_fun_fk int,
 cod_lei_fk int,
-id_dev_fk int,
 foreign key (id_fun_fk) references Funcionario (id_fun),
-foreign key (cod_lei_fk) references Leitor (cod_lei),
-foreign key (id_dev_fk) references Devolucao (id_dev)
+foreign key (cod_lei_fk) references Leitor (cod_lei)
 );
 
 CREATE TABLE Obras(
@@ -96,7 +93,8 @@ autor_obra varchar(100),
 genero_obra varchar(100),
 tipo_obra varchar(100),
 edicao_obra varchar (100),
-sinopse_obra varchar(100)
+sinopse_obra varchar(100),
+status_obra varchar(100)
 );
 
 #comando.CommandText = "INSERT INTO  Obras VALUES (null, @titulo_obra,  @dataPublicacao_obra, @num_exemplar_obra, @editora_obra, @num_paginas_obra, @autor_obra," +"@genero_obra,@tipo_obra,@edicao_obra, @sinopse_obra);";

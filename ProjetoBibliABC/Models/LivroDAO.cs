@@ -21,7 +21,7 @@ namespace ProjetoBibliABC.Models
 
                 comando.CommandText = "INSERT INTO  Obras VALUES (null, @titulo,  @dataPublicacao, " +
                     "@num_exemplar, @editora, @num_paginas, @autor," +
-                    "@genero, @tipo, @edicao, @sinopse);";
+                    "@genero, @tipo, @edicao, @sinopse, @status);";
 
                 comando.Parameters.AddWithValue("@titulo", livro.TituloObra);
                 comando.Parameters.AddWithValue("@dataPublicacao", livro.DataPublicacao?.ToString("yyyy-MM-dd"));
@@ -33,6 +33,7 @@ namespace ProjetoBibliABC.Models
                 comando.Parameters.AddWithValue("@tipo", livro.Tipo);
                 comando.Parameters.AddWithValue("@edicao", livro.EdicaoObra);
                 comando.Parameters.AddWithValue("@sinopse", livro.SinopseObra);
+                comando.Parameters.AddWithValue("@status", livro.Status);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -73,7 +74,8 @@ namespace ProjetoBibliABC.Models
                     livro.Tipo = DAOHelper.GetString(reader, "tipo_obra");
                     livro.EdicaoObra = DAOHelper.GetString(reader, "edicao_obra");
                     livro.SinopseObra = DAOHelper.GetString(reader, "sinopse_obra");
-                   
+                    livro.Status = DAOHelper.GetString(reader, "status");
+
                     lista.Add(livro);
                 }
                 reader.Close();
@@ -120,7 +122,7 @@ namespace ProjetoBibliABC.Models
                 comando.CommandText = "Update  Obras set " +
                "titulo_obra = @titulo, dataPublicacao_obra = @data, num_exemplar_obra = @numExemplar, editora_obra = @editora," +
                "num_paginas_obra = @numPagina, autor_obra = @autor, genero_obra = @genero, tipo_obra = @tipo, " +
-               "edicao_obra = @edicao, sinopse_obra = @sinopse" + " where cod_obra = @id";
+               "edicao_obra = @edicao, sinopse_obra = @sinopse, status_obra = @status" + " where cod_obra = @id";
 
                 comando.Parameters.AddWithValue("@id", livro.Id);
                 comando.Parameters.AddWithValue("@titulo", livro.TituloObra);
@@ -133,6 +135,7 @@ namespace ProjetoBibliABC.Models
                 comando.Parameters.AddWithValue("@tipo", livro.Tipo);
                 comando.Parameters.AddWithValue("@edicao", livro.EdicaoObra);
                 comando.Parameters.AddWithValue("@sinopse", livro.SinopseObra);
+                comando.Parameters.AddWithValue("@status", livro.Status);
 
                 var resultado = comando.ExecuteNonQuery();
 

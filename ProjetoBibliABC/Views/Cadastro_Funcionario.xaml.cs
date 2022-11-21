@@ -62,7 +62,8 @@ namespace ProjetoBibliABC.Views
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
         {
-
+            Menu_Principal menu = new Menu_Principal();
+            menu.ShowDialog();
         }
 
         private void btSalvar_Click(object sender, RoutedEventArgs e)

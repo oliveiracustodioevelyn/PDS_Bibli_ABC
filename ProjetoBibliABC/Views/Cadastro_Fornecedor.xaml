@@ -108,7 +108,7 @@
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Representante"
                         x:Name="txtRepresentante" Padding="10" FontSize="18" Cursor="IBeam"/>
-                    
+
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
                         VerticalAlignment="Top"
@@ -196,7 +196,7 @@
             <StackPanel Orientation="Horizontal">
                 <UniformGrid Grid.Row="2" Columns="3">
 
-                    <Button x:Name="btCancelar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="60" Width="211" FontSize="20" FontWeight="Normal" Click="btCancelar_Click" Margin="20 0 20 0">
+                    <Button x:Name="btCancelar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="60" Width="211" FontSize="20" FontWeight="Normal" Click="btCancelar_Click">
                         <Button.Template>
                             <ControlTemplate>
                                 <Border CornerRadius="15" Background="#FFFFC850">

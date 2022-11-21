@@ -109,6 +109,8 @@
     </ApplicationDefinition>
     <Compile Include="DataBase\Conexao.cs" />
     <Compile Include="Helper\DAOHelper.cs" />
+    <Compile Include="Models\Aluguel.cs" />
+    <Compile Include="Models\AluguelDAO.cs" />
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\FuncionarioDAO.cs" />
     <Compile Include="Models\Leitor.cs" />

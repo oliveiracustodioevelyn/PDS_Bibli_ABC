@@ -97,6 +97,16 @@
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Autor(a)"
                         x:Name="txtAutor" Padding="10"  FontSize="18" Margin="10 10 0 0" Width="684"/>
+
+                <TextBox 
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Center"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        materialDesign:HintAssist.Hint="Status"
+                        x:Name="txtStatus" Padding="10"  FontSize="18" Margin="10 10 0 0" Width="684" IsReadOnly="True"/>
+          
+
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="10,0">
@@ -154,7 +164,7 @@
 
                     <Button x:Name="btCancelar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="60" Width="211" FontSize="20" FontWeight="Normal"
                             
-                            Margin="20 0 20 0">
+                            Margin="20 0 20 0" Click="btCancelar_Click">
                         <Button.Template>
                             <ControlTemplate>
                                 <Border CornerRadius="15" Background="#FFFFC850">

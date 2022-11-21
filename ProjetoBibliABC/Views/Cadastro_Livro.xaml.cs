@@ -42,6 +42,10 @@ namespace ProjetoBibliABC.Views
             txtEdicao.Text = _livro.EdicaoObra;
             txtSinopse.Text = _livro.SinopseObra;
 
+            //_livro.Status = "Disponivel";
+            txtStatus.Text = "Disponível";
+            txtStatus.Text = _livro.Status;
+
 
 
         }
@@ -88,6 +92,9 @@ namespace ProjetoBibliABC.Views
             _livro.Genero = txtGenero.Text;
             _livro.Tipo = txtTipo.Text;
             _livro.DataPublicacao = dtPublicacao.SelectedDate;
+
+            txtStatus.Text = "Disponível";
+            _livro.Status = txtStatus.Text;
             
 
             /*CREATE TABLE Obras(
@@ -131,6 +138,12 @@ namespace ProjetoBibliABC.Views
         private void txtCodigo_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void btCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            Menu_Principal menu = new Menu_Principal();
+            menu.ShowDialog();
         }
     }
 }
