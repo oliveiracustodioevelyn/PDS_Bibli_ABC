@@ -45,11 +45,11 @@ namespace ProjetoBibliABC.Views
 
         private void Button_Atualizar_Click(object sender, RoutedEventArgs e)
         {
-            /*var fornecedorSelecionado = dataGridFornecedor.SelectedItem as Fornecedor;
+            var fornecedorSelecionado = dataGridFornecedor.SelectedItem as Fornecedor;
 
             var form = new Cadastro_Fornecedor(fornecedorSelecionado);
             form.ShowDialog();
-            CarregarListagem();*/
+            CarregarListagem();
         }
 
         private void Button_Remover_Click(object sender, RoutedEventArgs e)

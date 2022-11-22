@@ -66,6 +66,8 @@ cidade_edi varchar(100),
 estado_edi varchar(100)
 ); 
 
+select * FROM editora;
+
 /*CREATE TABLE Devolucao(
 id_dev int primary key auto_increment,
 data_dev date
@@ -109,3 +111,14 @@ foreign key (cod_obra_fk) references Obras (cod_obra)
 );
 
 select	* from obras;
+
+
+UPDATE editora SET razaoSocial_edi = '@razao_social', nomeFantasia_edi = '@nome_fantasia', cnpj_edi = '@cnpj', telefone1_edi = '@telefone1', telefone2_edi = '@telefone2', representante_edi = '@representante', email_edi = '@email', rua_edi = '@rua', bairro_edi = '@bairro', numero_edi = '@numero', cep_edi = '@cep', complemento_edi = '@complemento', cidade_edi = '@cidade', estado_edi = '@estado' WHERE (cod_edi = '@id');
+
+
+
+
+
+
+
+

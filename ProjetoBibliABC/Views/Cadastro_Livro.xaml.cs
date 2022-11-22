@@ -33,6 +33,7 @@ namespace ProjetoBibliABC.Views
             txtCodigo.Text = Convert.ToString(_livro.Id); 
             txtTitulo.Text = _livro.TituloObra;
             dtPublicacao.Text = Convert.ToString(_livro.DataPublicacao);
+            //dtPublicacao.Text = DateTime.Now.ToString();
             txtExemplar.Text = Convert.ToString(_livro.NumExemplar);
             txtEditora.Text = _livro.EditoraObra;
             txtNumPag.Text = Convert.ToString(_livro.NumPagina);
@@ -92,6 +93,7 @@ namespace ProjetoBibliABC.Views
             _livro.Genero = txtGenero.Text;
             _livro.Tipo = txtTipo.Text;
             _livro.DataPublicacao = dtPublicacao.SelectedDate;
+            //_livro.DataPublicacao = DateTime.Now;
 
             txtStatus.Text = "Disponível";
             _livro.Status = txtStatus.Text;

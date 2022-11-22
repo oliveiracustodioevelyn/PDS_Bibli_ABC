@@ -26,6 +26,12 @@ namespace ProjetoBibliABC.Views
             InitializeComponent();
             Loaded += Cadastro_Fornecedor_Loaded;
         }
+        public Cadastro_Fornecedor(Fornecedor fornecedor)
+        {
+            InitializeComponent();
+            Loaded += Cadastro_Fornecedor_Loaded;
+            _fornecedor = fornecedor;
+        }
 
         private void Cadastro_Fornecedor_Loaded(object sender, RoutedEventArgs e)
         {
@@ -92,6 +98,11 @@ namespace ProjetoBibliABC.Views
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void txtRazaoSoc_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

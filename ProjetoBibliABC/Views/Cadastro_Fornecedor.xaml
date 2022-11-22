@@ -57,7 +57,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Razao Social"
-                        x:Name="txtRazaoSoc" Padding="10" FontSize="18" Grid.ColumnSpan="3" Margin="232,0,0,0" />
+                        x:Name="txtRazaoSoc" Padding="10" FontSize="18" Grid.ColumnSpan="3" Margin="232,0,0,0" TextChanged="txtRazaoSoc_TextChanged" />
                 </Grid>
 
 

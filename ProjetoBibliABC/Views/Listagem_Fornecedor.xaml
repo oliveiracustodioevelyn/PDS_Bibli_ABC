@@ -22,8 +22,8 @@
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
-                    <DataGridTextColumn Header="Razão Social" Binding="{Binding RazaoSocial}"/>
-                    <DataGridTextColumn Header="Nome Fantasia" Binding="{Binding NomeFantasia}"/>
+                    <DataGridTextColumn Header="Razão Social" Binding="{Binding Razao_social}"/>
+                    <DataGridTextColumn Header="Nome Fantasia" Binding="{Binding Nome_fantasia}"/>
                     <DataGridTextColumn Header="CNPJ" Binding="{Binding Cnpj}"/>
                     <DataGridTextColumn Header="Telefone1" Binding="{Binding Telefone1}"/>
                     <DataGridTextColumn Header="Telefone2" Binding="{Binding Telefone2}"/>
