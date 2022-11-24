@@ -29,7 +29,6 @@
 
         <Grid Grid.Row="1" Background="#FFFFFF">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1200"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
@@ -115,23 +114,18 @@
 
 
 
-                <UniformGrid Columns="3" Margin="0 5">
+                <UniformGrid Columns="2" Margin="0 5">
 
 
                     <DatePicker 
                     x:Name="dtAtual"
                     Style="{StaticResource MaterialDesignFilledDatePicker}"
-                    materialDesign:HintAssist.Hint="Data Atual" Padding="10" Width="400" FontSize="18" HorizontalAlignment="Left"/>
-
-
-                    <ComboBox
-                        materialDesign:HintAssist.Hint="Qnt. Dias"
-                        x:Name="CbDias" Padding="18" Width="350" FontSize="18" Background="#FFE0E0E0"/>
+                    materialDesign:HintAssist.Hint="Data Atual" Padding="10" Width="450" FontSize="18" HorizontalAlignment="Left"/>
 
                     <DatePicker 
                     x:Name="dtDevolucao"
                     Style="{StaticResource MaterialDesignFilledDatePicker}"
-                    materialDesign:HintAssist.Hint="Data Devolução" Padding="10" Width="400" FontSize="18"  HorizontalAlignment="Left"/>
+                    materialDesign:HintAssist.Hint="Data Devolução" Padding="10" Width="450" FontSize="18"  HorizontalAlignment="Left"/>
 
                 </UniformGrid>
 
@@ -142,45 +136,6 @@
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Descrição Livro"
                         x:Name="txtDescricao" Padding="10" FontSize="18" Cursor="IBeam"/>
-
-            </StackPanel>
-
-            <StackPanel Grid.Column="1" Margin="15">
-
-                <Label Content="" FontSize="24"/>
-
-
-                <!---> adicionar imagem lupa nos botões-->
-                <Button x:Name="btBusLivro" HorizontalAlignment="center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="60" Width="210" FontSize="20" FontWeight="Normal" Margin="20 0 20 10">
-                    <Button.Template>
-                        <ControlTemplate>
-                            <Border CornerRadius="15" Background="#FFFFC850">
-                                <TextBlock Text="Buscar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" Foreground="#FF0A114A"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-
-                <!---> adicionar imagem lupa nos botões-->
-                <Button x:Name="btBusLeitor" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="60" Width="210" FontSize="20" FontWeight="Normal" Margin="20 0 20 10">
-                    <Button.Template>
-                        <ControlTemplate>
-                            <Border CornerRadius="15" Background="#FFFFC850">
-                                <TextBlock Text="Buscar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" Foreground="#FF0A114A"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-
-                <Button x:Name="btBusFunc" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="60" Width="210" FontSize="20" FontWeight="Normal" Margin="20 0 20 10">
-                    <Button.Template>
-                        <ControlTemplate>
-                            <Border CornerRadius="15" Background="#FFFFC850">
-                                <TextBlock Text="Buscar" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" Foreground="#FF0A114A"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
 
             </StackPanel>
 
