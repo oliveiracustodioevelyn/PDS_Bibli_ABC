@@ -25,7 +25,16 @@ namespace ProjetoBibliABC.Views
         public Cadastro_Livro()
         {
             InitializeComponent();
-           
+            Loaded += Cadastro_Livro_Loaded;
+
+
+        }
+        public Cadastro_Livro(Livro livro)
+        {
+            InitializeComponent();
+            Loaded += Cadastro_Livro_Loaded;
+            _livro = livro;
+
         }
 
         private void Cadastro_Livro_Loaded(object sender, RoutedEventArgs e)

@@ -31,6 +31,7 @@
                     <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" />
                     <DataGridTextColumn Header="Edição" Binding="{Binding EdicaoObra}" />
                     <DataGridTextColumn Header="Sinopse" Binding="{Binding SinopseObra}" />
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
 
                     <DataGridTemplateColumn Header="Ações">
                         <DataGridTemplateColumn.CellTemplate>

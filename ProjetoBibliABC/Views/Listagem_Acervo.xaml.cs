@@ -46,11 +46,11 @@ namespace ProjetoBibliABC.Views
 
         private void Button_Atualizar_Click(object sender, RoutedEventArgs e)
         {
-            /*var livroSelecionado = dataGridAcervo.SelectedItem as Livro;
+            var livroSelecionado = dataGridAcervo.SelectedItem as Livro;
 
             var form = new Cadastro_Livro(livroSelecionado);
             form.ShowDialog();
-            CarregarListagem();*/
+            CarregarListagem();
         }
 
         private void Button_Remover_Click(object sender, RoutedEventArgs e)
@@ -85,9 +85,9 @@ namespace ProjetoBibliABC.Views
             try
             {
                 var dao = new LivroDAO();
-                List<Livro> listaEscolas = dao.List();
+                List<Livro> listaLivro = dao.List();
 
-                dataGridAcervo.ItemsSource = listaEscolas;
+                dataGridAcervo.ItemsSource = listaLivro;
 
             }
             catch (Exception ex)

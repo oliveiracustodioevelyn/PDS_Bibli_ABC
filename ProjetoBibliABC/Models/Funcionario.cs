@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoBibliABC.Models
 {
-    internal class Funcionario
+    public class Funcionario
     {
         public int Id { get; set; }
         public string Nome { get; set; }

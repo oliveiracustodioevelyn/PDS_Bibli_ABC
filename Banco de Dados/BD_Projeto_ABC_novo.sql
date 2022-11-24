@@ -73,17 +73,6 @@ id_dev int primary key auto_increment,
 data_dev date
 );*/
 
-CREATE TABLE Aluguel(
-id_alu int primary key auto_increment,
-dataAluguel_alu date,
-hora_alu time,
-dataDevolucao date,
-id_fun_fk int,
-cod_lei_fk int,
-foreign key (id_fun_fk) references Funcionario (id_fun),
-foreign key (cod_lei_fk) references Leitor (cod_lei)
-);
-
 CREATE TABLE Obras(
 cod_obra int primary key auto_increment,
 titulo_obra varchar(100),
@@ -99,24 +88,31 @@ sinopse_obra varchar(100),
 status_obra varchar(100)
 );
 
-#comando.CommandText = "INSERT INTO  Obras VALUES (null, @titulo_obra,  @dataPublicacao_obra, @num_exemplar_obra, @editora_obra, @num_paginas_obra, @autor_obra," +"@genero_obra,@tipo_obra,@edicao_obra, @sinopse_obra);";
 
+CREATE TABLE Aluguel(
+id_alu int primary key auto_increment,
+dataAluguel_alu date,
+dataDevolucao_alu date,
+id_fun_fk int,
+cod_lei_fk int,
+cod_obra_fk int,
+foreign key (id_fun_fk) references Funcionario (id_fun),
+foreign key (cod_lei_fk) references Leitor (cod_lei),
+foreign key (cod_obra_fk) references Obras (cod_obra)
+);
 
+/*#comando.CommandText = "INSERT INTO  Obras VALUES (null, @titulo_obra,  @dataPublicacao_obra, @num_exemplar_obra, @editora_obra, @num_paginas_obra, @autor_obra," +"@genero_obra,@tipo_obra,@edicao_obra, @sinopse_obra);";
 CREATE TABLE AluObra(
 id_AluObra int primary key auto_increment,
 id_alu_fk int,
 cod_obra_fk int,
 foreign key (id_alu_fk) references Aluguel (id_alu),
 foreign key (cod_obra_fk) references Obras (cod_obra)
-);
+);*/
 
 select	* from obras;
-
-
-UPDATE editora SET razaoSocial_edi = '@razao_social', nomeFantasia_edi = '@nome_fantasia', cnpj_edi = '@cnpj', telefone1_edi = '@telefone1', telefone2_edi = '@telefone2', representante_edi = '@representante', email_edi = '@email', rua_edi = '@rua', bairro_edi = '@bairro', numero_edi = '@numero', cep_edi = '@cep', complemento_edi = '@complemento', cidade_edi = '@cidade', estado_edi = '@estado' WHERE (cod_edi = '@id');
-
-
-
+select * from leitor;
+select * from funcionario;
 
 
 

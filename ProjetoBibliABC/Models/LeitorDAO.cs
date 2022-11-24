@@ -126,10 +126,9 @@ namespace ProjetoBibliABC.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "Update Leitor set " +
-               "nome_lei = @nome_lei, cpf_lei = @cpf_lei, rg_lei = @rg_lei, email_lei = @email_lei, " +
-               " telefone_lei = @telefone_lei, dataNascimento_lei = @dataNascimento_lei, sexo_lei = @sexo_lei, rua_fun = @rua, " +
-               "bairo_fun = @bairo, numero_fun = @numero, cep_fun = @cep, complemento_fun = @complemento, cidade_fun = @cidade, estado_fun = @estado" + " where cod_lei = @id";
+                comando.CommandText = "Update Leitor set nome_lei = @nome, cpf_lei = @cpf, rg_lei = @rg, email_lei = @email, telefone_lei = @telefone," +
+                    " dataNascimento_lei = @dataNascimento, sexo_lei = @sexo, rua_lei = @rua, bairro_lei = @bairro, numero_lei = @numero, cep_lei = @cep," +
+                    " complemento_lei = @complemento, cidade_lei = @cidade, estado_lei = @estado WHERE (cod_lei = @id)";
 
                 comando.Parameters.AddWithValue("@id", leitor.Id);
                 comando.Parameters.AddWithValue("@nome", leitor.Nome);

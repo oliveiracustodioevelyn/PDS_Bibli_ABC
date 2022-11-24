@@ -74,7 +74,7 @@ namespace ProjetoBibliABC.Models
                     livro.Tipo = DAOHelper.GetString(reader, "tipo_obra");
                     livro.EdicaoObra = DAOHelper.GetString(reader, "edicao_obra");
                     livro.SinopseObra = DAOHelper.GetString(reader, "sinopse_obra");
-                    livro.Status = DAOHelper.GetString(reader, "status");
+                    livro.Status = DAOHelper.GetString(reader, "status_obra");
 
                     lista.Add(livro);
                 }
@@ -119,10 +119,9 @@ namespace ProjetoBibliABC.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "Update  Obras set " +
-               "titulo_obra = @titulo, dataPublicacao_obra = @data, num_exemplar_obra = @numExemplar, editora_obra = @editora," +
-               "num_paginas_obra = @numPagina, autor_obra = @autor, genero_obra = @genero, tipo_obra = @tipo, " +
-               "edicao_obra = @edicao, sinopse_obra = @sinopse, status_obra = @status" + " where cod_obra = @id";
+                comando.CommandText = "Update  Obras set titulo_obra = @titulo, dataPublicacao_obra = @dataPublicacao, " +
+                    "num_exemplar_obra = @num_exemplar, editora_obra = @editora, num_paginas_obra = @num_paginas, autor_obra = @autor, genero_obra = @genero, tipo_obra = @tipo, " +
+                    "edicao_obra = @edicao, sinopse_obra = @sinopse, status_obra = @status WHERE (cod_obra = @id)";
 
                 comando.Parameters.AddWithValue("@id", livro.Id);
                 comando.Parameters.AddWithValue("@titulo", livro.TituloObra);

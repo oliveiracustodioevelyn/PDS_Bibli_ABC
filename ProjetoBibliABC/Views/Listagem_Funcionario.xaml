@@ -23,8 +23,8 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
                     <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"/>
-                    <DataGridTextColumn Header="CPF" Binding="{Binding Cpf}"/>
-                    <DataGridTextColumn Header="RG" Binding="{Binding Rg}"/>
+                    <DataGridTextColumn Header="CPF" Binding="{Binding CPF}"/>
+                    <DataGridTextColumn Header="RG" Binding="{Binding RG}"/>
                     <DataGridTextColumn Header="Sexo" Binding="{Binding Sexo}"/>
                     <DataGridTextColumn Header="Telefone1" Binding="{Binding Telefone1}"/>
                     <DataGridTextColumn Header="Telefone2" Binding="{Binding Telefone2}"/>
@@ -36,7 +36,6 @@
                     <DataGridTextColumn Header="Rua" Binding="{Binding Rua}"/>
                     <DataGridTextColumn Header="Bairro" Binding="{Binding Bairro}"/>
                     <DataGridTextColumn Header="Número" Binding="{Binding Numero}"/>
-                    <DataGridTextColumn Header="CEP" Binding="{Binding Cep}"/>
                     <DataGridTextColumn Header="Complemento" Binding="{Binding Complemento}"/>
                     <DataGridTextColumn Header="Cidade" Binding="{Binding Cidade}"/>
                     <DataGridTextColumn Header="Estado" Binding="{Binding Estado}"/>

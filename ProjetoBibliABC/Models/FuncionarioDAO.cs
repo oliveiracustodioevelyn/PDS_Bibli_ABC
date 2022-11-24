@@ -135,10 +135,9 @@ namespace ProjetoBibliABC.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "Update Funcionario set " +
-               "nome_fun = @nome,  cpf_fun = @cpf, rg_fun = @rg, sexo_fun = @sexo, telefone1_fun = @telefone1, telefone2_fun = @telefone2, " +
-               "dataNascimento_fun = @dataNascimento, email_fun = @email, senha_fun = @senha, rua_fun = @rua, bairo_fun = @bairo, numero_fun = @numero," +
-               " complemento_fun = @complemento, cidade_fun = @cidade, estado_fun = @estado" + "where id_fun = @id";
+                comando.CommandText = "Update Funcionario set nome_fun = @nome, cpf_fun = @cpf, rg_fun = @rg, sexo_fun = @sexo, telefone1_fun = @telefone1," +
+                    " telefone2_fun = @telefone2, dataNascimento_fun = @dataNascimento, email_fun = @email, senha_fun = @senha, rua_fun = @rua," +
+                    " bairro_fun = @bairro, numero_fun = @numero, complemento_fun = @complemento, cidade_fun = @cidade, estado_fun = @estado WHERE (id_fun = @id)";
 
                 comando.Parameters.AddWithValue("@id", funcionario.Id);
                 comando.Parameters.AddWithValue("@nome", funcionario.Nome);

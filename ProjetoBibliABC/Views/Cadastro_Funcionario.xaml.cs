@@ -26,12 +26,12 @@ namespace ProjetoBibliABC.Views
             InitializeComponent();
             Loaded += Cadastro_Funcionario_Loaded;
         }
-        //public Cadastro_Leitor(Leitor leitor)
-        //{
-        //    InitializeComponent();
-        //    Loaded += Cadastro_Leitor_Loaded;
-        //    _leitor = leitor;
-        //}
+        public Cadastro_Funcionario(Funcionario funcionario)
+        {
+            InitializeComponent();
+            Loaded += Cadastro_Funcionario_Loaded;
+            _funcionario = funcionario;
+        }
 
         private void Cadastro_Funcionario_Loaded(object sender, RoutedEventArgs e)
         {
@@ -79,6 +79,7 @@ namespace ProjetoBibliABC.Views
             
             //_funcionario.Turno = txtTurno.Text;
             _funcionario.Email = txtEmail.Text;
+            _funcionario.Senha = txtSenha.Text;
             _funcionario.Rua = txtRua.Text;
             _funcionario.Bairro = txtBairro.Text;
             _funcionario.Numero = txtNumero.Text;

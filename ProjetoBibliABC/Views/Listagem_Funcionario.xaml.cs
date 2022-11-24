@@ -45,18 +45,18 @@ namespace ProjetoBibliABC.Views
 
         private void Button_Atualizar_Click(object sender, RoutedEventArgs e)
         {
-           /* var funcionarioSelecionado = dataGridFuncionario.SelectedItem as Funcionario;
+            var funcionarioSelecionado = dataGridFuncionario.SelectedItem as Funcionario;
 
-            var form = new Cadastro_Fornecedor(funcionarioSelecionado);
+            var form = new Cadastro_Funcionario(funcionarioSelecionado);
             form.ShowDialog();
-            CarregarListagem();*/
+            CarregarListagem();
         }
 
         private void Button_Remover_Click(object sender, RoutedEventArgs e)
         {
             var funcionarioSelecionado = dataGridFuncionario.SelectedItem as Funcionario;
 
-            var resultado = MessageBox.Show($"Deseja realmente remover o Funcionário '{funcionarioSelecionado.Nome}' ?", "Confirmação de Exclusão",
+            var resultado = MessageBox.Show($"Deseja realmente remover o Fornecedor '{funcionarioSelecionado.Nome}' ?", "Confirmação de Exclusão",
                 MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
             try

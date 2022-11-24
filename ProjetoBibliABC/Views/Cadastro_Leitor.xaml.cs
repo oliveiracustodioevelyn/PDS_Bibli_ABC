@@ -29,12 +29,12 @@ namespace ProjetoBibliABC.Views
             InitializeComponent();
             Loaded += Cadastro_Leitor_Loaded;
         }
-        //public Cadastro_Leitor(Leitor leitor)
-        //{
-        //    InitializeComponent();
-        //    Loaded += Cadastro_Leitor_Loaded;
-        //    _leitor = leitor;
-        //}
+        public Cadastro_Leitor(Leitor leitor)
+        {
+            InitializeComponent();
+            Loaded += Cadastro_Leitor_Loaded;
+            _leitor = leitor;
+        }
 
         private void Cadastro_Leitor_Loaded(object sender, RoutedEventArgs e)
         {
