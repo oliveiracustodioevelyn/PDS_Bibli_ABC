@@ -112,8 +112,15 @@ foreign key (cod_obra_fk) references Obras (cod_obra)
 
 select	* from obras;
 select * from leitor;
-select * from funcionario;
+select * from aluguel;
 
+INSERT INTO `projetoabc`.`aluguel` (`id_alu`, @dataAluguel, `dataDevolucao_alu`, `id_fun_fk`, `cod_lei_fk`) VALUES (null, null, null, null, null);
+
+
+UPDATE `projetoabc`.`aluguel` SET dataAluguel_alu = @dataAluguel, dataDevolucao_alu = @dataDevolucao, id_fun_fk = @idFuncionario, cod_lei_fk = @idLeitor, cod_obra_fk = @idObra  WHERE (`id_alu` = @id);
+
+null, @dataAluguel, " +
+                    "@dataDevolucao, @idFuncionario, @idLeitor, @idObra
 
 
 
