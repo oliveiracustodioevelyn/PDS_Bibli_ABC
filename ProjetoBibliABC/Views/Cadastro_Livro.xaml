@@ -30,6 +30,7 @@
         <Grid Grid.Row="1" Background="#FFF9F5F5" Margin="0,0,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
 
@@ -54,13 +55,13 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Título"
-                        x:Name="txtTitulo" Padding="10"  Cursor="IBeam" FontSize="18" HorizontalAlignment="Left" Width="823"/>
+                        x:Name="txtTitulo" Padding="10"  Cursor="IBeam" FontSize="18" HorizontalAlignment="Left" Width="608" Margin="-150,0,0,0"/>
                 </UniformGrid>
                 <UniformGrid Columns="3"  Margin="10 10 0 0">
                     <DatePicker 
                     x:Name="dtPublicacao"
                     Style="{StaticResource MaterialDesignFilledDatePicker}"
-                    materialDesign:HintAssist.Hint="Data de Publicacao" Padding="10" Width="638" FontSize="18" />
+                    materialDesign:HintAssist.Hint="Data de Publicacao" Padding="10" FontSize="18" Margin="0,0,111,0" />
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -68,7 +69,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="N° Exemplar"
-                        x:Name="txtExemplar" Padding="10" Width="498" FontSize="18" Cursor="IBeam" />
+                        x:Name="txtExemplar" Padding="10" FontSize="18" Cursor="IBeam" Margin="-90,0,260,0" />
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -76,7 +77,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Editora"
-                        x:Name="txtEditora" Padding="10" Width="516" FontSize="18" Cursor="IBeam" />
+                        x:Name="txtEditora" Padding="10" FontSize="18" Cursor="IBeam" Margin="-243,0,0,0" />
                 </UniformGrid>
 
                 <UniformGrid Columns="3" Margin="10 10 0 0">
@@ -87,7 +88,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="N° de Páginas"
-                        x:Name="txtNumPag" Padding="10" Cursor="IBeam" Width="422" FontSize="18"/>
+                        x:Name="txtNumPag" Padding="10" Cursor="IBeam" FontSize="18" Margin="0,0,171,0"/>
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -95,7 +96,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Autor(a)"
-                        x:Name="txtAutor" Padding="10"  FontSize="18" Width="428"/>
+                        x:Name="txtAutor" Padding="10"  FontSize="18" Margin="-147,0,20,0"/>
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -103,7 +104,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Status"
-                        x:Name="txtStatus" Padding="10"  FontSize="18" Width="464" IsReadOnly="True"/>
+                        x:Name="txtStatus" Padding="10"  FontSize="18" IsReadOnly="True"/>
                 </UniformGrid>
 
 
@@ -114,7 +115,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Gênero"
-                        x:Name="txtGenero" Padding="10" FontSize="18" Width="498" Cursor="IBeam" />
+                        x:Name="txtGenero" Padding="10" FontSize="18" Cursor="IBeam" Margin="0,0,-7,0" />
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -122,7 +123,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Tipo"
-                        x:Name="txtTipo" Padding="10" FontSize="18" Width="498" Cursor="IBeam" />
+                        x:Name="txtTipo" Padding="10" FontSize="18" Cursor="IBeam" Margin="39,0,0,0" />
                 </UniformGrid>
 
                 <UniformGrid Columns="2" Margin="10 10 0 0">
@@ -132,7 +133,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Edição"
-                        x:Name="txtEdicao" Padding="10" FontSize="18" Width="426" Cursor="IBeam"/>
+                        x:Name="txtEdicao" Padding="10" FontSize="18" Cursor="IBeam" Margin="0,0,-20,0"/>
 
 
                     <TextBox 
@@ -141,7 +142,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Sinopse"
-                        x:Name="txtSinopse" Padding="10" FontSize="18" Cursor="IBeam" Width="408"/>
+                        x:Name="txtSinopse" Padding="10" FontSize="18" Cursor="IBeam" Margin="25,0,0,0"/>
                 </UniformGrid>
 
 
