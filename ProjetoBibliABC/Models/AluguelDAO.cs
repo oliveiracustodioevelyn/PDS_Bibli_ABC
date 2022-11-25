@@ -51,7 +51,17 @@ namespace ProjetoBibliABC.Models
                 var lista = new List<Aluguel>();
                 var comando = _conn.Query();
 
-                comando.CommandText = "SELECT * FROM Aluguel";
+                comando.CommandText = "select " +
+                    "cod_obra as 'Codigo do Livro', " +
+                    "titulo_obra as 'Titulo do Livro', " +
+                    "id_fun as 'Codigo Funcionario', " +
+                    "nome_fun as 'Nome do Funcionario', " +
+                    "cod_lei as 'Codigo do Leitor', " +
+                    "nome_lei as 'Nome do Leitor', " +
+                    "id_alu as 'Codigo do Aluguel' " +
+                    "from " +
+                    "Obras, Funcionario, Leitor, Aluguel " +
+                    "where (Aluguel.id_fun_fk = Funcionario.id_fun) and (Leitor.cod_lei = Aluguel.cod_lei_fk) and (Aluguel.cod_obra_fk = Obras.cod_obra); ";
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -110,7 +120,7 @@ namespace ProjetoBibliABC.Models
                 var comando = _conn.Query();
 
                 comando.CommandText = "UPDATE Aluguel SET dataAluguel_alu = @dataAluguel, dataDevolucao_alu = @dataDevolucao," +
-                    " id_fun_fk = @idFuncionario, cod_lei_fk = @idLeitor, cod_obra_fk = @idObra  WHERE (`id_alu` = @id)";
+                    " id_fun_fk = @idFuncionario, cod_lei_fk = @idLeitor, cod_obra_fk = @idObra  WHERE (id_alu = @id)";
 
                 comando.Parameters.AddWithValue("@id", aluguel.Id);
                 comando.Parameters.AddWithValue("@dataAluguel", aluguel.DataAluguel);

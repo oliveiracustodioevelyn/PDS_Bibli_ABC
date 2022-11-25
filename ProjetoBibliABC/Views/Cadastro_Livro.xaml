@@ -119,11 +119,11 @@
 
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Tipo"
-                        x:Name="txtTipo" Padding="10" FontSize="18" Cursor="IBeam" Margin="39,0,0,0" />
+                        x:Name="txtTipo" Padding="10" FontSize="18" Cursor="IBeam" Width="912" HorizontalAlignment="Left" Margin="25 0 0 0"/>
                 </UniformGrid>
 
                 <UniformGrid Columns="2" Margin="10 10 0 0">
@@ -142,7 +142,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Sinopse"
-                        x:Name="txtSinopse" Padding="10" FontSize="18" Cursor="IBeam" Margin="25,0,0,0"/>
+                        x:Name="txtSinopse" Padding="10" FontSize="18" Cursor="IBeam" Width="907" Margin="40,0,0,0"/>
                 </UniformGrid>
 
 

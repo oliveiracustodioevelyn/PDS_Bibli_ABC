@@ -24,7 +24,7 @@
         <StackPanel Grid.Column="1" Background="White">
 
 
-            <StackPanel Margin="10 350 20 0">
+            <StackPanel Margin="10 300 20 0">
 
                 <Label Content="Login" HorizontalAlignment="Center" FontSize="48" FontFamily="Candara" Height="76" Background="Transparent" FontWeight="Bold" />
 

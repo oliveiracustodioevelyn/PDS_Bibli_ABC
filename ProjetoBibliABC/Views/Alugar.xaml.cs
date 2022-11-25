@@ -35,15 +35,15 @@ namespace ProjetoBibliABC.Views
 
         private void Alugar_Loaded(object sender, RoutedEventArgs e)
         {
-            txtCodLivro.Text = ;
-            txtCodLeitor.Text = ;
-            txtCodUse.Text = ;
-            txtTitulo.Text = ;
+            txtCodLivro.Text = Convert.ToString(_aluguel.Livro);
+            txtCodLeitor.Text = Convert.ToString(_aluguel.Leitor);
+            txtCodUse.Text = Convert.ToString(_aluguel.Funcionario);
+            /*txtTitulo.Text = ;
             txtLeitor.Text = ;
-            txtFunc.Text = ;
-            dtAtual.SelectedDate = ;
-            dtDevolucao.SelectedDate = ;
-            txtDescricao.Text = ;
+            txtFunc.Text = ;*/
+            dtAtual.SelectedDate = _aluguel.DataAluguel;
+            dtDevolucao.SelectedDate = _aluguel.DataDevolucao;
+            /*txtDescricao.Text = ;*/
 
         }
 
@@ -61,8 +61,12 @@ namespace ProjetoBibliABC.Views
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
 
+            /*_aluguel.Livro = txtCodLivro.Text;
+            _aluguel.Leitor =
 
-
+            _aluguel.DataAluguel = dtAtual.SelectedDate;
+            _aluguel.DataDevolucao = dtDevolucao.SelectedDate;
+            */
 
             try
             {
@@ -71,13 +75,13 @@ namespace ProjetoBibliABC.Views
                 if (_aluguel.Id > 0)
                 {
                     dao.Update(_aluguel);
-                    MessageBox.Show("Registro do livro atualizado com sucesso");
+                    MessageBox.Show("Registro do Aluguel atualizado com sucesso");
                 }
                 else
                 {
                     dao.Insert(_aluguel);
 
-                    MessageBox.Show("Cadastrado realizado com Sucesso!!");
+                    MessageBox.Show("Aluguel realizado com Sucesso!!");
                 }
 
             }

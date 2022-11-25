@@ -99,8 +99,8 @@
                         VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
-                        materialDesign:HintAssist.Hint="Código Usuário"
-                        x:Name="txtCodUse" Padding="10" FontSize="18" HorizontalAlignment="Left" Width="414" Margin="-2,0,0,0"/>
+                        materialDesign:HintAssist.Hint="Código Funcionário"
+                        x:Name="txtCodUse" Padding="10" FontSize="18" HorizontalAlignment="Left" Width="414" Margin="-2,0,0,0" Cursor="IBeam"/>
 
 
                     <TextBox
