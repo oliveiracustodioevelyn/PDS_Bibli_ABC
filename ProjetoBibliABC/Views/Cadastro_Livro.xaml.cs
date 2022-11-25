@@ -156,5 +156,25 @@ namespace ProjetoBibliABC.Views
             Menu_Principal menu = new Menu_Principal();
             menu.ShowDialog();
         }
+
+        private void btLimpar_Click(object sender, RoutedEventArgs e)
+        {
+            txtCodigo.Clear();
+            txtTitulo.Clear();
+            dtPublicacao.SelectedDate = null;
+            //dtPublicacao.Text = DateTime.Now.ToString();
+            txtExemplar.Clear();
+            txtEditora.Clear(); 
+            txtNumPag.Clear(); 
+            txtAutor.Clear(); 
+            txtGenero.Clear();
+            txtTipo.Clear();
+            txtEdicao.Clear();
+            txtSinopse.Clear();
+
+            //_livro.Status = "Disponivel";
+            txtStatus.Clear();
+            txtStatus.Clear();
+        }
     }
 }

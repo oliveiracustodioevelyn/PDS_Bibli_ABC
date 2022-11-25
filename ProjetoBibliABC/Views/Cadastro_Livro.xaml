@@ -29,14 +29,14 @@
 
         <Grid Grid.Row="1" Background="#FFF9F5F5" Margin="0,0,0,0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="77*"/>
+
             </Grid.ColumnDefinitions>
 
 
 
 
-            <StackPanel  Grid.Column="0" Margin="15">
+            <StackPanel  Grid.Column="0" Margin="15,15,15,15">
                 <Label Content="Informações do Livro" FontSize="24" Margin="10" Foreground="#FF251818" FontFamily="Arial" HorizontalAlignment="Center" Padding="20"/>
                 <!--<Image Source="/Imagens/logoo.png" Width="128" Height="120" Stretch="UniformToFill" Margin="0 0 0 10" HorizontalAlignment="Center"/>-->
 
@@ -48,14 +48,14 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Cod. Livro"
-                        x:Name="txtCodigo" Padding="10" Cursor="IBeam" FontSize="18" Width="273" HorizontalAlignment="Left"/>
+                        x:Name="txtCodigo" Padding="10" Cursor="IBeam" FontSize="18" Width="233" HorizontalAlignment="Left"/>
                     <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
                         VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Título"
-                        x:Name="txtTitulo" Padding="10"  Cursor="IBeam" FontSize="18" HorizontalAlignment="Left" Width="608" Margin="-150,0,0,0"/>
+                        x:Name="txtTitulo" Padding="10"  Cursor="IBeam" FontSize="18" HorizontalAlignment="Left" Width="1620" Margin="-680"/>
                 </UniformGrid>
                 <UniformGrid Columns="3"  Margin="10 10 0 0">
                     <DatePicker 
@@ -166,7 +166,7 @@
                         </Button.Template>
                     </Button>
 
-                    <Button x:Name="btLimpar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="61" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A">
+                    <Button x:Name="btLimpar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="61" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A" Click="btLimpar_Click">
                         <Button.Template>
                             <ControlTemplate>
                                 <Border CornerRadius="15" Background="#FFFFC850">

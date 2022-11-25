@@ -196,7 +196,7 @@
             <StackPanel Orientation="Horizontal">
                 <UniformGrid Grid.Row="2" Columns="3">
 
-                    <Button x:Name="btCancelar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="60" Width="211" FontSize="20" FontWeight="Normal" Click="btCancelar_Click">
+                    <Button x:Name="btCancelar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="60" Width="259" FontSize="20" FontWeight="Normal" Click="btCancelar_Click">
                         <Button.Template>
                             <ControlTemplate>
                                 <Border CornerRadius="15" Background="#FFFFC850">
@@ -206,7 +206,7 @@
                         </Button.Template>
                     </Button>
 
-                    <Button x:Name="btLimpar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="61" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A">
+                    <Button x:Name="btLimpar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="60" Width="217" FontSize="20" FontWeight="Normal" Background="#FF0A114A" Click="btLimpar_Click">
                         <Button.Template>
                             <ControlTemplate>
                                 <Border CornerRadius="15" Background="#FFFFC850">
@@ -215,7 +215,7 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-                    <Button x:Name="btSalvar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black"  FontFamily="Arial Black" Height="60" Width="255" FontSize="20" FontWeight="Normal" Background="#FF0A114A" Click="btSalvar_Click">
+                    <Button x:Name="btSalvar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black"  FontFamily="Arial Black" Height="60" Width="225" FontSize="20" FontWeight="Normal" Background="#FF0A114A" Click="btSalvar_Click">
                         <Button.Template>
                             <ControlTemplate>
                                 <Border CornerRadius="15" Background="#FFFFC850">

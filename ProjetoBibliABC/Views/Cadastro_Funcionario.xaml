@@ -111,7 +111,7 @@
 
 
             <StackPanel Grid.Column="1" Margin="15">
-                <Label Content="Informações de Contato" HorizontalAlignment="Center" FontSize="24"/>
+                <Label Content="Informações do Sistema" HorizontalAlignment="Center" FontSize="24"/>
 
                 <UniformGrid Columns="2" Margin="0 5">
                     <TextBox 

@@ -24,7 +24,7 @@
         <StackPanel Grid.Column="1" Background="White">
 
 
-            <StackPanel Margin="10 188 20 0">
+            <StackPanel Margin="10 350 20 0">
 
                 <Label Content="Login" HorizontalAlignment="Center" FontSize="48" FontFamily="Candara" Height="76" Background="Transparent" FontWeight="Bold" />
 
@@ -45,16 +45,9 @@
                     </Button.Template>
                 </Button>
 
-                <Button x:Name="btEsqueceuSenha" Content="Esqueceu a Senha?" HorizontalAlignment="Center" Foreground="#DD04A8ED" Margin="0,130,0,0"  Width="253" Cursor="Hand">
-                    <Button.BorderBrush>
-                        <ImageBrush/>
-                    </Button.BorderBrush>
-                    <Button.Background>
-                        <ImageBrush/>
-                    </Button.Background>
-                </Button>
+                
 
-                <Button x:Name="btCadastrarFunc" Content="Novo? Cadastre-se aqui" HorizontalAlignment="Center" Foreground="#DD04A8ED"  Width="253" Cursor="Hand" Click="btCadastrarFunc_Click">
+                <Button x:Name="btCadastrarFunc" Content="Novo? Cadastre-se aqui" HorizontalAlignment="Center" Foreground="#DD04A8ED"  Width="253"  Margin="0,100,0,0" Cursor="Hand" Click="btCadastrarFunc_Click">
                     <Button.BorderBrush>
                         <ImageBrush/>
                     </Button.BorderBrush>

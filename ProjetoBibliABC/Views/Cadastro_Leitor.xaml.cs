@@ -117,5 +117,24 @@ namespace ProjetoBibliABC.Views
         {
 
         }
+
+        private void btLimpar_Click_1(object sender, RoutedEventArgs e)
+        {
+            
+
+            txtNome.Clear();
+            txtCpf.Clear();
+            txtRg.Clear();
+            txtEmail.Clear();
+            txtTelefone.Clear();
+            dtNasc.SelectedDate = null;
+            txtSexo.Clear();
+            txtRua.Clear();
+            txtBairro.Clear();
+            txtNumero.Clear();
+            txtComplemento.Clear();
+            txtCidade.Clear();
+            txtEstado.Clear();
+        }
     }
 }

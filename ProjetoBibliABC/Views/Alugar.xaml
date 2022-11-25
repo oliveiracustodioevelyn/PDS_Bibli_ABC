@@ -100,7 +100,7 @@
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Código Usuário"
-                        x:Name="txtCodUse" Padding="10" FontSize="18" HorizontalAlignment="Left" Width="260" Margin="-2,0,0,0"/>
+                        x:Name="txtCodUse" Padding="10" FontSize="18" HorizontalAlignment="Left" Width="414" Margin="-2,0,0,0"/>
 
 
                     <TextBox
@@ -114,37 +114,39 @@
 
 
 
-                <UniformGrid Columns="2" Margin="0 5">
+                <UniformGrid Columns="3" Margin="0 5">
 
 
                     <DatePicker 
                     x:Name="dtAtual"
                     Style="{StaticResource MaterialDesignFilledDatePicker}"
-                    materialDesign:HintAssist.Hint="Data Atual" Padding="10" Width="450" FontSize="18" HorizontalAlignment="Left"/>
+                    materialDesign:HintAssist.Hint="Data Atual" Padding="10" Width="414" FontSize="18" HorizontalAlignment="Left"/>
 
                     <DatePicker 
                     x:Name="dtDevolucao"
                     Style="{StaticResource MaterialDesignFilledDatePicker}"
-                    materialDesign:HintAssist.Hint="Data Devolução" Padding="10" Width="450" FontSize="18"  HorizontalAlignment="Left"/>
+                    materialDesign:HintAssist.Hint="Data Devolução" Padding="10" Width="414" FontSize="18"  HorizontalAlignment="Left" Margin="-202"/>
 
-                </UniformGrid>
-
-                <TextBox 
+                    <TextBox 
                         Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
                         materialDesign:HintAssist.Hint="Descrição Livro"
-                        x:Name="txtDescricao" Padding="10" FontSize="18" Cursor="IBeam"/>
+                        x:Name="txtDescricao" Padding="10" FontSize="18" Cursor="IBeam" Width="1032"  HorizontalAlignment="Left" Margin="-405"/>
+
+                </UniformGrid>
+
+
 
             </StackPanel>
 
         </Grid>
         <StackPanel Grid.Row="2">
             <StackPanel Orientation="Horizontal">
-                <UniformGrid Grid.Row="2" Columns="3">
+                <UniformGrid Grid.Row="2" Columns="3" Width="1918">
 
-                    <Button x:Name="btCancelar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="60" Width="211" FontSize="20" FontWeight="Normal"  Margin="20 0 20 0" Click="btCancelar_Click">
+                    <Button x:Name="btCancelar" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="72" FontSize="20" FontWeight="Normal" Click="btCancelar_Click" Margin="205,0,205,0">
                         <Button.Template>
                             <ControlTemplate>
                                 <Border CornerRadius="15" Background="#FFFFC850">
@@ -154,7 +156,7 @@
                         </Button.Template>
                     </Button>
 
-                    <Button x:Name="btLimpar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="61" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A" Click="btLimpar_Click">
+                    <Button x:Name="btLimpar" Cursor="Hand" Foreground="Black" FontFamily="Arial Black" Height="81" FontSize="20" FontWeight="Normal" Background="#FF0A114A" Click="btLimpar_Click" Margin="196,0,203,0">
                         <Button.Template>
                             <ControlTemplate>
                                 <Border CornerRadius="15" Background="#FFFFC850">
@@ -163,7 +165,7 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-                    <Button x:Name="btSalvar" HorizontalAlignment="Center" Cursor="Hand" Foreground="Black"  FontFamily="Arial Black" Height="59" Width="211" FontSize="20" FontWeight="Normal" Background="#FF0A114A">
+                    <Button x:Name="btSalvar" Cursor="Hand" Foreground="Black"  FontFamily="Arial Black" Height="75" FontSize="20" FontWeight="Normal" Background="#FF0A114A" Margin="214,0,214,0" Click="btSalvar_Click">
                         <Button.Template>
                             <ControlTemplate>
                                 <Border CornerRadius="15" Background="#FFFFC850">
